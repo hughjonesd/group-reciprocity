@@ -8,6 +8,7 @@ Source and data for the paper "Humans reciprocate by discriminating against grou
 
 * The paper is in the `Paper` subfolder, you can recreate it from the Rmd file
 
-* You'll need to edit a few file paths and download the appropriate R libraries   - Everything should work as of April 2018
+* You'll need to edit a few file paths and download the appropriate R libraries   
+  - Everything should work as of April 2018
 
 * Data is in `data` and is anonymous
