@@ -1,0 +1,308 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{cameron2011robust}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d626e346d3b818872a529c81d40d7d04}{%
+           family={Cameron},
+           familyi={C\bibinitperiod},
+           given={A\bibnamedelima Colin},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4017a88a7b341738668099b741474451}{%
+           family={Gelbach},
+           familyi={G\bibinitperiod},
+           given={Jonah\bibnamedelima B},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=912e96eb4dc5abd022071cb8e765b707}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{3d91be507819a32e2e528aebeab88b5c}
+      \strng{fullhash}{3d91be507819a32e2e528aebeab88b5c}
+      \strng{authornamehash}{3d91be507819a32e2e528aebeab88b5c}
+      \strng{authorfullhash}{3d91be507819a32e2e528aebeab88b5c}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Business \& Economic Statistics}
+      \field{number}{2}
+      \field{title}{Robust inference with multiway clustering}
+      \field{volume}{29}
+      \field{year}{2011}
+      \field{pages}{238\bibrangedash 249}
+      \range{pages}{12}
+    \endentry
+    \entry{falk2006theory}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           familyi={F\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62f4d33673a293fc9457a98daadd2feb}{%
+           family={Fischbacher},
+           familyi={F\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{fullhash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{authornamehash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{authorfullhash}{d7674051d1829818d34bfd47bf7a4afb}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Game Econ Behav}
+      \field{number}{2}
+      \field{title}{A theory of reciprocity}
+      \field{volume}{54}
+      \field{year}{2006}
+      \field{pages}{293\bibrangedash 315}
+      \range{pages}{23}
+      \verb{file}
+      \verb :C\:\\Academic\\Various literature\\Falk Fischbacher 2006.pdf:PDF
+      \endverb
+    \endentry
+    \entry{fearon1996explaining}{article}{}
+      \name{author}{2}{}{%
+        {{hash=85d93b93d5348ad9754eaae2aa494482}{%
+           family={Fearon},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b16036bb72c02ebd624607ad68ebea87}{%
+           family={Laitin},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima D},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2135bb753e2102f744150dea3d67c949}
+      \strng{fullhash}{2135bb753e2102f744150dea3d67c949}
+      \strng{authornamehash}{2135bb753e2102f744150dea3d67c949}
+      \strng{authorfullhash}{2135bb753e2102f744150dea3d67c949}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American political science review}
+      \field{number}{4}
+      \field{title}{Explaining interethnic cooperation}
+      \field{volume}{90}
+      \field{year}{1996}
+      \field{pages}{715\bibrangedash 735}
+      \range{pages}{21}
+    \endentry
+    \entry{kimbrough2015norms}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2fada8284d5d0de981258e34bec2f201}{%
+           family={Kimbrough},
+           familyi={K\bibinitperiod},
+           given={Erik\bibnamedelima O},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=84807ce30d6d292d059bd5b4fcd829b6}{%
+           family={Vostroknutov},
+           familyi={V\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{fullhash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{authornamehash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{authorfullhash}{60b255b167a534856e4a0d6bb04eea81}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Eur Econ Assoc}
+      \field{number}{3}
+      \field{title}{Norms make preferences social}
+      \field{volume}{14}
+      \field{year}{2015}
+      \field{pages}{608\bibrangedash 638}
+      \range{pages}{31}
+    \endentry
+    \entry{stanca2009testing}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6dc80a6369fdadeb0bf98aa1f946f795}{%
+           family={Stanca},
+           familyi={S\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1b4daa6c3dac4b68214890acea13c4b8}{%
+           family={Bruni},
+           familyi={B\bibinitperiod},
+           given={Luigino},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9e9d6ab481b5327868f94b19ea3d210f}{%
+           family={Corazzini},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{438e15443d976bc7eba662b7fa097556}
+      \strng{fullhash}{438e15443d976bc7eba662b7fa097556}
+      \strng{authornamehash}{438e15443d976bc7eba662b7fa097556}
+      \strng{authorfullhash}{438e15443d976bc7eba662b7fa097556}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Econ Behav Organ}
+      \field{number}{2}
+      \field{title}{Testing theories of reciprocity: Do motivations matter?}
+      \field{volume}{71}
+      \field{year}{2009}
+      \field{pages}{233\bibrangedash 245}
+      \range{pages}{13}
+      \verb{file}
+      \verb :Various literature\\Stanca Bruni Corazzini 2009.pdf:PDF;:C\:\\Academic\\Various literature\\Stanca Bruni Corazzini 2009.pdf:PDF
+      \endverb
+    \endentry
+    \entry{weisel2015ingroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fc28bf7a126fd9ebb809fdfac744f3a6}{%
+           family={Weisel},
+           familyi={W\bibinitperiod},
+           given={Ori},
+           giveni={O\bibinitperiod}}}%
+        {{hash=e8f8d2d2f6f5f48118718e5173573902}{%
+           family={Böhm},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{fullhash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{authornamehash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{authorfullhash}{cd2d1b206630f3f45bcdceec3516b587}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Exp Soc Psychol}
+      \field{title}{``Ingroup love'' and ``outgroup hate'' in intergroup conflict between natural groups}
+      \field{volume}{60}
+      \field{year}{2015}
+      \field{pages}{110\bibrangedash 120}
+      \range{pages}{11}
+      \verb{file}
+      \verb :Teaching\\Social Dilemmas\\Articles\\Weisel Böhm 2015.pdf:PDF
+      \endverb
+    \endentry
+    \entry{wilson2017sentiments}{article}{}
+      \name{author}{2}{}{%
+        {{hash=217150b29ffb94e36eec341427ba3770}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Bart\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=41256de7442d73b482b3ab0536a2f733}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Vernon\bibnamedelima L},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{fullhash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{authornamehash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{authorfullhash}{5afe06e81dd8d16858f82779f5001203}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Social Philosophy and Policy}
+      \field{number}{1}
+      \field{title}{Sentiments, Conduct, and Trust in the Laboratory}
+      \field{volume}{34}
+      \field{year}{2017}
+      \field{pages}{25\bibrangedash 55}
+      \range{pages}{31}
+      \verb{file}
+      \verb :Various literature/Wilson Smith Sentiments.pdf:PDF
+      \endverb
+    \endentry
+    \entry{yamagishi2000thegroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=88a327bc53753035bfbdc4062fd7dff8}{%
+           family={Yamagishi},
+           familyi={Y\bibinitperiod},
+           given={Toshio},
+           giveni={T\bibinitperiod}}}%
+        {{hash=32deaf5bfa6d013bd7f1398b187bf634}{%
+           family={Kiyonari},
+           familyi={K\bibinitperiod},
+           given={Toko},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{fullhash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{authornamehash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{authorfullhash}{1f2efe9341fca13f080aefd0039ccf05}
+      \field{sortinit}{Y}
+      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Soc Psychol Quart}
+      \field{note}{contains references to literature on in-group favoritism in 2 person PDs}
+      \field{number}{2}
+      \field{title}{The {Group} as the {Container} of {Generalized} {Reciprocity}}
+      \field{volume}{63}
+      \field{year}{2000}
+      \field{pages}{116\bibrangedash 132}
+      \range{pages}{17}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Yamagishi Kiyonari 2000.pdf:PDF;:Group reciprocity\\Literature\\Yamagishi Kiyonari 2000.pdf:PDF
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,99 @@
+---
+title: "Second run of simulations"
+output: html_notebook
+---
+
+
+```{r setup}
+load("bound-09-13-15.37.RData")
+library(dplyr)
+library(ggplot2)
+library(glue)
+desc_vars <- function(...) {
+  nms <- substitute(...)
+  vars <- list(...)
+  paste(nms, "=", vars, collapse = ", " )
+}
+```
+
+# Raw data
+
+```{r}
+result2
+```
+
+# Values of parameters
+
+```{r}
+apply(result2[2:6], 2, unique)
+```
+
+20 repetitions each.
+
+# GR wins by benefit/cost and group size
+
+```{r}
+
+result2 %>% group_by(b, gsize) %>% summarize(GR_wins = mean(winner=='GR')) %>% ggplot(aes(x = factor(gsize), y = GR_wins)) + geom_line(aes(group = factor(b), colour = factor(b))) 
+```
+
+# More groups helps GR:
+
+```{r}
+
+result2 %>% group_by(G, gsize) %>% summarize(GR_wins = mean(winner=='GR')) %>% ggplot(aes(x = factor(gsize), y = GR_wins)) + geom_line(aes(group = factor(G), colour = factor(G))) 
+```
+
+# Memory makes little difference
+
+
+```{r}
+
+result2 %>% group_by(gsize, memory) %>% summarize(GR_wins = mean(winner=='GR')) %>% ggplot(aes(x = factor(gsize), y = GR_wins)) + geom_line(aes(group = factor(memory), colour = factor(memory))) 
+```
+
+```{r}
+result2 %>% group_by(G, memory) %>% summarize(GR_wins = mean(winner=='GR')) %>% ggplot(aes(x = factor(G), y = GR_wins)) + geom_line(aes(group = factor(memory), colour = factor(memory))) 
+```
+
+
+
+# Mechanisms
+
+```{r}
+f <- function(ggobj, var) {
+  ggobj + 
+        geom_violin(aes_string(y = var)) + 
+        geom_point(aes_string(y = var), alpha = .2, color = 'orange', position = position_jitter(width = .05, 
+          height = 0))
+}
+p <- ggplot(result2, aes(x = winner))
+```
+
+```{r}
+f(p, "cor_prop_reput")
+```
+
+```{r}
+f(p, "cor_reput_fit")
+```
+
+# These patterns aren't much changed by different group sizes
+
+```{r}
+p <- ggplot(result2, aes(x = interaction(winner, gsize), colour = factor(gsize)))
+f(p, "cor_prop_reput")
+```
+
+```{r}
+f(p, "cor_reput_fit")
+```
+
+# Nor by different benefit/cost ratios
+
+```{r}
+p <- ggplot(result2, aes(x = interaction(winner, b), colour = factor(b)))
+f(p, "cor_prop_reput")
+f(p, "cor_reput_fit")
+```
+

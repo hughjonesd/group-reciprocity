@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\begin{document}
+
+<<simulations, fig.cap = "Simulation results. $b$ = benefit of being helped. $n$ = group size.", fig.align = "center", fig.width = 6, fig.height = 4,  out.width='6in', out.height='4in', dev = 'quartz_pdf', dev.args = list(antialias=FALSE), echo=FALSE>>=
+
+
+tmp <- structure(list(memory = c(30, 30, 30, 30, 30, 30, 30, 30, 30, 
+30, 30, 30), G = c(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 
+10), b = c(12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 14, 14), gsize = c(12, 
+14, 16, 18, 20, 22, 24, 26, 28, 30, 12, 14), GR_wins = c(0.2, 
+0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0), Condition = c("m = t = 30, G = 10", 
+"m = t = 30, G = 10", "m = t = 30, G = 10", "m = t = 30, G = 10", 
+"m = t = 30, G = 10", "m = t = 30, G = 10", "m = t = 30, G = 10", 
+"m = t = 30, G = 10", "m = t = 30, G = 10", "m = t = 30, G = 10", 
+"m = t = 30, G = 10", "m = t = 30, G = 10"), grwc = structure(c(2L, 
+1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 1L), .Label = c("[0,0.1]", 
+"(0.1,0.2]", "(0.2,0.3]", "(0.3,0.4]", "(0.4,0.5]", "(0.5,0.6]", 
+"(0.6,0.7]", "(0.7,0.8]", "(0.8,0.9]", "(0.9,1]"), class = "factor")), .Names = c("memory", 
+"G", "b", "gsize", "GR_wins", "Condition", "grwc"), row.names = c(NA, 
+-12L), class = c("grouped_df", "tbl_df", "tbl", "data.frame"), vars = c("memory", 
+"G", "b"), drop = TRUE, indices = list(0:9, 10:11), group_sizes = c(10L, 
+2L), biggest_group_size = 10L, labels = structure(list(memory = c(30, 
+30), G = c(10, 10), b = c(12, 14)), row.names = c(NA, -2L), class = "data.frame", vars = c("memory", 
+"G", "b"), drop = TRUE, .Names = c("memory", "G", "b")))
+
+library(ggplot2)
+
+ggplot(tmp, aes(gsize, b, fill = grwc)) + geom_raster()
+
+@
+
+
+\end{document}

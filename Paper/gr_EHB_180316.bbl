@@ -1,0 +1,1869 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{allport1954nature}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b4b94df6301446e4d3ecf73978931a9d}{%
+           family={Allport},
+           familyi={A\bibinitperiod},
+           given={Gordon\bibnamedelima W},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{b4b94df6301446e4d3ecf73978931a9d}
+      \strng{fullhash}{b4b94df6301446e4d3ecf73978931a9d}
+      \strng{authornamehash}{b4b94df6301446e4d3ecf73978931a9d}
+      \strng{authorfullhash}{b4b94df6301446e4d3ecf73978931a9d}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The nature of prejudice.}
+      \field{year}{1954}
+    \endentry
+    \entry{balliet2014ingroup}{article}{}
+      \name{author}{3}{}{%
+        {{hash=dc87c8b61789b28aa84143e8bb74c6fb}{%
+           family={Balliet},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0f6843af92c292c7194779243c7b587b}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Junhui},
+           giveni={J\bibinitperiod}}}%
+        {{hash=891c7514c49551d0cd9542649b6586d1}{%
+           family={De\bibnamedelima Dreu},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Carsten\bibnamedelima KW},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{a214e35c7100c419af34e9d8e2f9451e}
+      \strng{fullhash}{a214e35c7100c419af34e9d8e2f9451e}
+      \strng{authornamehash}{a214e35c7100c419af34e9d8e2f9451e}
+      \strng{authorfullhash}{a214e35c7100c419af34e9d8e2f9451e}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychol Bull}
+      \field{number}{6}
+      \field{title}{Ingroup favoritism in cooperation: A meta-analysis.}
+      \field{volume}{140}
+      \field{year}{2014}
+      \field{pages}{1556\bibrangedash 1581}
+      \range{pages}{26}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Balliet Wu De Dreu 2014.pdf:PDF
+      \endverb
+    \endentry
+    \entry{barrett2016small}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=0b795c78df7d2c22b6f3a419bf59775b}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={H\bibnamedelima Clark},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=3ae82a2605eb1c8f0036fd047987c8be}{%
+           family={Bolyanatz},
+           familyi={B\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=887ad41a4f3f7639edb17d841fdf3f13}{%
+           family={Crittenden},
+           familyi={C\bibinitperiod},
+           given={Alyssa\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=0551fa68b1fbf9eea93b478fef8b8335}{%
+           family={Fessler},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima MT},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=017ae7dc16a1b76f96e0efe2fb63114b}{%
+           family={Fitzpatrick},
+           familyi={F\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6871e0a557f6a546b0d7c0189a47c5ff}{%
+           family={Gurven},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=135deb37dc4a16e2d813922bf87fe654}{%
+           family={Henrich},
+           familyi={H\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93120a444b31bf75f5cb6eb42fa3e19d}{%
+           family={Kanovsky},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4c072cbcdc746f329300feb008a7ff35}{%
+           family={Kushnick},
+           familyi={K\bibinitperiod},
+           given={Geoff},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4f8c23e71a4898addc1f184278a3cf48}{%
+           family={Pisor},
+           familyi={P\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Acad Sciences}%
+      }
+      \strng{namehash}{6dc9854d076af735385b25648b727bde}
+      \strng{fullhash}{e8274e4916a07caf9221bb46e570522e}
+      \strng{authornamehash}{6dc9854d076af735385b25648b727bde}
+      \strng{authorfullhash}{e8274e4916a07caf9221bb46e570522e}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{P Natl Acad Sci Usa}
+      \field{number}{17}
+      \field{title}{Small-scale societies exhibit fundamental variation in the role of intentions in moral judgment}
+      \field{volume}{113}
+      \field{year}{2016}
+      \field{pages}{4688\bibrangedash 4693}
+      \range{pages}{6}
+    \endentry
+    \entry{berg1995trust}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bdf2c53bd9cda1a9cbf15cf1b7539ee4}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Joyce},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0be608155f00405738ecc546140f00b2}{%
+           family={Dickhaut},
+           familyi={D\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=50b22710d58b10d626d77c0c5ea4dfbe}{%
+           family={McCabe},
+           familyi={M\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{de6e09fb42fcfeb5c39be2813554223d}
+      \strng{fullhash}{de6e09fb42fcfeb5c39be2813554223d}
+      \strng{authornamehash}{de6e09fb42fcfeb5c39be2813554223d}
+      \strng{authorfullhash}{de6e09fb42fcfeb5c39be2813554223d}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Game Econ Behav}
+      \field{number}{1}
+      \field{title}{Trust, reciprocity, and social history}
+      \field{volume}{10}
+      \field{year}{1995}
+      \field{pages}{122\bibrangedash 142}
+      \range{pages}{21}
+      \verb{file}
+      \verb :Various literature\\Berg Dickhaut McCabe 1995.pdf:PDF
+      \endverb
+    \endentry
+    \entry{bernhard2006group}{article}{}
+      \name{author}{3}{}{%
+        {{hash=270efcac8a41f581fd9217e8e04e4582}{%
+           family={Bernhard},
+           familyi={B\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=91ed91d8a80667277e10cbdf3b0585db}{%
+           family={Fehr},
+           familyi={F\bibinitperiod},
+           given={Ernst},
+           giveni={E\bibinitperiod}}}%
+        {{hash=62f4d33673a293fc9457a98daadd2feb}{%
+           family={Fischbacher},
+           familyi={F\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{3e98f0aa6c322196bf68991fd90b63fa}
+      \strng{fullhash}{3e98f0aa6c322196bf68991fd90b63fa}
+      \strng{authornamehash}{3e98f0aa6c322196bf68991fd90b63fa}
+      \strng{authorfullhash}{3e98f0aa6c322196bf68991fd90b63fa}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am Econ Rev}
+      \field{number}{2}
+      \field{title}{Group affiliation and altruistic norm enforcement}
+      \field{volume}{96}
+      \field{year}{2006}
+      \field{pages}{217\bibrangedash 221}
+      \range{pages}{5}
+      \verb{file}
+      \verb :/Users/roizultan/Documents/Academic/Group reciprocity/Literature/Bernhard Fehr Fischbacher 2006.pdf:PDF
+      \endverb
+    \endentry
+    \entry{bernhard2006parochial}{article}{}
+      \name{author}{3}{}{%
+        {{hash=270efcac8a41f581fd9217e8e04e4582}{%
+           family={Bernhard},
+           familyi={B\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=62f4d33673a293fc9457a98daadd2feb}{%
+           family={Fischbacher},
+           familyi={F\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+        {{hash=91ed91d8a80667277e10cbdf3b0585db}{%
+           family={Fehr},
+           familyi={F\bibinitperiod},
+           given={Ernst},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{3c4006f6e7e9d54c863bb784274f93a9}
+      \strng{fullhash}{3c4006f6e7e9d54c863bb784274f93a9}
+      \strng{authornamehash}{3c4006f6e7e9d54c863bb784274f93a9}
+      \strng{authorfullhash}{3c4006f6e7e9d54c863bb784274f93a9}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7105}
+      \field{title}{Parochial altruism in humans}
+      \field{volume}{442}
+      \field{year}{2006}
+      \field{pages}{912\bibrangedash 915}
+      \range{pages}{4}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Bernhard Fehr Fischbacher 2006a.pdf:PDF
+      \endverb
+    \endentry
+    \entry{boehm1984blood}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4c7f8514b73fa30523efa11b4ed95098}{%
+           family={Boehm},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA}%
+      }
+      \list{publisher}{1}{%
+        {University of Pennsylvania Press}%
+      }
+      \strng{namehash}{4c7f8514b73fa30523efa11b4ed95098}
+      \strng{fullhash}{4c7f8514b73fa30523efa11b4ed95098}
+      \strng{authornamehash}{4c7f8514b73fa30523efa11b4ed95098}
+      \strng{authorfullhash}{4c7f8514b73fa30523efa11b4ed95098}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Blood revenge: The enactment and management of conflict in Montenegro and other tribal societies}
+      \field{year}{1984}
+    \endentry
+    \entry{bohm2016makes}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e8f8d2d2f6f5f48118718e5173573902}{%
+           family={Böhm},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e1e02decd622d21efd89431b0343f659}{%
+           family={Rusch},
+           familyi={R\bibinitperiod},
+           given={Hannes},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a2951d16ea15578136dfbd9059717b45}{%
+           family={Gürerk},
+           familyi={G\bibinitperiod},
+           given={Özgür},
+           giveni={Ö\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{daeef032933617d00830d3ec685925ca}
+      \strng{fullhash}{daeef032933617d00830d3ec685925ca}
+      \strng{authornamehash}{daeef032933617d00830d3ec685925ca}
+      \strng{authorfullhash}{daeef032933617d00830d3ec685925ca}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evol Hum Behav}
+      \field{number}{1}
+      \field{title}{What makes people go to war? Defensive intentions motivate retaliatory and preemptive intergroup aggression}
+      \field{volume}{37}
+      \field{year}{2016}
+      \field{pages}{29\bibrangedash 34}
+      \range{pages}{6}
+    \endentry
+    \entry{bowles2009did}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e0df54abddcd6c63678de2c0b46f9762}{%
+           family={Bowles},
+           familyi={B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{e0df54abddcd6c63678de2c0b46f9762}
+      \strng{fullhash}{e0df54abddcd6c63678de2c0b46f9762}
+      \strng{authornamehash}{e0df54abddcd6c63678de2c0b46f9762}
+      \strng{authorfullhash}{e0df54abddcd6c63678de2c0b46f9762}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5932}
+      \field{title}{Did warfare among ancestral hunter-gatherers affect the evolution of human social behaviors?}
+      \field{volume}{324}
+      \field{year}{2009}
+      \field{pages}{1293\bibrangedash 1298}
+      \range{pages}{6}
+    \endentry
+    \entry{boyd1989evolution}{article}{}
+      \name{author}{2}{}{%
+        {{hash=018a1bcaeb722c836df66d27c47f298a}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5dd3361ee65a9c47abb41d15036105e0}{%
+           family={Richerson},
+           familyi={R\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{4ed93ce0df9d75afe4bb83a428449920}
+      \strng{fullhash}{4ed93ce0df9d75afe4bb83a428449920}
+      \strng{authornamehash}{4ed93ce0df9d75afe4bb83a428449920}
+      \strng{authorfullhash}{4ed93ce0df9d75afe4bb83a428449920}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Soc Networks}
+      \field{number}{3}
+      \field{title}{The evolution of indirect reciprocity}
+      \field{volume}{11}
+      \field{year}{1989}
+      \field{pages}{213\bibrangedash 236}
+      \range{pages}{24}
+      \verb{file}
+      \verb :Various literature/Boyd Richerson 1989.pdf:PDF;:C\:\\Academic\\Various literature\\Boyd Richerson 1989.pdf:PDF
+      \endverb
+    \endentry
+    \entry{chagnon1988lifehistories}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ca5053b052146258f80139f10b2d70e6}{%
+           family={Chagnon},
+           familyi={C\bibinitperiod},
+           given={Napoleon\bibnamedelima A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca5053b052146258f80139f10b2d70e6}
+      \strng{fullhash}{ca5053b052146258f80139f10b2d70e6}
+      \strng{authornamehash}{ca5053b052146258f80139f10b2d70e6}
+      \strng{authorfullhash}{ca5053b052146258f80139f10b2d70e6}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Blood revenge is one of the most commonly cited causes of violence and warfare in tribal societies, yet it is largely ignored in recent anthropological theories of primitive warfare. A theory of tribal violence is presented showing how homicide, revenge, kinship obligations, and warfare are linked and why reproductive variables must be included in explanations of tribal violence and warfare. Studies of the Yanomamö Indians of Amazonas during the past 23 years show that 44 percent of males estimated to be 25 or older have participated in the killing of someone, that approximately 30 percent of adult male dealths are due to violence, and that nearly 70 percent of all adults over an estimated 40 years of age have lost a close genetic relative due to violence. Demographic data indicate that men who have killed have more wives and offspring than men who have not killed.}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{month}{2}
+      \field{number}{4843}
+      \field{title}{Life {Histories}, {Blood} {Revenge}, and {Warfare} in a {Tribal} {Population}}
+      \field{urlday}{2}
+      \field{urlmonth}{10}
+      \field{urlyear}{2013}
+      \field{volume}{239}
+      \field{year}{1988}
+      \field{urldateera}{ce}
+      \field{pages}{985\bibrangedash 992}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1126/science.239.4843.985
+      \endverb
+      \verb{file}
+      \verb Snapshot:/Users/david/Library/Application Support/Zotero/Profiles/opom5vmw.default/zotero/storage/DIEKFH7P/985.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.sciencemag.org/content/239/4843/985
+      \endverb
+    \endentry
+    \entry{chen2011potential}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4a759a57d4e7bd5d804df8c2b98b7c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b6f25c2ea695f4385f6acab832194dfc}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{0764a3c3d4abcc83303051508723a22e}
+      \strng{fullhash}{0764a3c3d4abcc83303051508723a22e}
+      \strng{authornamehash}{0764a3c3d4abcc83303051508723a22e}
+      \strng{authorfullhash}{0764a3c3d4abcc83303051508723a22e}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am Econ Rev}
+      \field{number}{6}
+      \field{title}{The Potential of Social Identity for Equilibrium Selection}
+      \field{volume}{101}
+      \field{year}{2011}
+      \field{pages}{2562\bibrangedash 2589}
+      \range{pages}{28}
+      \verb{file}
+      \verb :Competition\\IPD\\Literature\\Chen Chen 2011(WP).pdf:PDF
+      \endverb
+    \endentry
+    \entry{chen2009group}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b6f25c2ea695f4385f6acab832194dfc}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=48dd536799ea1fb898750f9254f11c1d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Sherry\bibnamedelima X.},
+           giveni={S\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{678847efceedfafea9c423471dd39569}
+      \strng{fullhash}{678847efceedfafea9c423471dd39569}
+      \strng{authornamehash}{678847efceedfafea9c423471dd39569}
+      \strng{authorfullhash}{678847efceedfafea9c423471dd39569}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-8282}
+      \field{journaltitle}{Am Econ Rev}
+      \field{number}{1}
+      \field{title}{Group identity and social preferences}
+      \field{volume}{99}
+      \field{year}{2009}
+      \field{pages}{431\bibrangedash 457}
+      \range{pages}{27}
+      \verb{file}
+      \verb :Competition\\Groups\\Literature\\chen, li, 2009 - group identity and social preferences.pdf:PDF
+      \endverb
+    \endentry
+    \entry{choi2007coevolution}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1b556b943cb791dc672d550df33c3de7}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jung-Kyoo},
+           giveni={J\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=e0df54abddcd6c63678de2c0b46f9762}{%
+           family={Bowles},
+           familyi={B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{9dc88f030abf5b12944c913fca67646c}
+      \strng{fullhash}{9dc88f030abf5b12944c913fca67646c}
+      \strng{authornamehash}{9dc88f030abf5b12944c913fca67646c}
+      \strng{authorfullhash}{9dc88f030abf5b12944c913fca67646c}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5850}
+      \field{title}{The coevolution of parochial altruism and war}
+      \field{volume}{318}
+      \field{year}{2007}
+      \field{pages}{636\bibrangedash 640}
+      \range{pages}{5}
+    \endentry
+    \entry{crosetto2012flexible}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a0416983b051121487542c2df30c19ce}{%
+           family={Crosetto},
+           familyi={C\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fc28bf7a126fd9ebb809fdfac744f3a6}{%
+           family={Weisel},
+           familyi={W\bibinitperiod},
+           given={Ori},
+           giveni={O\bibinitperiod}}}%
+        {{hash=962103160c338351b5e9f664e593384f}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b6108afa55a8b172cb8daace14cfdb9}
+      \strng{fullhash}{7b6108afa55a8b172cb8daace14cfdb9}
+      \strng{authornamehash}{7b6108afa55a8b172cb8daace14cfdb9}
+      \strng{authorfullhash}{7b6108afa55a8b172cb8daace14cfdb9}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jena Economic Research Papers}
+      \field{note}{Friedrich-Schiller-University Jena, Max-Planck-Institute of Economics}
+      \field{number}{2012-062}
+      \field{title}{A Flexible z-Tree Implementation of the Social Value Orientation Slider Measure (Murphy et al. 2011): Manual}
+      \field{year}{2012}
+    \endentry
+    \entry{DeDreu2014}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=7dd46119fc7daaf25bac651ec62fe74f}{%
+           family={{De Dreu}},
+           familyi={D\bibinitperiod},
+           given={Carsten\bibnamedelima K.W.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=dc87c8b61789b28aa84143e8bb74c6fb}{%
+           family={Balliet},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a0cf55f2680c3ab8f3fbd143eb304e31}{%
+           family={Halevy},
+           familyi={H\bibinitperiod},
+           given={Nir},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=8c800a9f3660c19c9bd3c17da727dd4a}{%
+           family={Elliot},
+           familyi={E\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d09eec81ff27da4c1523f082fb3b1549}
+      \strng{fullhash}{d09eec81ff27da4c1523f082fb3b1549}
+      \strng{authornamehash}{d09eec81ff27da4c1523f082fb3b1549}
+      \strng{authorfullhash}{d09eec81ff27da4c1523f082fb3b1549}
+      \strng{editornamehash}{8c800a9f3660c19c9bd3c17da727dd4a}
+      \strng{editorfullhash}{8c800a9f3660c19c9bd3c17da727dd4a}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Motivation Science}
+      \field{chapter}{1}
+      \field{issn}{2215-0919}
+      \field{title}{Chapter One -- Parochial Cooperation in Humans: Forms and Functions of Self-Sacrifice in Intergroup Conflict}
+      \field{volume}{1}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 47}
+      \range{pages}{47}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1016/bs.adms.2014.08.001
+      \endverb
+      \verb{file}
+      \verb :/Users/roizultan/Documents/Academic/Group reciprocity/Literature/De Dreu Balliet Halevy 2014.pdf:PDF;:E\:\\Academic\\Group reciprocity\\Literature\\De Dreu Balliet Halevy 2014.pdf:PDF
+      \endverb
+      \keyw{Altruism}
+    \endentry
+    \entry{esteban2012ethnicity}{article}{}
+      \name{author}{3}{}{%
+        {{hash=474cb799232d636c805be6be31bfb55a}{%
+           family={Esteban},
+           familyi={E\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6028671636ee96ea5d651ccb9a9ae1f8}{%
+           family={Mayoral},
+           familyi={M\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d8ab662529ff77a2e7edf535fbc17813}{%
+           family={Ray},
+           familyi={R\bibinitperiod},
+           given={Debraj},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{3900ab5e495629b6b0ed94521637305d}
+      \strng{fullhash}{3900ab5e495629b6b0ed94521637305d}
+      \strng{authornamehash}{3900ab5e495629b6b0ed94521637305d}
+      \strng{authorfullhash}{3900ab5e495629b6b0ed94521637305d}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{science}
+      \field{number}{6083}
+      \field{title}{Ethnicity and conflict: Theory and facts}
+      \field{volume}{336}
+      \field{year}{2012}
+      \field{pages}{858\bibrangedash 865}
+      \range{pages}{8}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Esteban Mayoral Ray 2012.pdf:PDF
+      \endverb
+    \endentry
+    \entry{falk2006theory}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           familyi={F\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62f4d33673a293fc9457a98daadd2feb}{%
+           family={Fischbacher},
+           familyi={F\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{fullhash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{authornamehash}{d7674051d1829818d34bfd47bf7a4afb}
+      \strng{authorfullhash}{d7674051d1829818d34bfd47bf7a4afb}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Game Econ Behav}
+      \field{number}{2}
+      \field{title}{A theory of reciprocity}
+      \field{volume}{54}
+      \field{year}{2006}
+      \field{pages}{293\bibrangedash 315}
+      \range{pages}{23}
+      \verb{file}
+      \verb :C\:\\Academic\\Various literature\\Falk Fischbacher 2006.pdf:PDF
+      \endverb
+    \endentry
+    \entry{fearon1996explaining}{article}{}
+      \name{author}{2}{}{%
+        {{hash=85d93b93d5348ad9754eaae2aa494482}{%
+           family={Fearon},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b16036bb72c02ebd624607ad68ebea87}{%
+           family={Laitin},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima D},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2135bb753e2102f744150dea3d67c949}
+      \strng{fullhash}{2135bb753e2102f744150dea3d67c949}
+      \strng{authornamehash}{2135bb753e2102f744150dea3d67c949}
+      \strng{authorfullhash}{2135bb753e2102f744150dea3d67c949}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American political science review}
+      \field{number}{4}
+      \field{title}{Explaining interethnic cooperation}
+      \field{volume}{90}
+      \field{year}{1996}
+      \field{pages}{715\bibrangedash 735}
+      \range{pages}{21}
+    \endentry
+    \entry{Fischbacher2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=62f4d33673a293fc9457a98daadd2feb}{%
+           family={Fischbacher},
+           familyi={F\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{62f4d33673a293fc9457a98daadd2feb}
+      \strng{fullhash}{62f4d33673a293fc9457a98daadd2feb}
+      \strng{authornamehash}{62f4d33673a293fc9457a98daadd2feb}
+      \strng{authorfullhash}{62f4d33673a293fc9457a98daadd2feb}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Exp Econ}
+      \field{number}{2}
+      \field{title}{{z-Tree:} {Zurich} toolbox for ready-made economic experiments}
+      \field{volume}{10}
+      \field{year}{2007}
+      \field{pages}{171\bibrangedash 178}
+      \range{pages}{8}
+    \endentry
+    \entry{gaertner2008whenrejection}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b689f73f3cd76cd25416291df99802af}{%
+           family={Gaertner},
+           familyi={G\bibinitperiod},
+           given={Lowell},
+           giveni={L\bibinitperiod}}}%
+        {{hash=100fadee61d6af7f96c114179ad35330}{%
+           family={Iuzzini},
+           familyi={I\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7da7bd833258b035d967fc61cdb570fd}{%
+           family={O'Mara},
+           familyi={O\bibinitperiod},
+           given={Erin\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a663a57815bbd3681a08b6d3c158f1d0}
+      \strng{fullhash}{a663a57815bbd3681a08b6d3c158f1d0}
+      \strng{authornamehash}{a663a57815bbd3681a08b6d3c158f1d0}
+      \strng{authorfullhash}{a663a57815bbd3681a08b6d3c158f1d0}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{{<}p{>}{<}br/{>}Two experiments examined the hypothesis that social rejection and perceived groupness function together to produce multiple-victim incidents of aggression. When a rejecter's group membership is salient during an act of rejection, the rejectee ostensibly associates the rejecter's group with rejection and retaliates against the group. Both experiments manipulated whether an aggregate of three persons appeared as separate individuals or members of an entity-like group and whether one of those persons rejected the participant. Consistent with the hypothesis, participants who experienced both rejection and perceived groupness behaved more aggressively against the aggregate (Experiment 1) and evidenced less favorable affective associations toward the aggregate (Experiment 2) than did participants who did not experience both rejection and perceived groupness.{<}/p{>}}
+      \field{issn}{0022-1031}
+      \field{journaltitle}{J Exp Soc Psychol}
+      \field{month}{7}
+      \field{number}{4}
+      \field{shorttitle}{When rejection by one fosters aggression against many}
+      \field{title}{When rejection by one fosters aggression against many: {Multiple}-victim aggression as a consequence of social rejection and perceived groupness}
+      \field{urlday}{20}
+      \field{urlmonth}{7}
+      \field{urlyear}{2011}
+      \field{volume}{44}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{958\bibrangedash 970}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 16/j.jesp.2008.02.004
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Full Text PDF:/Users/david/Library/Application Support/Zotero/Profiles/opom5vmw.default/zotero/storage/9P5T6T87/Gaertner et al. - 2008 - When rejection by one fosters aggression against m.pdf:application/pdf;ScienceDirect Snapshot:/Users/david/Library/Application Support/Zotero/Profiles/opom5vmw.default/zotero/storage/54X49TES/S0022103108000267.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022103108000267
+      \endverb
+      \keyw{Aggression,Entitativity,Ostracism,Perceived groupness,School violence,Social rejection}
+    \endentry
+    \entry{greiner2015subject}{article}{}
+      \name{author}{1}{}{%
+        {{hash=59405572abffd532b93e3d60be59c9e2}{%
+           family={Greiner},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{59405572abffd532b93e3d60be59c9e2}
+      \strng{fullhash}{59405572abffd532b93e3d60be59c9e2}
+      \strng{authornamehash}{59405572abffd532b93e3d60be59c9e2}
+      \strng{authorfullhash}{59405572abffd532b93e3d60be59c9e2}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2199-6776}
+      \field{journaltitle}{Journal of the Economic Science Association}
+      \field{number}{1}
+      \field{title}{Subject pool recruitment procedures: organizing experiments with ORSEE}
+      \field{volume}{1}
+      \field{year}{2015}
+      \field{pages}{114\bibrangedash 125}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/s40881-015-0004-4
+      \endverb
+    \endentry
+    \entry{greiner2005indirect}{article}{}
+      \name{author}{2}{}{%
+        {{hash=59405572abffd532b93e3d60be59c9e2}{%
+           family={Greiner},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c8aa270ef9860fe84be8a2b4562caceb}{%
+           family={Levati},
+           familyi={L\bibinitperiod},
+           given={{M. Vittoria}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2a74e0305503bc9122d23ec43d716232}
+      \strng{fullhash}{2a74e0305503bc9122d23ec43d716232}
+      \strng{authornamehash}{2a74e0305503bc9122d23ec43d716232}
+      \strng{authorfullhash}{2a74e0305503bc9122d23ec43d716232}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Econ Psychol}
+      \field{number}{5}
+      \field{title}{Indirect reciprocity in cyclical networks: An experimental study}
+      \field{volume}{26}
+      \field{year}{2005}
+      \field{pages}{711\bibrangedash 731}
+      \range{pages}{21}
+      \verb{file}
+      \verb :Group reciprocity\\Literature\\Greiner Levati 2005.pdf:PDF
+      \endverb
+    \endentry
+    \entry{guth2001trust}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3cf97139968d5796c20981246f24e77c}{%
+           family={Güth},
+           familyi={G\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=59925a1f7c43fac367aeadad56cf280d}{%
+           family={Königstein},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=28288869cc6bce58b909442ac0347786}{%
+           family={Marchand},
+           familyi={M\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b8d9b831c253b5d0fd4b1c26082752f2}{%
+           family={Nehring},
+           familyi={N\bibinitperiod},
+           given={K.D.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of SocioEconomics}%
+      }
+      \strng{namehash}{cc08f54856670db6b6543dfb93a2a663}
+      \strng{fullhash}{cc08f54856670db6b6543dfb93a2a663}
+      \strng{authornamehash}{cc08f54856670db6b6543dfb93a2a663}
+      \strng{authorfullhash}{cc08f54856670db6b6543dfb93a2a663}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Homo Oeconomicus}
+      \field{title}{Trust and Reciprocity in the Investment Game with Indirect Reward}
+      \field{volume}{18}
+      \field{year}{2001}
+      \field{pages}{241\bibrangedash 262}
+      \range{pages}{22}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Guth Konigstein Marchand 2001.pdf:PDF
+      \endverb
+    \endentry
+    \entry{haushofer_both_2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e34924a13640a37a189137933c2148ab}{%
+           family={Haushofer},
+           familyi={H\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=dbf388545bcf0ff1b1de1c3b5b1fb646}{%
+           family={Biletzki},
+           familyi={B\bibinitperiod},
+           given={Anat},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c08fa15373eeeaf086260703015358d5}{%
+           family={Kanwisher},
+           familyi={K\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e33c5e7e05b249743f2393b48518a79}
+      \strng{fullhash}{7e33c5e7e05b249743f2393b48518a79}
+      \strng{authornamehash}{7e33c5e7e05b249743f2393b48518a79}
+      \strng{authorfullhash}{7e33c5e7e05b249743f2393b48518a79}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{P Natl Acad Sci Usa}
+      \field{number}{42}
+      \field{title}{Both sides retaliate in the {Israeli}–{Palestinian} conflict}
+      \field{volume}{107}
+      \field{year}{2010}
+      \field{pages}{17927\bibrangedash 17932}
+      \range{pages}{6}
+    \endentry
+    \entry{henrich2010most}{article}{}
+      \name{author}{3}{}{%
+        {{hash=135deb37dc4a16e2d813922bf87fe654}{%
+           family={Henrich},
+           familyi={H\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f51781f3657fb07c616af31dba1200a}{%
+           family={Heine},
+           familyi={H\bibinitperiod},
+           given={Steven\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=27efbf5c59eef289ed6ad538d7449347}{%
+           family={Norenzayan},
+           familyi={N\bibinitperiod},
+           given={Ara},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Research}%
+      }
+      \strng{namehash}{a282865bcb7a8be6a278379d1005fe03}
+      \strng{fullhash}{a282865bcb7a8be6a278379d1005fe03}
+      \strng{authornamehash}{a282865bcb7a8be6a278379d1005fe03}
+      \strng{authorfullhash}{a282865bcb7a8be6a278379d1005fe03}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7302}
+      \field{title}{Most people are not WEIRD}
+      \field{volume}{466}
+      \field{year}{2010}
+      \field{pages}{29\bibrangedash 29}
+      \range{pages}{1}
+    \endentry
+    \entry{horowitz1985ethnicgroups}{book}{}
+      \name{author}{1}{}{%
+        {{hash=919eeac10b1aa6da1791fd41bac8ff7c}{%
+           family={Horowitz},
+           familyi={H\bibinitperiod},
+           given={D.\bibnamedelimi L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{919eeac10b1aa6da1791fd41bac8ff7c}
+      \strng{fullhash}{919eeac10b1aa6da1791fd41bac8ff7c}
+      \strng{authornamehash}{919eeac10b1aa6da1791fd41bac8ff7c}
+      \strng{authorfullhash}{919eeac10b1aa6da1791fd41bac8ff7c}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethnic {Groups} in {Conflict}}
+      \field{year}{1985}
+    \endentry
+    \entry{horowitz2001thedeadly}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8544c8f7a88211912b471ffd3bad982d}{%
+           family={Horowitz},
+           familyi={H\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{8544c8f7a88211912b471ffd3bad982d}
+      \strng{fullhash}{8544c8f7a88211912b471ffd3bad982d}
+      \strng{authornamehash}{8544c8f7a88211912b471ffd3bad982d}
+      \strng{authorfullhash}{8544c8f7a88211912b471ffd3bad982d}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The deadly ethnic riot}
+      \field{year}{2001}
+    \endentry
+    \entry{johnstone2004evolution}{article}{}
+      \name{author}{2}{}{%
+        {{hash=07b9d4971a2c667ab1841dbaf5781c70}{%
+           family={Johnstone},
+           familyi={J\bibinitperiod},
+           given={Rufus\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a4e06071fc950a168cbef4fe761a276b}{%
+           family={Bshary},
+           familyi={B\bibinitperiod},
+           given={Redouan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society}%
+      }
+      \strng{namehash}{6ef856c66cfbae2dbaa0de94bc4e17f3}
+      \strng{fullhash}{6ef856c66cfbae2dbaa0de94bc4e17f3}
+      \strng{authornamehash}{6ef856c66cfbae2dbaa0de94bc4e17f3}
+      \strng{authorfullhash}{6ef856c66cfbae2dbaa0de94bc4e17f3}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{P Roy Soc B-biol Sci}
+      \field{number}{1551}
+      \field{title}{Evolution of spite through indirect reciprocity}
+      \field{volume}{271}
+      \field{year}{2004}
+      \field{pages}{1917\bibrangedash 1922}
+      \range{pages}{6}
+    \endentry
+    \entry{kelly2005evolution}{article}{}
+      \name{author}{1}{}{%
+        {{hash=15bb1a53229a1a3000687161925e8790}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Raymond\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Acad Sciences}%
+      }
+      \strng{namehash}{15bb1a53229a1a3000687161925e8790}
+      \strng{fullhash}{15bb1a53229a1a3000687161925e8790}
+      \strng{authornamehash}{15bb1a53229a1a3000687161925e8790}
+      \strng{authorfullhash}{15bb1a53229a1a3000687161925e8790}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{P Natl Acad Sci Usa}
+      \field{number}{43}
+      \field{title}{The evolution of lethal intergroup violence}
+      \field{volume}{102}
+      \field{year}{2005}
+      \field{pages}{15294\bibrangedash 15298}
+      \range{pages}{5}
+    \endentry
+    \entry{kelly2000warless}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7486fd846b05232bf3539e172d49c460}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Raymond\bibnamedelima Case},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Michigan Press}%
+      }
+      \strng{namehash}{7486fd846b05232bf3539e172d49c460}
+      \strng{fullhash}{7486fd846b05232bf3539e172d49c460}
+      \strng{authornamehash}{7486fd846b05232bf3539e172d49c460}
+      \strng{authorfullhash}{7486fd846b05232bf3539e172d49c460}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Warless societies and the origin of war}
+      \field{year}{2000}
+    \endentry
+    \entry{kimbrough2015norms}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2fada8284d5d0de981258e34bec2f201}{%
+           family={Kimbrough},
+           familyi={K\bibinitperiod},
+           given={Erik\bibnamedelima O},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=84807ce30d6d292d059bd5b4fcd829b6}{%
+           family={Vostroknutov},
+           familyi={V\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{fullhash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{authornamehash}{60b255b167a534856e4a0d6bb04eea81}
+      \strng{authorfullhash}{60b255b167a534856e4a0d6bb04eea81}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Eur Econ Assoc}
+      \field{number}{3}
+      \field{title}{Norms make preferences social}
+      \field{volume}{14}
+      \field{year}{2015}
+      \field{pages}{608\bibrangedash 638}
+      \range{pages}{31}
+    \endentry
+    \entry{murphy2011measuring}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d096e050a41dd9c1367adc4b90961db7}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Ryan\bibnamedelima O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=db1ef8455b675abc27237332a4e75984}{%
+           family={Ackermann},
+           familyi={A\bibinitperiod},
+           given={Kurt\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=42fa0b4b3edae98d4379773182c29d51}{%
+           family={Handgraaf},
+           familyi={H\bibinitperiod},
+           given={Michel\bibnamedelimb J.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e51a7b3f173751cd486f2e9a14181eb7}
+      \strng{fullhash}{e51a7b3f173751cd486f2e9a14181eb7}
+      \strng{authornamehash}{e51a7b3f173751cd486f2e9a14181eb7}
+      \strng{authorfullhash}{e51a7b3f173751cd486f2e9a14181eb7}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Judgm Decis Mak}
+      \field{number}{8}
+      \field{title}{Measuring Social Value Orientation}
+      \field{volume}{6}
+      \field{year}{2011}
+      \field{pages}{771\bibrangedash 781}
+      \range{pages}{11}
+      \verb{file}
+      \verb :Various literature\\Murphy Ackermann Handgraaf 2011.pdf:PDF
+      \endverb
+    \endentry
+    \entry{nowak2006five}{article}{}
+      \name{author}{1}{}{%
+        {{hash=95f8b6483b4223659dce18f13b26bc41}{%
+           family={Nowak},
+           familyi={N\bibinitperiod},
+           given={Martin\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{fullhash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{authornamehash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{authorfullhash}{95f8b6483b4223659dce18f13b26bc41}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5805}
+      \field{title}{Five rules for the evolution of cooperation}
+      \field{volume}{314}
+      \field{year}{2006}
+      \field{pages}{1560\bibrangedash 1563}
+      \range{pages}{4}
+      \verb{file}
+      \verb :/Users/roizultan/Documents/Academic/Group reciprocity/Literature/Nowak 2006.pdf:PDF
+      \endverb
+    \endentry
+    \entry{nowak2012evolving}{article}{}
+      \name{author}{1}{}{%
+        {{hash=95f8b6483b4223659dce18f13b26bc41}{%
+           family={Nowak},
+           familyi={N\bibinitperiod},
+           given={Martin\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{fullhash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{authornamehash}{95f8b6483b4223659dce18f13b26bc41}
+      \strng{authorfullhash}{95f8b6483b4223659dce18f13b26bc41}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Theor Biol}
+      \field{title}{Evolving cooperation}
+      \field{volume}{299}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{file}
+      \verb :Various literature\\Nowak 2012.pdf:PDF
+      \endverb
+    \endentry
+    \entry{nowak2007upstream}{article}{}
+      \name{author}{2}{}{%
+        {{hash=95f8b6483b4223659dce18f13b26bc41}{%
+           family={Nowak},
+           familyi={N\bibinitperiod},
+           given={Martin\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ce9e938c8ac94456fa805feaa30942d7}{%
+           family={Roch},
+           familyi={R\bibinitperiod},
+           given={Sébastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society}%
+      }
+      \strng{namehash}{e14b6f5d65184c034589324d707c47db}
+      \strng{fullhash}{e14b6f5d65184c034589324d707c47db}
+      \strng{authornamehash}{e14b6f5d65184c034589324d707c47db}
+      \strng{authorfullhash}{e14b6f5d65184c034589324d707c47db}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{P Roy Soc B-biol Sci}
+      \field{number}{1610}
+      \field{title}{Upstream reciprocity and the evolution of gratitude}
+      \field{volume}{274}
+      \field{year}{2007}
+      \field{pages}{605\bibrangedash 610}
+      \range{pages}{6}
+      \verb{file}
+      \verb :/Users/roizultan/Documents/Academic/Group reciprocity/Literature/Nowak Roch 2007.pdf:PDF;:Group reciprocity\\Literature\\Nowak Roch 2007.pdf:PDF
+      \endverb
+    \endentry
+    \entry{shayo2010judicial}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1581bcfed710b23b79548df84f07477e}{%
+           family={Shayo},
+           familyi={S\bibinitperiod},
+           given={Moses},
+           giveni={M\bibinitperiod}}}%
+        {{hash=432a0eca2a98931b377a5a13e102357b}{%
+           family={Zussman},
+           familyi={Z\bibinitperiod},
+           given={Asaf},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fc46f673c463ec0b182c9c870845a6f}
+      \strng{fullhash}{6fc46f673c463ec0b182c9c870845a6f}
+      \strng{authornamehash}{6fc46f673c463ec0b182c9c870845a6f}
+      \strng{authorfullhash}{6fc46f673c463ec0b182c9c870845a6f}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Q J Econ}
+      \field{title}{Judicial ingroup bias in the shadow of terrorism}
+      \field{year}{2010}
+    \endentry
+    \entry{Singelis1995horizontal}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b93b1bb0e5b22e76c9aea5943f5a548b}{%
+           family={Singelis},
+           familyi={S\bibinitperiod},
+           given={Theodore\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=acb834bd1d6f01e3826707875880e100}{%
+           family={Triandis},
+           familyi={T\bibinitperiod},
+           given={Harry\bibnamedelima C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e269bcc086faf5167fc91d9336230b8e}{%
+           family={Bhawuk},
+           familyi={B\bibinitperiod},
+           given={Dharm\bibnamedelimb P.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=94515b41c9e6ed7cd4da1d05c6facf0d}{%
+           family={Gelfand},
+           familyi={G\bibinitperiod},
+           given={Michele\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{1edfc0ed52a3d5eee2b63d7f08eef865}
+      \strng{fullhash}{1edfc0ed52a3d5eee2b63d7f08eef865}
+      \strng{authornamehash}{1edfc0ed52a3d5eee2b63d7f08eef865}
+      \strng{authorfullhash}{1edfc0ed52a3d5eee2b63d7f08eef865}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cross-Cult Res}
+      \field{number}{3}
+      \field{title}{Horizontal and vertical dimensions of individualism and collectivism: A theoretical and measurement refinement}
+      \field{volume}{29}
+      \field{year}{1995}
+      \field{pages}{240\bibrangedash 275}
+      \range{pages}{36}
+      \verb{file}
+      \verb :Competition\\IPD\\Literature\\Singelis Triandis Bhawuk Gelfand 1995.pdf:PDF
+      \endverb
+    \endentry
+    \entry{stanca2009testing}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6dc80a6369fdadeb0bf98aa1f946f795}{%
+           family={Stanca},
+           familyi={S\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1b4daa6c3dac4b68214890acea13c4b8}{%
+           family={Bruni},
+           familyi={B\bibinitperiod},
+           given={Luigino},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9e9d6ab481b5327868f94b19ea3d210f}{%
+           family={Corazzini},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{438e15443d976bc7eba662b7fa097556}
+      \strng{fullhash}{438e15443d976bc7eba662b7fa097556}
+      \strng{authornamehash}{438e15443d976bc7eba662b7fa097556}
+      \strng{authorfullhash}{438e15443d976bc7eba662b7fa097556}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Econ Behav Organ}
+      \field{number}{2}
+      \field{title}{Testing theories of reciprocity: Do motivations matter?}
+      \field{volume}{71}
+      \field{year}{2009}
+      \field{pages}{233\bibrangedash 245}
+      \range{pages}{13}
+      \verb{file}
+      \verb :Various literature\\Stanca Bruni Corazzini 2009.pdf:PDF;:C\:\\Academic\\Various literature\\Stanca Bruni Corazzini 2009.pdf:PDF
+      \endverb
+    \endentry
+    \entry{stenstrom2008theroles}{article}{}
+      \name{author}{4}{}{%
+        {{hash=65027661d19e37829ad8b870dd170737}{%
+           family={Stenstrom},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=57211c5d5321a479585012457043b650}{%
+           family={Lickel},
+           familyi={L\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e8bea09ae02ab7db6291f8cd2faf3b53}{%
+           family={Denson},
+           familyi={D\bibinitperiod},
+           given={Thomas\bibnamedelima F.},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1bd52b7f8ff0dccd14c1bd6cbe69c4df}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Norman},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8b9ee0187abb5b37f1f54ec9de8f6cc3}
+      \strng{fullhash}{8b9ee0187abb5b37f1f54ec9de8f6cc3}
+      \strng{authornamehash}{8b9ee0187abb5b37f1f54ec9de8f6cc3}
+      \strng{authorfullhash}{8b9ee0187abb5b37f1f54ec9de8f6cc3}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new aspect of intergroup conflict was investigated{—}vicarious retribution{—}in which neither the agent of retribution nor the target of retribution are directly involved in the initial intergroup provocation. The underlying processes involved in vicarious intergroup retribution were tested correlationally (Study 1) and experimentally (Study 2). Both ingroup identification and outgroup entitativity predict the degree of vicarious retribution. In both studies, there was evidence of motivated cognition, specifically that highly identified individuals perceived the outgroup as higher in entitativity than individuals low in identification. Structural equation modeling demonstrated that part of the effect of identification on retribution against the outgroup was mediated through perceptions of entitativity.}
+      \field{issn}{0146-1672, 1552-7433}
+      \field{journaltitle}{Pers Soc Psychol B}
+      \field{month}{8}
+      \field{title}{The {Roles} of {Ingroup} {Identification} and {Outgroup} {Entitativity} in {Intergroup} {Retribution}}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2015}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1177/0146167208322999
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/david/Library/Application Support/Zotero/Profiles/opom5vmw.default/zotero/storage/67MFN29B/Stenstrom et al. - 2008 - The Roles of Ingroup Identification and Outgroup E.pdf:application/pdf;Snapshot:/Users/david/Library/Application Support/Zotero/Profiles/opom5vmw.default/zotero/storage/W3Z2NX2M/0146167208322999.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://psp.sagepub.com/content/early/2008/08/20/0146167208322999
+      \endverb
+    \endentry
+    \entry{tajfel1979integrative}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=d234567a16d76986d1a34f0623b6b071}{%
+           family={Tajfel},
+           familyi={T\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+        {{hash=21e7c6bf5a5c67f53cf840344521af8c}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=56d18e10fdeb3300a15acfceaa9a49ad}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={William\bibnamedelima G.},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a1f9d012c069727f3c4027e910508614}{%
+           family={Worchel},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Monterey, CA}%
+      }
+      \list{publisher}{1}{%
+        {Brookes/Coole}%
+      }
+      \strng{namehash}{3214a432615cd4e3ebaa8ebdc1b8e641}
+      \strng{fullhash}{3214a432615cd4e3ebaa8ebdc1b8e641}
+      \strng{authornamehash}{3214a432615cd4e3ebaa8ebdc1b8e641}
+      \strng{authorfullhash}{3214a432615cd4e3ebaa8ebdc1b8e641}
+      \strng{editornamehash}{fc6d5f378fbc8056d594acbc991d4604}
+      \strng{editorfullhash}{fc6d5f378fbc8056d594acbc991d4604}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Social Psychology of Intergroup Relations}
+      \field{chapter}{3}
+      \field{title}{An integrative theory of intergroup conflict}
+      \field{year}{1979}
+      \field{pages}{33\bibrangedash 47}
+      \range{pages}{15}
+      \verb{file}
+      \verb :Competition/Groups/Literature/Tajfel Turner 1979.pdf:PDF
+      \endverb
+    \endentry
+    \entry{tsvetkova2014social}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f68042a33fc1c73e8f8191f285624f64}{%
+           family={Tsvetkova},
+           familyi={T\bibinitperiod},
+           given={Milena},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a7f0882c3590714fdbd3987a6c8a8976}{%
+           family={Macy},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{fullhash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{authornamehash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{authorfullhash}{3fbf05d3ced9444903bdd102790bc798}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PloS one}
+      \field{number}{2}
+      \field{title}{The social contagion of generosity}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{e87275}
+      \range{pages}{-1}
+    \endentry
+    \entry{tsvetkova2015social}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f68042a33fc1c73e8f8191f285624f64}{%
+           family={Tsvetkova},
+           familyi={T\bibinitperiod},
+           given={Milena},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a7f0882c3590714fdbd3987a6c8a8976}{%
+           family={Macy},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{fullhash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{authornamehash}{3fbf05d3ced9444903bdd102790bc798}
+      \strng{authorfullhash}{3fbf05d3ced9444903bdd102790bc798}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sociological Science}
+      \field{title}{The Social Contagion of Antisocial Behavior.}
+      \field{volume}{2}
+      \field{year}{2015}
+      \field{pages}{36\bibrangedash 49}
+      \range{pages}{14}
+    \endentry
+    \entry{van1999pursuit}{article}{}
+      \name{author}{1}{}{%
+        {{hash=314a2563b40081e6e21d1aa5588ac37b}{%
+           family={Van\bibnamedelima Lange},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Paul\bibnamedelima AM},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{314a2563b40081e6e21d1aa5588ac37b}
+      \strng{fullhash}{314a2563b40081e6e21d1aa5588ac37b}
+      \strng{authornamehash}{314a2563b40081e6e21d1aa5588ac37b}
+      \strng{authorfullhash}{314a2563b40081e6e21d1aa5588ac37b}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Pers Soc Psychol}
+      \field{number}{2}
+      \field{title}{The pursuit of joint outcomes and equality in outcomes: An integrative model of social value orientation.}
+      \field{volume}{77}
+      \field{year}{1999}
+      \field{pages}{337}
+      \range{pages}{1}
+    \endentry
+    \entry{weisel2015ingroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fc28bf7a126fd9ebb809fdfac744f3a6}{%
+           family={Weisel},
+           familyi={W\bibinitperiod},
+           given={Ori},
+           giveni={O\bibinitperiod}}}%
+        {{hash=e8f8d2d2f6f5f48118718e5173573902}{%
+           family={Böhm},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{fullhash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{authornamehash}{cd2d1b206630f3f45bcdceec3516b587}
+      \strng{authorfullhash}{cd2d1b206630f3f45bcdceec3516b587}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Exp Soc Psychol}
+      \field{title}{``Ingroup love'' and ``outgroup hate'' in intergroup conflict between natural groups}
+      \field{volume}{60}
+      \field{year}{2015}
+      \field{pages}{110\bibrangedash 120}
+      \range{pages}{11}
+      \verb{file}
+      \verb :Teaching\\Social Dilemmas\\Articles\\Weisel Böhm 2015.pdf:PDF
+      \endverb
+    \endentry
+    \entry{wilson2017sentiments}{article}{}
+      \name{author}{2}{}{%
+        {{hash=217150b29ffb94e36eec341427ba3770}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Bart\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=41256de7442d73b482b3ab0536a2f733}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Vernon\bibnamedelima L},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{fullhash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{authornamehash}{5afe06e81dd8d16858f82779f5001203}
+      \strng{authorfullhash}{5afe06e81dd8d16858f82779f5001203}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Social Philosophy and Policy}
+      \field{number}{1}
+      \field{title}{Sentiments, Conduct, and Trust in the Laboratory}
+      \field{volume}{34}
+      \field{year}{2017}
+      \field{pages}{25\bibrangedash 55}
+      \range{pages}{31}
+      \verb{file}
+      \verb :Various literature/Wilson Smith Sentiments.pdf:PDF
+      \endverb
+    \endentry
+    \entry{wilson2003intergroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dc592a3f3fd9884eb0a74aa7b971a244}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3520a0881af7e69cc9669c3a82d1a13e}{%
+           family={Wrangham},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA}%
+      }
+      \strng{namehash}{37ed49ef980e1d74c50b9f3377d0edf9}
+      \strng{fullhash}{37ed49ef980e1d74c50b9f3377d0edf9}
+      \strng{authornamehash}{37ed49ef980e1d74c50b9f3377d0edf9}
+      \strng{authorfullhash}{37ed49ef980e1d74c50b9f3377d0edf9}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annu Rev Anthropol}
+      \field{number}{1}
+      \field{title}{Intergroup relations in chimpanzees}
+      \field{volume}{32}
+      \field{year}{2003}
+      \field{pages}{363\bibrangedash 392}
+      \range{pages}{30}
+    \endentry
+    \entry{world_bank_world_2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b7b1392937b89054ef8d8bf494c8dae0}{%
+           family={{World Bank}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Bank}%
+      }
+      \strng{namehash}{b7b1392937b89054ef8d8bf494c8dae0}
+      \strng{fullhash}{b7b1392937b89054ef8d8bf494c8dae0}
+      \strng{authornamehash}{b7b1392937b89054ef8d8bf494c8dae0}
+      \strng{authorfullhash}{b7b1392937b89054ef8d8bf494c8dae0}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0821384406}
+      \field{title}{World {Development} {Report} 2011: {Conflict}, {Security}, and {Development}}
+      \field{year}{2011}
+    \endentry
+    \entry{wrangham2012intergroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3520a0881af7e69cc9669c3a82d1a13e}{%
+           family={Wrangham},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=7a2c51bc1eaa04b841e5a3baf626a77e}{%
+           family={Glowacki},
+           familyi={G\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5aeff92d33f85edad66af1f76d1d3c9b}
+      \strng{fullhash}{5aeff92d33f85edad66af1f76d1d3c9b}
+      \strng{authornamehash}{5aeff92d33f85edad66af1f76d1d3c9b}
+      \strng{authorfullhash}{5aeff92d33f85edad66af1f76d1d3c9b}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hum Nature}
+      \field{number}{1}
+      \field{title}{Intergroup aggression in chimpanzees and war in nomadic hunter-gatherers}
+      \field{volume}{23}
+      \field{year}{2012}
+      \field{pages}{5\bibrangedash 29}
+      \range{pages}{25}
+    \endentry
+    \entry{wrangham2006comparative}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3520a0881af7e69cc9669c3a82d1a13e}{%
+           family={Wrangham},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=dc592a3f3fd9884eb0a74aa7b971a244}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=97d7fa6ac9dd7787a2ae6382c0bb20f0}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Martin\bibnamedelima N},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{85a81d0b859bbe0b51921c14002cf356}
+      \strng{fullhash}{85a81d0b859bbe0b51921c14002cf356}
+      \strng{authornamehash}{85a81d0b859bbe0b51921c14002cf356}
+      \strng{authorfullhash}{85a81d0b859bbe0b51921c14002cf356}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Primates}
+      \field{number}{1}
+      \field{title}{Comparative rates of violence in chimpanzees and humans}
+      \field{volume}{47}
+      \field{year}{2006}
+      \field{pages}{14\bibrangedash 26}
+      \range{pages}{13}
+      \verb{file}
+      \verb :E\:\\Dropbox\\Dave_Ro'i\\group and indiv reciprocity\\Wrangham et al 2006.pdf:PDF
+      \endverb
+    \endentry
+    \entry{yamagishi2000thegroup}{article}{}
+      \name{author}{2}{}{%
+        {{hash=88a327bc53753035bfbdc4062fd7dff8}{%
+           family={Yamagishi},
+           familyi={Y\bibinitperiod},
+           given={Toshio},
+           giveni={T\bibinitperiod}}}%
+        {{hash=32deaf5bfa6d013bd7f1398b187bf634}{%
+           family={Kiyonari},
+           familyi={K\bibinitperiod},
+           given={Toko},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{fullhash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{authornamehash}{1f2efe9341fca13f080aefd0039ccf05}
+      \strng{authorfullhash}{1f2efe9341fca13f080aefd0039ccf05}
+      \field{sortinit}{Y}
+      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Soc Psychol Quart}
+      \field{note}{contains references to literature on in-group favoritism in 2 person PDs}
+      \field{number}{2}
+      \field{title}{The {Group} as the {Container} of {Generalized} {Reciprocity}}
+      \field{volume}{63}
+      \field{year}{2000}
+      \field{pages}{116\bibrangedash 132}
+      \range{pages}{17}
+      \verb{file}
+      \verb :E\:\\Academic\\Group reciprocity\\Literature\\Yamagishi Kiyonari 2000.pdf:PDF;:Group reciprocity\\Literature\\Yamagishi Kiyonari 2000.pdf:PDF
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,2309 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{booktabs,multirow,array}
+\newcolumntype{x}[1]{>{\centering\arraybackslash}m{#1}}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -2090823052 "Ro'i Zultan" 
+\author 218412813 "David" 
+\author 754370499 "zultan" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\family sans
+Humans reciprocate intentional acts by discriminating against 
+\change_inserted 218412813 1457963228
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457963271
+
+\family sans
+we need an equivalent to 
+\begin_inset Quotes eld
+\end_inset
+
+co-ethnics
+\begin_inset Quotes erd
+\end_inset
+
+ for groups...
+ 
+\begin_inset Quotes eld
+\end_inset
+
+groupmates
+\begin_inset Quotes erd
+\end_inset
+
+, like 
+\begin_inset Quotes eld
+\end_inset
+
+team-mates
+\begin_inset Quotes erd
+\end_inset
+
+?
+\change_inserted -2090823052 1458457412
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458457552
+
+\family sans
+Why not just use ‘co-ethnics’ in scare quotes?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+group peers
+\end_layout
+
+\begin_layout Author
+David Hugh-Jones, Itay Ron and Ro'i Zultan
+\end_layout
+
+\begin_layout Abstract
+Cycles of intergroup revenge appear in large scale conflicts.
+ We experimentally test the hypothesis that humans practice group-based
+ reciprocity: if someone harms or helps them, they harm or help other members
+ of that person's group.
+ Subjects played a trust game, then allocated money between other people.
+ Senders whose partners returned more in the trust game gave more to that
+ partner's group members.
+ The effect was about 60 per cent of the size of the direct reciprocity
+ effect.
+ Receivers' allocations to group members did not depend on their partner's
+ play, suggesting that group reciprocity was only triggered when the partner's
+ intentions were unequivocal.
+\end_layout
+
+\begin_deeper
+\begin_layout Section
+Introduction
+\end_layout
+
+\end_deeper
+\begin_layout Abstract
+The evolution of cooperation poses a puzzle to evolutionary and social scientist
+s.
+ Cooperation---by which individuals forgo personal benefits to aid others---is
+ a hallmark of human uniqueness.
+ However, there is a direct evolutionary pressure selecting against cooperators
+ in favour of free riders, who can reap the societal benefits of cooperation
+ without paying the costs.
+ One mechanism that may underlie the evolution of cooperation is reciprocity
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nowak2006five,nowak2012evolving"
+
+\end_inset
+
+.
+ Direct reciprocity increases the fitness of cooperators, as helping another
+ individual leads to that individual reciprocating the help.
+ In indirect reciprocity, individuals help or harm other people than those
+ who have helped them.
+\end_layout
+
+\begin_layout Abstract
+Indirect reciprocity comes in two flavours: 
+\emph on
+downstream
+\emph default
+ reciprocity follows the 
+\change_deleted 218412813 1457963317
+principle
+\change_inserted 218412813 1457963318
+maxim
+\change_unchanged
+ 
+\change_deleted 218412813 1457963320
+of 
+\change_unchanged
+`do unto thy neighbour as they have done to others', whereas 
+\emph on
+upstream
+\emph default
+ reciprocity follows the 
+\change_deleted 218412813 1457963323
+principle
+\change_inserted 218412813 1457963323
+maxim
+\change_unchanged
+ 
+\change_deleted 218412813 1457963325
+of 
+\change_unchanged
+`do unto thy neighbour as others have done unto you'.
+ In this paper we study upstream indirect reciprocity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boyd1989evolution,nowak2005evolution,nowak2007upstream"
+
+\end_inset
+
+.
+ Compared to downstream reciprocity, upstream reciprocity is simpler to
+ implement, as it does not require tracking individual reputations
+\change_inserted 218412813 1457963311
+, 
+\change_deleted 218412813 1457963310
+---
+\change_unchanged
+but is more difficult to understand from an evolutionary point of view 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boyd1989evolution,nowak2005evolution"
+
+\end_inset
+
+.
+ Nonetheless, upstream reciprocity can co-evolve with direct or spatial
+ reciprocity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nowak2007upstream"
+
+\end_inset
+
+.
+ Furthermore, laboratory experiments provide positive evidence for upstream
+ reciprocity, as individuals are more generous to others if a third party
+ was generous to them 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dufwenberg2001direct,guth2001trust,greiner2005indirect"
+
+\end_inset
+
+, and the mere possibility of being harmed by a third party reduces cooperation
+ in a social dilemma 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "weisel2016social"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Abstract
+Direct and indirect reciprocity are embedded in a socially structured world.
+ Evidence suggests that human social behaviour---including cooperation and
+ reciprocity---is bounded by social groups 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tajfel1979integrative,yamagishi2000thegroup,balliet2014ingroup,DeDreu2014"
+
+\end_inset
+
+.
+ Humans cooperate more with, and reciprocate more towards members of their
+ group 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "chen2009group,chen2011potential"
+
+\end_inset
+
+; and they punish norm violators more if these harm a member of their own
+ group 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bernhard2006group,bernhard2006parochial"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Abstract
+Here we examine group-based upstream reciprocity, or 
+\emph on
+group reciprocity
+\emph default
+.
+ That is, an individual who is harmed (helped) by a member of an outgroup
+ becomes more likely to harm (help) others from that group.
+ Whereas group-based downstream reciprocity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bernhard2006group,bernhard2006parochial"
+
+\end_inset
+
+ follows the 
+\change_deleted 218412813 1457964071
+dictate
+\change_inserted 218412813 1457964072
+maxim
+\change_unchanged
+ `do unto others as they have done to members of 
+\emph on
+my
+\emph default
+ tribe', group-based upstream reciprocity follows the 
+\change_deleted 218412813 1457964073
+dictate
+\change_inserted 218412813 1457964075
+maxim
+\change_unchanged
+ `do unto others as members of 
+\emph on
+their
+\emph default
+ tribe have done to me' (Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:illustration"
+
+\end_inset
+
+).
+ 
+\change_inserted 218412813 1457964796
+Both kinds of motive can expand the scope of an individual-level conflict
+ into an inter-group conflict.
+ While (group-based) downstream reciprocity can bring a victim's groupmates
+ in as retaliators, upstream reciprocity makes members of the aggressor's
+ group into potential targets.
+ 
+\change_unchanged
+Ethnic conflicts provide ample evidence that group identities play an important
+ role in generalized reciprocity.
+ Humans take revenge on outgroups as well as on individuals, as evidenced
+ by the cycles of intergroup revenge that appear widespread in human conflict
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "horowitz2001thedeadly,horowitz1985ethnicgroups,chagnon1988lifehistories,shayo2010judicial"
+
+\end_inset
+
+.
+ 
+\change_deleted 218412813 1457968144
+Notwithstanding, surprisingly little work has examined this motivation.
+
+\change_unchanged
+ 
+\change_inserted 218412813 1457963391
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457968152
+I didn't like the next sentence much (yes, it's my own!) It makes us sound
+ mean; it highlights existing work; and it suggests reviewers who will then
+ be hostile....
+ On the other hand, it's honest to point out the previous literature....
+ So, have moved it down a bit -->
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted 218412813 1457964969
+Existing experiments are suggestive but lack material incentives 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "stenstrom2008theroles"
+
+\end_inset
+
+, cannot distinguish direct from group-based reciprocity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gaertner2008whenrejection"
+
+\end_inset
+
+ or cannot rule out strategic motives 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hugh-jones2013intergroup"
+
+\end_inset
+
+.
+ 
+\change_inserted 218412813 1457964896
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457964911
+I agree, we can skip this as irrelevant for now.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted 218412813 1457964914
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aureli1992kinoriented"
+
+\end_inset
+
+ found in a correlational study that attacked Japanese macaques are more
+ likely to show aggression to the attacker's kin, but did not control for
+ a general increase in aggression by the victim.
+ 
+\change_inserted 218412813 1457968203
+
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted 218412813 1457968891
+Upstream group reciprocity also has different cognitive requirements from
+ related phenomena.
+ While in-group altruism and group-based downstream reciprocity require
+ people to differentiate their own group from outsiders---
+\begin_inset Quotes eld
+\end_inset
+
+us
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset Quotes eld
+\end_inset
+
+them
+\begin_inset Quotes erd
+\end_inset
+
+---upstream group reciprocity requires them to differentiate between different
+ outgroups---between 
+\begin_inset Quotes eld
+\end_inset
+
+them and them
+\begin_inset Quotes erd
+\end_inset
+
+---and to keep a mental account of outgroups' reputation.
+ Upstream group reciprocity could thus provide an evolutionary basis for
+ the phenomenon of outgroup stereotyping 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457969153
+[list of citations to prove what a big phenomenon this is.
+ Include maybe Social Categorization Theory...
+ which is maybe an alternative evolutionary explanation, not just a proximate
+ one.
+ We shd talk about this, you probably know more.]
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457968705
+do you think this is too big a stretch?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -2090823052 1458670760
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458670797
+I don't mind putting it in.
+ If a referee does, we'll take it out.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename upstream.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Someone who was helped or harmed becomes more likely to help or harm new
+ partners.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename group.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Group reciprocity: upstream reciprocity is particularly directed at new
+ partners that belong to the same group as the initial partner.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Indirect reciprocity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+We ran a laboratory experiment to test the hypothesis that people reciprocate
+ 
+\change_deleted 754370499 1456928224
+in
+\change_inserted 754370499 1456928224
+to
+\change_inserted 218412813 1457968406
+wards
+\change_unchanged
+ groups.
+ After an initial group-formation stage, participants interacted in two
+ strategic stages.
+ The first stage represented the upstream interaction, in which the individual
+ could be helped by another person.
+ We implemented this as a Trust Game (TG) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "berg1995trust"
+
+\end_inset
+
+, in which the Sender
+\begin_inset space ~
+\end_inset
+
+(S) receives
+\begin_inset space ~
+\end_inset
+
+150 money-equivalent tokens, and chooses how many of them to send to the
+ Responder
+\begin_inset space ~
+\end_inset
+
+(R).
+ The amount sent is multiplied by a factor of
+\begin_inset space ~
+\end_inset
+
+3, so that R receives between 0
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+450 tokens, of which he can send any number back to S.
+ The TG enables us to model two types of interactions.
+ Whereas R is clearly kind when returning money (and nasty when exploiting
+ a generous proposer by keeping the received amount), S's intentions are
+ equivocal.
+ Sending money can be driven by selfish expectations of reciprocity, while
+ not sending can be driven by caution.
+ Thus,
+\begin_inset space ~
+\end_inset
+
+R experiences kind or nasty 
+\emph on
+actions
+\emph default
+, while
+\begin_inset space ~
+\end_inset
+
+S experiences kind or nasty actions and 
+\emph on
+intentions
+\emph default
+.
+\end_layout
+
+\begin_layout Abstract
+The second stage represented the reciprocal action, in which the individual
+ could help others.
+ We implemented this interaction as an allocation game, in which an allocator
+ allocates a fixed amount between two recipients.
+ In Direct Reciprocity rounds, the recipients included the TG partner; in
+ Group Reciprocity rounds, a member of the TG partner's group; and in In-Group
+ Favouritism rounds, a member of the allocator's group.
+ The other recipient was always a member of a third, neutral, group.
+ Baseline rounds included two neutral recipients, to test whether the TG
+ experience lead allocators to discriminate in absence of any reciprocal
+ or group motivations.
+
+\change_inserted 218412813 1457965387
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457965412
+what do you think? better here?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+This design is an advance on previous work 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gaertner2008whenrejection,stenstrom2008theroles,hugh-jones2013intergroup"
+
+\end_inset
+
+, because it tests for group reciprocity using material incentives, clearly
+ differentiates the individual partner from his or her group members, and
+ rules out strategic motives.
+\change_inserted -2090823052 1458670901
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458670933
+This just looks like we're trying to ignore existing work.
+ I think we should say a bit more about what they did.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted 218412813 1457965474
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457965500
+I'm not sure we need a results preview in such a short paper.
+ It deflates the tension a bit.
+\change_inserted -2090823052 1458670861
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458670894
+I followed what I saw in Proceeding papers.
+ Four short sentences seem OK.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted 218412813 1457965503
+The allocation decisions revealed that reciprocating intentions generalizes
+ to groups.
+ The effect of group-based upstream reciprocity was approximately 63% of
+ that of direct reciprocity.
+ Although we found strong evidence for direct reciprocity of actions, this
+ did not generalize to the group level.
+ Allocations favoured in-group members, indicating that our group manipulation
+ was successful.
+\change_unchanged
+
+\end_layout
+
+\begin_deeper
+\begin_layout Section
+Method
+\end_layout
+
+\end_deeper
+\begin_layout Abstract
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:design"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Each session consisted of
+\begin_inset space ~
+\end_inset
+
+24 participants, who were randomly allocated 
+\change_inserted 218412813 1457965607
+in
+\change_unchanged
+to six groups of four.
+ To distinguish from the groups in which participants interacted throughout
+ the different stages of the experiment, we refer to the identity-relevant
+ initial group as a 
+\emph on
+Team
+\emph default
+.
+ Each participant was identified throughout the experiment by team colour
+ and individual number (1--4) within the team.
+ At the beginning of the experiment, we informed participants that the experimen
+t has five distinct stages.
+ In each stage, new groups are formed, and it is possible (though not necessary)
+ that two participants will be in the same group in two different stages.
+ The specific instructions for each stage were dist
+\change_inserted 218412813 1457965562
+ri
+\change_deleted 218412813 1457965562
+ir
+\change_unchanged
+buted and read aloud at the beginning of the stage.
+ The five stage were a group formation stage, the TG stage, the AG stage,
+ a social value orientation elicitation 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*{murphy2011measuring}
+\end_layout
+
+\end_inset
+
+ stage and a collectivism scale measurement 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*[adapted from the horizontal collectivism scale in]{Singelis1995horizontal
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Abstract
+Following 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet*{chen2009group}
+\end_layout
+
+\end_inset
+
+, we created group identity in the first stage by allowing participants
+ to consult each other using anonymous chat wh
+\change_inserted 218412813 1457965593
+ile
+\change_deleted 218412813 1457965592
+en
+\change_unchanged
+ solving a simple task.
+ Participants solved five Raven matrices (see supplementary material).
+ Each matrix was presented on screen for 120
+\begin_inset space ~
+\end_inset
+
+seconds, during which each participant could both send written messages
+ to the team and update her own answer.
+ The final answer submitted at the end of the 120
+\begin_inset space ~
+\end_inset
+
+seconds determined payoffs, with 10
+\begin_inset space ~
+\end_inset
+
+tokens paid for each correct answer.
+ To further boost group identity through a common goal, 
+\change_inserted 218412813 1457965676
+team members each earned 
+\change_unchanged
+an additional bonus of 5
+\begin_inset space ~
+\end_inset
+
+tokens 
+\change_deleted 218412813 1457965681
+was earned 
+\change_unchanged
+if all four team members answered correctly.
+\end_layout
+
+\begin_layout Abstract
+Next, participants were rematched into pairs to play the one-shot TG.
+ To facilitate understanding, participants played five practice rounds,
+ in which they entered decisions both as
+\begin_inset space ~
+\end_inset
+
+S and as
+\begin_inset space ~
+\end_inset
+
+R.
+ In the actual interaction, participants could see their TG partner's team
+ colour and individual number.
+ The kindness of the Sender was measured as the share of the endowment sent,
+ and of the Responder as the share of the received amount sent back.
+ Responder's kindness was not defined for six (out of 96) responders whose
+ partner did not send any money.
+\end_layout
+
+\begin_layout Abstract
+The third stage consisted of six rounds.
+ In each round, participants interacted in a group of three, identified
+ by team colour and number.
+ The allocation game was implemented as a random dictator game as follows.
+ Each player in the group of three received 100
+\begin_inset space ~
+\end_inset
+
+tokens to allocate within the group.
+ The allocator received 30
+\begin_inset space ~
+\end_inset
+
+tokens, and could freely allocate the remaining 70
+\begin_inset space ~
+\end_inset
+
+tokens between the other two players.
+ 
+\change_inserted 218412813 1457965760
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457965763
+what's the cite?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+Previous research found that people do not harm, but refrain from helping
+ negatively perceived out-groups
+\change_inserted -2090823052 1458671001
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "weisel2015ingroup"
+
+\end_inset
+
+
+\change_unchanged
+.
+ Accordingly, we set the parameters of the game 
+\change_deleted 218412813 1457966434
+such
+\change_inserted 218412813 1457966434
+so
+\change_unchanged
+ that, compared to the reference point of the allocator's own share, an
+ equal division benefits both other players.
+ The matching scheme ensured that over the six rounds, each participant
+ was in the same group of three exactly once with a member of her own team
+ (treatment IG), once with her TG partner (Treatment DR), and twice with
+ other members of the TG partner's team (treatment GR).
+ The remaining two rounds served as the baseline (B) treatment.
+ 
+\change_deleted 218412813 1457966450
+For example.
+ 
+\change_unchanged
+Note that the matching is not independent.
+ For example, if one player is in treatment DR, than the other two are in
+ treatments D
+\change_deleted 218412813 1457966456
+r
+\change_inserted 218412813 1457966456
+R
+\change_unchanged
+ and either B or GR.
+ No feedback was provided between rounds.
+ The payoffs for this stage were determined by one randomly chosen round
+ of the six rounds, and the allocat
+\change_inserted 218412813 1457966387
+ion
+\change_deleted 218412813 1457966385
+or
+\change_unchanged
+ decision of one randomly chosen player in each group.
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted 218412813 1457966610
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457966682
+we should probably mention the results from 4th and 5th stages.
+ Not sure if we've done them, but the obvious thing is just to look separately
+ at high/low SVO people, and high/low collectivism people.
+ We need only write a line or two.
+\change_inserted -2090823052 1458671596
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458671652
+Looks like there is something in the collectivism scale.
+ Doesn't correlate with in-group favouritism, but GR and DR are stronger
+ for people with low collectivism measure.
+ I'm not sure whether low index means high or low collectivism.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+The fourth stage implemented the slider measure
+\change_inserted 218412813 1457966487
+ of social value orientation
+\change_unchanged
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*{murphy2011measuring,crosetto2012flexible}
+\end_layout
+
+\end_inset
+
+, in which participants choose nine allocations between themselves and another
+ person.
+ For consistency with the previous stages, the team identity of the partner
+ was known.
+ To keep the decision independent of previous experience with the different
+ teams, we matched participants within teams.
+ Consistent
+\change_inserted 218412813 1457966508
+ly
+\change_unchanged
+ with the notion of humans as parochial altruists, we believe that such
+ in-group allocations best reflect social preferences
+\change_inserted 218412813 1457966523
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457966555
+a relevant cite may be useful - maybe 
+\begin_inset Quotes eld
+\end_inset
+
+parochial altruism
+\begin_inset Quotes erd
+\end_inset
+
+ and/or the cite that Oxytocin only increases in-group trust or whatever
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ Payoffs were determined by one randomly chosen decision of the nine decisions
+ made by one randomly chosen player in each dyad.
+ The decisions yielded 
+\change_deleted 218412813 1457966572
+for each participant 
+\change_unchanged
+a social orientation angle
+\change_inserted 218412813 1457966581
+ for each participant
+\change_unchanged
+, with
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0^{\circ}$
+\end_inset
+
+ corresponding to selfishness, 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+ to pure altruism, and negative angles to spitefulness.
+\end_layout
+
+\begin_layout Abstract
+After the fifth and final stage
+\change_deleted 218412813 1457966694
+ of
+\change_inserted 218412813 1457966695
+(
+\change_deleted 218412813 1457966694
+ 
+\change_inserted 218412813 1457966598
+a 
+\change_unchanged
+non-strategic and non-incentivised collectivism measurement
+\change_inserted 218412813 1457966698
+)
+\change_unchanged
+, participants learned 
+\change_deleted 218412813 1457966721
+of 
+\change_unchanged
+their cumulative payoff in tokens, and final payment in New Israeli Shekels.
+ 
+\change_inserted 218412813 1457966731
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457966739
+earlier it says 
+\begin_inset Quotes eld
+\end_inset
+
+six out of ninety-six
+\begin_inset Quotes erd
+\end_inset
+
+?
+\change_inserted -2090823052 1458672128
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458672139
+Earlier as in before we ran more sessions?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+One hundred and ninety two participants, recruited using ORSEE 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*{greiner2015subject}
+\end_layout
+
+\end_inset
+
+ participated in eight sessions conducted between June 2014 and January
+ 2015.
+ Due to software malfunction in one session, the data from the AG sixth
+ round were not saved.
+ The experiment was programmed in z-Tree 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*{Fischbacher2007}
+\end_layout
+
+\end_inset
+
+.
+ The average payment was 72
+\begin_inset space ~
+\end_inset
+
+NIS (approximately $18) for a duration of 70
+\begin_inset space ~
+\end_inset
+
+minutes.
+\end_layout
+
+\begin_deeper
+\begin_layout Section
+Results
+\end_layout
+
+\end_deeper
+\begin_layout Abstract
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:results"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+We report results on allocations, discrimination between recipients, and
+ direct and group reciprocity.
+ All reported statistical tests are based on 
+\change_inserted 218412813 1457966766
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457966787
+what's a mixed-effect regression? DHJ
+\change_inserted -2090823052 1458672173
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458672178
+fixed and random
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+mixed-effects regressions with robust standard errors clustered on subjects.
+ See the supplementary material for the full specification and results.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[tbp] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+sym#1{
+\backslash
+ifmmode^{#1}
+\backslash
+else
+\backslash
+(^{#1}
+\backslash
+)
+\backslash
+fi} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Allocations and discrimination 
+\backslash
+label{tab:results}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{p{4cm}*{3}{x{2.5cm}}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{4}{c}{Senders} 
+\backslash
+
+\backslash
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{table_senders.tex}     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{4}{c}{Responders} 
+\backslash
+
+\backslash
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{table_responders.tex} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{4}{p{0.9
+\backslash
+textwidth}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize 
+\end_layout
+
+\begin_layout Plain Layout
+
+Notes: Mean discrimination, mean allocation, and reciprocity (marginal effect
+ of TG partner's kindness on allocations) by recipient's identity.
+ Estimates are based on mixed-effects regressions with robust standard errors
+ clustered on subjects.
+ Separate regressions for discrimination, Senders' allocations, and Responders'
+ allocations.
+\end_layout
+
+\begin_layout Plain Layout
+
+Discrimination is higher than between two neutral players in all three experimen
+tal conditions.
+ Allocations to in-group members are consistently higher than for a neutral
+ player.
+ Allocations to the TG partner strongly depend on his TG behavior.
+ Allocations to the TG partner's team mates is dependent on his TG behavior
+ only for Senders.
+ Significance of comparison to Baseline is marked.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sym{*}, 
+\backslash
+sym{**}, and 
+\backslash
+sym{***} indicate 
+\backslash
+(p<0.10
+\backslash
+), 
+\backslash
+(p<0.05
+\backslash
+), and 
+\backslash
+(p<0.01
+\backslash
+), respectively.
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{table} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+The second column in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Table~
+\backslash
+ref{tab:results}
+\end_layout
+
+\end_inset
+
+ presents the mean allocations.
+ Participants gave significantly more to members of their own team at the
+ expense of the neutral recipient (
+\begin_inset Formula $z=5.55,p<0.005$
+\end_inset
+
+ for senders, 
+\begin_inset Formula $z=4.79,p<0.001$
+\end_inset
+
+ for responders), establishing that our group formation manipulation was
+ successful in inducing group identity and triggering in-group favouritism.
+ Allocations to the TG
+\begin_inset space ~
+\end_inset
+
+partner and his team mates were not significantly different to the baseline
+\begin_inset space ~
+\end_inset
+
+35 (
+\begin_inset Formula $p>0.440$
+\end_inset
+
+ for all comparisons).
+ Nonetheless, allocators discriminated significantly more than in the baseline
+ both when interacting with their TG partner (
+\begin_inset Formula $z=9.36,p<0.001$
+\end_inset
+
+) and with his team mates (
+\begin_inset Formula $z=4.56,p<0.001),$
+\end_inset
+
+as reported in the first column of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Table~
+\backslash
+ref{tab:results}
+\end_layout
+
+\end_inset
+
+.
+ The interaction of the identity of the recipient and the allocator's TG
+ role (sender or receiver) was not significant (
+\begin_inset Formula $\chi^{2}=1.42,p=0.700$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Subsection*
+Direct and group reciprocity
+\end_layout
+
+\end_deeper
+\begin_layout Abstract
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:reciprocity"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:reciprocity"
+
+\end_inset
+
+ presents the allocations made in the DR and GR conditions separated by
+ the whether the kindness of the action of the TG partner was below the
+ median or not.
+ The median kindness of the senders was
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ (median transfer of
+\begin_inset space ~
+\end_inset
+
+75 out of
+\begin_inset space ~
+\end_inset
+
+150 tokens).
+ The median kindness of the responders was
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ (median share returned matches the amount sent).
+ The figure reveals strong direct reciprocity.
+ Senders allocate less than the baseline
+\begin_inset space ~
+\end_inset
+
+35 tokens to responders who failed to at least compensate the sender for
+ the amount sent.
+ Responders both allocate more than
+\begin_inset space ~
+\end_inset
+
+35 tokens to senders who sent at least half their endowment, and less to
+ those who sent less.
+ These observations are confirmed by the regression analysis (see third
+ column in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Table~
+\backslash
+ref{tab:results})
+\end_layout
+
+\end_inset
+
+.
+ Allocations to the TG partners increase with that partner's kindness both
+ for senders (
+\begin_inset Formula $z=1.75,p=0.080$
+\end_inset
+
+ and for responders (
+\begin_inset Formula $z=4.96,p<0.001$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Abstract
+Group reciprocity, however, is only observed for senders, who allocate less
+ to team mates of a responder who failed to at least compensate the sender
+ for the amount sent---a clear signal of bad intentions.
+ Responders, on the other hand, although directly reciprocating the TG partner,
+ do not systematically discriminate against team mates of a sender who sent
+ little---an unkind action that does not unequivocally signals a bad intention.
+ The regression analysis shows no significant effect of sender kindness
+ on responder's allocation to the sender's team mates (
+\begin_inset Formula $z=0.86,p=0.391$
+\end_inset
+
+).
+ The responder's kindness, on the other hand, significantly increases allocation
+s made to his team mates (
+\begin_inset Formula $z=2.02,p<0.05$
+\end_inset
+
+).
+ The estimated ratio of the group and direct reciprocity coefficients is
+ 0.63, implying that for every allocation dollar that the responder loses
+ due to an unkind action in the TG, his team mates lose
+\begin_inset space ~
+\end_inset
+
+63 cents.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ Allocations made by to the TG partner (Direct Reciprocity) and his team
+ mates (Group Reciprocity) by TG partner's kindness with
+\begin_inset space ~
+\end_inset
+
+95% confidence intervals based on subject-level averages.
+ Responders give more (less) to senders who sent more (less) then the median
+ (equal to exactly half the endowment)---but do not generalize to the sender's
+ team mates.
+ Senders give less to responders who returned less than the median (equal
+ to exactly 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+, i.e., the amount sent) and their team mates.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:reciprocity"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Reciprocity.pdf
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Section
+Discussion
+\end_layout
+
+\end_deeper
+\begin_layout Abstract
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:conclusion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted 218412813 1457967206
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967635
+I'm not really comfortable with the discussion yet.
+ The action/intention distinction, which is certainly plausible, is not
+ completely proven by our result.
+ If we make it the centrepiece of the conclusion, then we may be setting
+ ourselves up to be shot down.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967955
+I know, we need a non-obvious result to talk about! One solution is to say
+ that we open the door to further study of the roots of conflict.
+ That's a bit weak, though.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967935
+Another solution is maybe to do a second experiment.
+ I had an idea: could we show that this motive actually can lead to a full-blown
+ intergroup conflict?
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+Our results 
+\change_deleted 218412813 1457967035
+suggest
+\change_inserted 218412813 1457967037
+show
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967038
+right?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ that upstream reciprocity is moderated by social boundaries.
+ We distinguish between two types of reciprocity: reciprocated actions and
+ reciprocated intentions 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{stanca2009testing}
+\end_layout
+
+\end_inset
+
+.
+ 
+\change_deleted 218412813 1457967052
+We find that p
+\change_inserted 218412813 1457967052
+P
+\change_unchanged
+eople discriminate against others who harm them even if the harmful action
+ does not necessarily indicate 
+\change_deleted 218412813 1457967054
+deleterious
+\change_inserted 218412813 1457967055
+bad
+\change_unchanged
+ intentions.
+ 
+\change_inserted 218412813 1457967118
+However, t
+\change_deleted 218412813 1457967118
+T
+\change_unchanged
+he
+\change_inserted 218412813 1457967063
+y
+\change_unchanged
+ 
+\change_deleted 218412813 1457967065
+generalisation
+\change_inserted 218412813 1457967068
+only generalize
+\change_unchanged
+ to the perpetrator's 
+\change_deleted 218412813 1457967070
+fellow
+\change_unchanged
+ group members
+\change_inserted 218412813 1457967125
+ 
+\change_deleted 218412813 1457967122
+, however, arises only 
+\change_unchanged
+if the intentions behind the harmful actions are unequivocally 
+\change_deleted 218412813 1457967143
+malignant
+\change_inserted 218412813 1457967143
+bad
+\change_unchanged
+.
+ 
+\end_layout
+
+\begin_layout Abstract
+This observation raises new questions regarding the nature of reciprocity
+ and the role of intentions (or perceptions thereof).
+ One possible interpretation stems 
+\change_deleted 218412813 1457967182
+in
+\change_inserted 218412813 1457967183
+from
+\change_unchanged
+ the distinction between intention-based and outcome-based motives in reciprocal
+ behaviour 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "falk2006theory"
+
+\end_inset
+
+.
+ Whereas intention-based reciprocity is plausibly generalisable
+\change_inserted 218412813 1457967509
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967516
+explain why.
+ This is my attempt:
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+,
+\change_inserted 218412813 1457967533
+ i.e.
+ subjects may wish to punish
+\change_unchanged
+ there is no reason to generalize outcome-based reciprocity to group members
+ who don't share the outcome.
+ The notion of outcome-based reciprocity is also related to that of restorative
+ justice.
+ A desire to equalize earnings given the TG behaviour in the experiment
+ can motivate discrimination against a misb
+\change_inserted 218412813 1457967197
+e
+\change_deleted 218412813 1457967197
+a
+\change_unchanged
+having TG partner, but not his fellow group members.
+\end_layout
+
+\begin_layout Abstract
+A related distinction is between actions and types.
+ Stereotypical thinking can easily lead people to generalise types, whereas
+ gene
+\change_inserted 218412813 1457967422
+r
+\change_unchanged
+alisation of actions is nonsensical.
+ The conjecture `One member of the Blue group is a bad person, therefore
+ all Blue members are bad' is plausible.
+ 
+\change_inserted 218412813 1457967781
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967867
+Why? Presumably if you think one member of Blue is bad, as evidenced by
+ their failure to return money; and you generalize this to other members
+ of Blue being bad; then you also expect those members not to return money.
+ I.e.
+ the second conjecture is implied by the first.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+The conjecture `One member of the Blue group did not send any money, therefore
+ other Blue members did not send money' is not---as the other Blue members
+ did not even necessarily face the choice of how much to send as a sender.
+ 
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted 218412813 1457969083
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457969093
+I put this in at the intro and talked about stereotypes.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted 218412813 1457969081
+Group reciprocity is related to previously studied phenomena such as direct
+ reciprocity, downstream reciprocity, and upstream reciprocity.
+ The psychological distinction with respect to group-based downstream reciprocit
+y is non-trivial, as group reciprocity goes beyond the construction of the
+ social world as divides into categories of Us and Them---as in Social Identity
+ Theory, which focuses on one's self perception and self social identity---to
+ allow for more graded construction that allows for different categories
+ of Them and Them.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Abstract
+Upstream reci
+\change_inserted 218412813 1457967973
+pr
+\change_deleted 218412813 1457967973
+rp
+\change_unchanged
+ocity is notoriously difficult to understand in evolutionary terms 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boyd1989evolution,nowak2007upstream"
+
+\end_inset
+
+ Group reciprocity may provide another piece of the puzzle, as it 
+\change_deleted 218412813 1457968921
+potentially 
+\change_unchanged
+provides two new channels 
+\change_deleted 218412813 1457968925
+in
+\change_inserted 218412813 1457968934
+by
+\change_unchanged
+ which upstream reciprocity may evolve.
+ First, group members are interdependent, especially in 
+\change_inserted 218412813 1457968021
+the 
+\change_unchanged
+small groups 
+\change_deleted 218412813 1457968037
+depictive of human organisation throughout most of the
+\change_inserted 218412813 1457968061
+that were the norm during most of human
+\change_deleted 218412813 1457968047
+ species'
+\change_unchanged
+ evolutionary history.
+ Punishing a perpetrator's group member 
+\change_deleted 218412813 1457968960
+leads to a material harm
+\change_inserted 218412813 1457968963
+therefore indirectly harms
+\change_deleted 218412813 1457968964
+ to
+\change_unchanged
+ the perpetrator, who is dependent on his peers for, e.g., public goods provision.
+ Thus, group reciprocity may bridge upstream indirect reciprocity and direct
+ reciprocity.
+\change_inserted 218412813 1457967916
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457967927
+Hmm, ok I guess I need to write some theory to justify this.
+\change_inserted -2090823052 1458672348
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2090823052 1458672380
+In this paper, I think, it's enough to hint the the directions.
+ We should definitely try to see whether this pans out.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Abstract
+Second, the evolution of indirect reciprocity acts by way of chains of reciproca
+l actions, which return with some probability
+\change_inserted 218412813 1457967999
+ 
+\change_unchanged
+to the original instigator of the chain 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nowak2007upstream"
+
+\end_inset
+
+.
+ In a population organised in groups, such that people interact more frequently
+ with their own group members, group reciprocity may increase the likelihood
+ of successful reciprocal chains, facilitating the evolution of upstream
+ reci
+\change_inserted 218412813 1457969003
+pr
+\change_deleted 218412813 1457969003
+rp
+\change_unchanged
+ocity.
+ We aim to explore these ideas in future work.
+\change_inserted 218412813 1457969008
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457969058
+I don't think Nature/Science will go for that.
+ It sounds too like tentative early research.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Abstract
+SUMMARY PARAGRAPH? WHAT DO WE WANT TO SAY ABOUT YAMAGISHI?
+\change_inserted 218412813 1457968099
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 218412813 1457968116
+Yamagishi saw the group as the container of generalized reciprocity.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Us and Them: we extend to Them and Them
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Intentions generalize, actions don't
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Possible evolutionary channels
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+For example, we thought of it also as generalising types.
+ It doesn't make sense to punish Blue 2 for an action that he didn't do
+ (Blue 1 did).
+ The generalisation of if Blue 1 did something than all Blues did it is
+ clearly nonsensical.
+ But if the motivation is to punish bastards, it makes some sense to generalise
+ that all blues are bastards (well, 63% percent they are :P), and therefore
+ I should punish all of them.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yamagishi2000thegroup"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "grouprec"
+options "chicago"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

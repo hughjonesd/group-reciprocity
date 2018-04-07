@@ -1,0 +1,87 @@
+---
+title: "EHB simulations appendix"
+author: "David Hugh-Jones"
+date: "16/03/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+
+library(dplyr)
+library(ggplot2)
+
+cut_pval <- function (pval) {
+  ifelse(pval < 0.05, 
+        as.character(cut(pval, c(0, 0.001, 0.01, 0.05, 1), labels = c("< 0.001", "< 0.01", "< 0.05", "> 0.05"), 
+          right = FALSE)),
+        paste('=', myfmt(pval)))
+}
+
+```
+\section{Simulations}
+
+We ran simulations of the evolution of group reciprocity as follows. The population consisted of $G$ groups of size $n$.
+Each generation consisted of $T$ rounds. In each round, all individuals were matched with a randomly selected target 
+from a different group. The individual could either help the target, losing $c = 1$ and benefiting the target $b$, or not 
+help, which did not affect payoffs. 
+
+Individuals were of two types. Selfish types never help. Group reciprocal types condition on their current target's group.
+If they have never been targeted by someone from that group before, they help. If they have been targeted in the
+previous $m$ rounds by one or more persons from that group, then they help with probability equal to the proportion of
+times they were helped. For example, if they were targeted by persons from that group 5 times in the previous $m$ rounds,
+and were helped 3 times, then they help with probability 3/5 = 60\%.
+
+After each generation, each individual changed type with independently drawn probability $\pi = 0.05$, copying a 
+new type from one other individual in the population. Individuals' probability of being copied was proportional 
+to their own total payoff. This could represent either a process of success-biased cultural transmission, or evolution
+with payoffs representing fitness and full mixing across populations. The simulation ran until one strategy evolved 
+to fixation in the whole population.
+
+Our base simulation has $T = m = 60$ and $G = 10$ groups, with the initial type distribution being 50\% selfish and
+50\% group reciprocal, drawn independently for all individuals. We vary the benefit of being helped $b$, and the 
+group size $n$, from 12 to 30. In the "short memory" variant we set $T = m = 30$. In the "many groups" variant 
+we set $G = 20$. We ran ten simulations of each parameter configuration. The figure shows the proportion of times 
+that GR evolved to fixation. In each case, larger $b$ and smaller $n$ make it easier for
+group reciprocity to evolve.
+
+
+```{r sims, warning = FALSE, error = FALSE, echo = FALSE}
+load("bound-09-19-19.50.RData")
+result1 <- result
+load("bound-09-20-10.01.RData")
+result2 <- result
+load("bound-09-20-16.54.RData")
+result3 <- result
+
+result <- bind_rows(result1, result2, result3)
+rm(result1,result2,result3)
+
+summary_res <- result %>% group_by(memory, G, b, gsize) %>% summarize(GR_wins = mean(winner=="GR"))
+crf_test <- t.test(cor_reput_fit ~ winner == "GR", result)
+
+```
+
+The mechanism for group reciprocity's evolution is as follows. The cost of helping is balanced against the benefit
+that a target who is a group reciprocator will subsequently help one's own group with increased probability. In this
+case, with probability $1/n$, one will oneself be helped. Thus, group reciprocity can evolve much like individual
+reciprocity so long as the benefit/cost ratio $b$ is high enough. 
+
+
+It is only advantageous to help if the target is a group reciprocator. Group reciprocity itself achieves this by
+counting the number of times that help has come from the group. If there is sufficient variation between groups in the
+proportion of group reciprocators, then this will be an effective heuristic, and groups with a good reputation will be
+helped more. In the simulations, the correlation between
+individual fitness, and the reputation of the individual's group (average number of times it had helped), was a good
+predictor of whether GR would evolve to fixation: the mean correlation was `r round(crf_test$estimate[2], 2)` when GR fixed and `r round(crf_test$estimate[1], 2)` when selfishness fixed (p `r cut_pval(crf_test$p.value)`).
+
+```{r simulations, fig.cap = "Simulation results. $b$ = benefit of being helped. $n$ = group size.", fig.align = "center", fig.width = 6, fig.height = 4,  out.width='6in', out.height='4in', dev = 'png', dpi = 300, echo = FALSE}
+
+summary_res$Condition <- sprintf("m = t = %s, G = %s", summary_res$memory, summary_res$G)
+summary_res$grwc       <- cut(summary_res$GR_wins, 0:10/10, include.lowest = TRUE)
+ggplot(summary_res, aes(gsize, b, fill = grwc)) + geom_raster() + 
+      scale_fill_brewer(palette = 'RdYlBu') +
+      facet_wrap(~Condition) + 
+      guides(fill = guide_legend(reverse = TRUE, title = 'Prob. GR fixed')) +
+      theme_minimal(base_size = 13) +
+      xlab('n')
+```

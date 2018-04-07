@@ -1,0 +1,216 @@
+
+
+The literature on the evolution of intergroup violence is divided into three schools. Cultural theories argue there is
+no innate tendency to intergroup aggression. Parochial altruism theories argue that intergroup violence was a driver of
+within-group altruism, via group selection; as a result, intergroup violence can involve self-sacrifice for one's group
+members . The "chimpanzee model", by contrast, argues that early humans, like chimpanzees, only attack when odds are
+very favourable; thus conflict is motivated only by self-interest \citep{wrangham2012intergroup}. 
+
+Paradoxically, group reciprocity could have evolved as a human-specific adaptation to maintain peace with outgroups. 
+When there is group reciprocity, someone who harms an outgroup member brings retaliation on his
+own group. This gives his group members an incentive to maintain peace.
+
+For example, among Montenegrin headhunters, a person who has been insulted may take revenge against
+the insulter or someone in his clan. This puts the two clans "in blood". People are often restrained from
+violence by fellow clan members, who are aware this will make them targets for retaliation. (Boehm, blood revenge) 
+Kelly (2000) argues that group reciprocity ("social substitutability") is more important when there is a 
+strong political clan organization; however, hunter-gatherers do sometimes practice group reciprocity. 
+
+By contrast, while chimpanzees do practice retaliation and reconciliation among alliances within the band, they 
+do not reciprocate towards other bands. Instead, they always attack stranger chimpanzees, when it is safe to do so 
+[Wrangham and Glowacki 2012].  The risk of being 
+attacked forces chimps to avoid territory bordering other bands, which limits their available space for foraging 
+[cite].
+
+While group reciprocity can benefit the group, to evolve it must increase individual fitness. In the appendix we 
+run simulations showing how this can happen. Individuals are divided into groups of size $n$. They are either selfish 
+or group reciprocal types. Each 
+period, each individual has an opportunity to help or harm a randomly chosen outgroup member. Helping has a 
+fitness cost $c$ while providing a benefit $b$ to the target. Selfish types never help, while group reciprocators
+help in the first instance, and then help with a probability proportional to the number of times they have been
+helped before by a member of the outgroup.
+
+If the helper is facing a group reciprocator, then the benefit of helping is that in future the helper's own 
+group members will be helped. This benefit is a public good within the group, since the probability that 
+the helper himself is the group member helped on any occasion is $1/n$. Thus, group reciprocity only evolves
+if the benefit/cost ratio $b/c$ is high enough compared to the group size.  
+In our simulations, group reciprocity is stable if $b/c > n$. For real early human groups, this would require a
+benefit/cost ratio of at least 20-30. [right? cites, see below] 
+
+Several factors could lower the benefit/cost ratio that would make group reciprocity stable. Relatedness within
+kin groups would increase the future benefit of one's group being helped. The same would hold if groups were
+mutually dependent, for example because members contribute to a shared collective resource. Groups might also act 
+collectively to encourage revenge, or alternatively, to restrain initial acts of harm. [cite Chagnon 1988 on
+encouraging retaliation - men who exact revenge have higher marital success; and Boehm blood revenge on 
+restraining initial acts] Indeed, groups may take revenge collectively. [Chagnon, Boehm] This would strengthen the
+motivation to initial restraint, since an act of aggression would result in the whole outgroup retaliating, rather
+than just the individual.
+
+Nevertheless, the high b/c ratio required for group reciprocity to evolve fits a "chimpanzee model" of conflict
+where attacks are only launched if it is low risk (e.g. with numerical superiority or an ambush). This may also explain 
+why most salient examples of group reciprocity are seen in the "negative" domain of harm and conflict. When b/c is high,
+hurting or refraining from helping is a "nasty"" thing to do, since it imposes a large loss on the target for a relatively
+small gain to oneself.
+
+
+---
+
+Paradoxically, group reciprocity could have evolved as a human-specific adaptation to maintain peace with outgroups. 
+When there is group reciprocity, someone who harms an outgroup member brings retaliation on his
+own group. This gives his group members an incentive to maintain peace \citep{boehm1984blood}.
+
+For example, among Montenegrin headhunters, a person who has been insulted may take revenge against
+the insulter or someone in his clan. This puts the two clans "in blood". People are often restrained from
+violence by fellow clan members, who are aware this will make them targets for retaliation. (Boehm, blood revenge) 
+Kelly (2000) argues that group reciprocity ("social substitutability") is more important when there is a 
+strong political clan organization; however, hunter-gatherers do sometimes practice group reciprocity. 
+
+By contrast, while chimpanzees do practice retaliation and reconciliation among alliances within the band, they 
+do not reciprocate towards other bands. Instead, they always attack stranger chimpanzees, when it is safe to do so 
+[Wrangham and Glowacki 2012].  The risk of being 
+attacked forces chimps to avoid territory bordering other bands, which limits their available space for foraging 
+[cite].
+
+While group reciprocity can benefit the group, to evolve it must increase individual fitness. In the appendix we 
+run simulations showing how this can happen. Individuals are divided into groups of size $n$. They are either selfish 
+or group reciprocal types. Each 
+period, each individual has an opportunity to help or harm a randomly chosen outgroup member. Helping has a 
+fitness cost $c$ while providing a benefit $b$ to the target. Selfish types never help, while group reciprocators
+help in the first instance, and then help with a probability proportional to the number of times they have been
+helped before by a member of the outgroup.
+
+If the helper is facing a group reciprocator, then the benefit of helping is that in future the helper's own 
+group members will be helped. This benefit is a public good within the group, since the probability that 
+the helper himself is the group member helped on any occasion is $1/n$. Thus, group reciprocity only evolves
+if the benefit/cost ratio $b/c$ is high enough compared to the group size.  
+In our simulations, group reciprocity is stable if $b/c > n$. For real early human groups, this would require a
+benefit/cost ratio of at least 20-30. [right? cites, see below] 
+
+Several factors could lower the benefit/cost ratio that would make group reciprocity stable. Relatedness within
+kin groups would increase the future benefit of one's group being helped. The same would hold if groups were
+mutually dependent, for example because members contribute to a shared collective resource. Groups might also act 
+collectively to encourage revenge, or alternatively, to restrain initial acts of harm. [cite Chagnon 1988 on
+encouraging retaliation - men who exact revenge have higher marital success; and Boehm blood revenge on 
+restraining initial acts] Indeed, groups may take revenge collectively. [Chagnon, Boehm] This would strengthen the
+motivation to initial restraint, since an act of aggression would result in the whole outgroup retaliating, rather
+than just the individual.
+
+Nevertheless, the high b/c ratio required for group reciprocity to evolve fits a "chimpanzee model" of conflict
+where attacks are only launched if it is low risk (e.g. with numerical superiority or an ambush). This may also explain 
+why most salient examples of group reciprocity are seen in the "negative" domain of harm and conflict. When b/c is high,
+hurting or refraining from helping is a "nasty"" thing to do, since it imposes a large loss on the target for a relatively
+small gain to oneself.
+
+
+We ran a laboratory experiment to test the hypothesis that people reciprocate towards groups. Although field observations 
+from conflict are highly suggestive, they are loaded with individual and group context and history. Observing group 
+reciprocity under controlled laboratory conditions with artifical groups identifies group reciprocity as an innate 
+human tendency [XXX no]. Cleanly identifying group reciprocity requires controlling for three confounds: individual level 
+reciprocity, e.g. if subjects' actions affect an entire group including the original actor who helped or harmed them; 
+generalized reciprocity, where subjects reciprocate not specifically towards the original actor’s group, but towards 
+other people in general; and strategic interactions, where apparent reciprocity is driven by reputation-building.
+our experiment fulfils all three: subjects can differentiate the original actor from his or her group members, 
+they interact both with these group members and with members of other groups, and we minimize strategic concerns by not 
+giving feedback about subjects' actions.
+
+  * Kelly (2005) argues that humans with ranged weapons probably did not practice war against neighbours - too 
+  risky and tech favours defensive. But he ignores the game theoretic logic that makes it risky to 
+  unilaterally renounce violence. GR could be a missing piece of the puzzle. [not sure about this]
+  
+  
+  
+BITS AND BOBS
+
+Jones (2000): humans may have adaptations for group nepotism: "adaptations leading them to construct solidary groups enforcing an ethic of unidirectional altruism toward kin". Suggests there may be "conditional nepotism",
+I will help my kin if you do too. Hence an "axiom of amity" - you should help your kin. And the fact that
+cultural "relatedness" doesn't map to the biological concept completely: because kin altruism should depend
+on the level of solidarity, which is a cultural variable.
+He has a table of population sizes and subgroup estimated sizes. Lowest (Yanomami) is 32; median is 326.
+  
+Wrangham (2012). The "chimpanzee model" that humans and chimps have the same evolved aggression tendencies to
+outgroups: "a tendency to kill members of neighboring groups when killing could be carried out safely". Human
+differences - e.g. self-sacrifice in war - are cultural not evolutionary. Contrasts with "parochial altruism"
+where humans evolved to self-sacrifice; or nonadaptive models.
+Interactions are usually mutual avoidance; when at close quarters, aggressive display. Lethal attacks
+only when strong asymmetries (e.g. several males encounter a lone male/mother with offspring). Lone adults
+tend to avoid the border between 2 communities. Risk of death from intergroup attacks is significant (maybe > 1 in 1000).
+Simple warfare (not same as modern "above military horizon" warfare) among humans: there is a distinction
+between limited, "internal" war among bands who are usually cooperative and external war between different societies, whichi is unremitting. (This from Kelly 2000.) "To the extent that internal war “originates as an alternation of war and peace, that is, as a war/peace system” (Kelly 2000:118), it differs from the persistently hostile character of intergroup aggression among chimpanzees."... "In sum, whereas internal war was highly variable in frequency and clearly oscillated with relaxed peace, the relatively few cases of hunter-gatherers living with different societies of hunter-gatherers as neighbors show that the threat of violence was never far away."
+But human raiding too was only done when you expected to win - attacking parties have few casualties.
+Argues that indiv selection, not group selection matters, because group selection would require group extinction
+to be higher than intergroup migration. *Note though that only females migrate, so if something was on the Y
+chromosome.
+  
+read - (Goodall 1986; Manson and Wrangham 1991; Roscoe 2007; Trudeau et al. 1981; van der Dennen 2002; Wilson and Wrangham 2003; Wrangham 1999, 2006; Wrangham and Peterson 1996)  
+
+Boehm (2012):
+- feelings of vengeance, and retaliatory killing, are common among tribesmen and h-gs; though tribesmen
+have more developed ideologies of vengeance.
+- among chimps and bonobos, within the dominance hierarchy, negative reciprocity is hard to observe
+  (you can't challenge the alpha without a serious fight); and alphas help to control fights. Within group
+  they have vicarious retribution. Bonobos also observe collective negative reciprocity; but
+  this is within the group against bullying males inc. the alpha. 
+- he suggests that vengeance was enabled in humans by their egalitarian structure.
+NB he also argues that bands averaged about 20-30 ppl in the pleistocene.
+- Disputes often avoided between groups by avoidance.
+- Only tribal agriculturalists show extensive "social substitutability" - perhaps because they couldn't move
+  away. But h-gs do do it. See Kelly 2000 again! Among h-gs it's more by close kin, e.g. Netsilik.
+- Argues that the Montenegrins and some others others "channel retaliatory feelings" to "limit social damage".
+
+  read - Sahlins stone age economics; Chagnon 1983*;
+  
+Chagnon 1988 - 
+  "if killing occurs within the village, the village fissions anad the principals of the two new groups then
+ begin raiding each other"
+  * "swift retaliation in kind serves as a deterrent over the long run". He argues that kinship helps to
+  solve the public good problem. 
+  * kin groups also pooled resources.
+  * Men who have killed have (many) more children then those who have not. 
+  "Until recently in human history, successful warriors were traditionally rewarded with public offices
+  and political power which, in turn, was used for reproductive advantage"
+  
+Rusch 2014
+- review of parochial altruism
+- notes that standard PD models can't capture spiteful "-/-" altruism
+- other models have an intergroup contest
+- typical models rely on intergroup selection and assume (constant?) outgroup aggression in a contest
+- questions the "assumption of total war between groups"
+- empirical evidence: individual effort is adjusted by own costs
+- plenty of evidence that indeed warfare increases status
+- alternative hypotheses to paroch. alt.:
+  - group reciprocity as a heuristic, i.e. in group bias is because you expect to see more
+    of your ingroup in future
+  - chimpanzee model i.e. only attack when there is an imbalance of power. Simple, but can't explain
+    altruistic self-sacrifice in war.
+  - male warrior hypothesis i.e. peacock's tail
+
+Fry and Soderbergh 2013
+  - Is there war among hunter-gatherers?
+  - As they are mobile, egalitarian, have few resources, we'd expect little intergroup conflict
+  * so, there's a controversy about this. Perhaps we can suggest a new way forward?
+  - In fact, not much evidence for war - they find most socs indeed have interindividual killings
+  not intergroup killings.
+
+Maria Gomez et al 2016
+  - they compare human violence levels with other species
+  [to read]
+  
+Boehm Rusch and Gurerk 2016
+  - in EHB! We should cite...
+  - they run an experiment looking at motivations for defence in group conflict
+  - one kind of defence was retaliation
+  - an IPD-MD
+  - in one condition the "defenders" can play with the strategy method, conditioning
+    on the strategy of the first mover
+  - second movers displayed reciprocity; and might also "first-strike" preemptively.
+  * we should probably cite this and explain why they're doing it wrong (well, at least in 
+    terms of *our* hypothesis, maybe not in terms of their own...)
+    
+Bowles 2009
+  - model of parochial altruism spreading via group selection in conflict
+  - instead of asking "were ancestral humans warlike" he asks, was there enough
+    intergroup conflict to drive in-group altruism? He writes down a model with
+    regular intergroup contests to the death, and estimates it for plausible parameters.
+
+To read:
+Keeley 1996 - war before civilization?

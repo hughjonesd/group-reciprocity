@@ -1,0 +1,198 @@
+Ref: EVOLHUMBEHAV_2017_270
+Title: Humans reciprocate intentional harm by discriminating against group peers
+Journal: Evolution and Human Behavior
+
+Dear Dr. Hugh-Jones,
+
+Thank you for submitting your manuscript to Evolution and Human Behavior. I have completed the review of your manuscript and a summary is appended below. The reviewers recommend reconsideration of your paper following major revision. I invite you to resubmit your manuscript after addressing all reviewer comments.
+
+The reviewers provide numerous constructive comments that will be important address before submitting a revision.  Reviewer 2 in particular points out key concerns about theoretical framing, experimental setup, and interpretation which deserve careful consideration.  Also, regarding the simulation, I agree with R1 that they don't contribute much to the paper, and that the real potential of the paper is in the empirical findings.
+
+When resubmitting your manuscript, please carefully consider all issues mentioned in the reviewers' comments, outline every change made point by point, and provide suitable rebuttals for any comments not addressed.
+
+To submit your revised manuscript:
+
+Log into EVISE® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=EVOLHUMBEHAV
+Locate your manuscript under the header 'My Submissions that need Revisions' on your 'My Author Tasks' view
+Click on 'Agree to Revise'
+Make the required edits
+Click on 'Complete Submission' to approve
+What happens next?
+After you approve your submission preview you will receive a notification that the submission is complete. To track the status of your paper throughout the editorial process, log in to Evise® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=EVOLHUMBEHAV.
+
+I look forward to receiving your revised manuscript as soon as possible.
+
+Kind regards,
+
+Dr Hruschka
+Editor
+Evolution and Human Behavior
+
+Comments from the editors and reviewers:
+-Reviewer 1
+
+  -
+
+This is a well-designed study on an interesting and under-theorized question: does group-based reciprocity drive harm towards outgroups. The manuscript is well-written with the experimental design clearly articulated and it fits within a larger body of experimental work using versions of the DG and TG to explore and test hypotheses about real-world intergroup relationships. I see the key contribution of this manuscript being that it advances a novel and important line of theorizing about the origins of intergroup relationships. In this respect, I am optimistic it will simulate more theory on this topic.
+
+ 
+
+ I recommend publication pending minor revisions and have a few general and specific comments below.
+
+ 
+
+--------
+
+I find the simulations not very convincing and think they could be safely removed from the ms without losing much of substance. But it’s also fine if they remain in.
+
+ 
+
+Their results find group based reciprocity only towards receivers, not senders, which weakens the interpretation from their experimental results. They provide one plausible explanation but it might also be the case that upstream reciprocity doesn’t shape these types of intergroup interactions or the experimental design doesn’t adequately capture real-world phenomena in this context. Nonetheless, I don’t see this as a serious flaw of their paper.
+
+ 
+
+I would have found the claim of “intentional” harm more compelling if they included an unintentional harm as a control. However, I don’t see this as serious enough to warrant running more experiments for the sake of this paper though.
+
+ 
+
+Minor Comments
+
+Page 4, Line 199: Typo: “reciprocity” is spelled incorrectly.
+
+ 
+
+Page 15, lines 842-846: can you unpack this sentence? It’s a little too opaque.
+
+ 
+
+Line 84, page 2. Tit-for-tat conflict doesn’t imply general reciprocity including both harm and help but rather reciprocity for harm.
+
+ 
+
+Page 3, line 168: chimpanzees do not live in “bands”, which refers to a type of human social organization. They live in “communities”, which is the term for the chimpanzee unit of social organization. Many human hunter-gatherers and some horticulturalists lived in “bands” but not all of them.
+
+ 
+
+Page 166:: “well-defined” institutions? What does ‘well-defined’ mean? Is this a term Kelly uses?  If not, I don’t think it’s an accurate assessment of war/ peace systems and would strongly suggest deleting it.  
+
+ 
+
+Page 14, line 780: “the argument of Pietraszewski” is introduced out of the blue as if this is if his ideas were what was designed to be tested in this study. I would suggest rephrasing it or introducing Pietraszewski’s paper earlier in the manuscript.
+
+ 
+
+Page 14, lines 814-815. Whether HGs had “generally peaceful” relationships is the subject of intense dispute and the authors don’t adequately support this claim and cite work elsewhere in this manuscript that argues to the contrary. This debate can be safely dodged by rephrasing this sentence to say “….group reciprocity can help explain why some groups have relatively peaceful intergroup relationships.”  Or “…why hunter-gatherers have lower rates of intergroup violence than horticulturalists or pastoralists”. Neither of these are contentious. For a reference that directly compares rates of death due to warfare between subsistence styles you can cite: Wrangham, Richard W., Michael L. Wilson, and Martin N. Muller. "Comparative rates of violence in chimpanzees and humans." Primates 47.1 (2006): 14-26.
+
+ 
+
+I have several suggestions about references you might consider:
+
+ 
+
+P.2. Line 7: the citation to World Bank is strange. You might consider citing a review on group based conflict, these two below cover this terrain more comprehensively: 
+
+Esteban, J., Mayoral, L., & Ray, D. (2012). Ethnicity and conflict: Theory and facts. science, 336(6083), 858-865.
+
+ Or
+
+
+Glowacki, Luke, Michael L. Wilson, and Richard W. Wrangham. "The evolutionary anthropology of war." Journal of Economic Behavior & Organization (2017). 
+
+ 
+
+The role of parochial altruism and intergroup conflict has been written about more widely than just Choi and Bowles. See for example: Rusch, Hannes. "The evolutionary interplay of intergroup conflict and altruism in humans: a review of parochial altruism theory and prospects for its extension." Proceedings of the Royal Society of London B: Biological Sciences 281.1794 (2014): 20141539.
+
+
+
+Citations for tit-for-tat logic would do well to include a review or theory paper consider:
+
+Boehm, Christopher. Blood revenge: The enactment and management of conflict in Montenegro and other tribal societies. University of Pennsylvania Press, 1984.
+
+ 
+
+Boehm, Christopher. "Retaliatory violence in human prehistory." The British Journal of Criminology 51.3 (2011): 518-534.
+
+ 
+
+Page 156-157: Fry and Soderberg don’t actually show that intergroup conflict among HGs is rare. They only report number of people killed with no denominator. They found 148 killings occurred and were present in all but 3 societies and made up 34% of total killings. So I think it’s a bit off hand on the basis of this to state that conflict appears to have been rare, especially when numerous other reviews find evidence to the contrary, including the one you cite (Wrangham and Glowacki 2012). What you can safely claim is that HGs had lower rates of deaths from warfare than farmers and pastoralists. For support for this you can see Wrangham, Richard W., Michael L. Wilson, and Martin N. Muller. "Comparative rates of violence in chimpanzees and humans." Primates 47.1 (2006): 14-26.
+
+
+ 
+
+
+-Reviewer 2
+
+  -
+The manuscript “Human reciprocate intentional harm by discriminating against group peers” provides an experimental investigation of group-based reciprocity. Participants first played a trust game (either as sender or responder) and then engaged in an adapted third-player dictator game with different recipients. It was found that participants who played the trust game as senders (but not responders), allocated more to the responder’s (sender’s) group members based on the responder’s (sender’s) transfer in the trust game. This is interpreted (partial) support for group-based reciprocity.
+
+ 
+
+The research questions are important and likely of interest to the readers of E&HB. I value the idea of the the experimental design in general and the results (partly) support the authors’ hypotheses. Hence, there are several things to like about the manuscript. That said, however, there are also a number of weaknesses in the theoretical overview, the experiment, and the interpretation of results. I describe my concerns and suggestions in detail below in the order of appearance in the paper.
+
+ 
+
+Introduction
+
+ 
+
+1. The introduction is well written. However, this overview misses some important work. In my view, the authors need to discuss the theory of group-bounded reciprocity by Yamagishi and colleagues, which is closely related to the present work. The authors already cite some of this work, but do not discuss it. There is also recent empirical research supporting and extending this theory, which might be helpful for interpreting the present results and putting them into context.
+
+ 
+
+2. The simulation results appear quite important and relevant for the present paper. I strongly suggest including them in the main text. The results provide important insights for the hypotheses of the experiment. However, in the current form, the simulation and its parameters are not discussed with regard to other simulation work in the field of direct/indirect reciprocity. The authors should rewrite this section to help the less informed reader understanding and interpreting their results. Of course, this requires substantial rewriting.
+
+ 
+
+Material and methods
+
+ 
+
+3. The dictator game is not well explained. From the methods section and the instructions I guess the allocator had to allocate the remaining 70 tokens and could nothing keep for him/herself? In this case, this is a third-party dictator game (with some fixed endowment for the allocator) and allocations have nothing to do with prosociality, i.e., they are not costly to the allocator. This is an important limitation and the authors should at least discuss this.
+
+ 
+
+4. Potentially even more critically, it is explained: “Each player in the group of three had to allocate 100 tokens within the group.” Did participants know about that? This introduces the confound that all allocations may not be based on own preferences based on the trust game allocations (e.g., reciprocity concerns) but could also be based on participants reciprocity to their belief about others’ reciprocity based on the trust game. In other words, I might give more to a person because I expect this person give more to me because of direct/group-based reciprocity or group-based preferences. In this case, all behavior may be based on direct (expected) reciprocity based on participant’s beliefs. In my view, this undermines the whole idea of the otherwise well-designed experiment.
+
+ 
+
+5. The authors do not explain how the payment of participants worked. From the instructions I conclude that decisions were incentivized. How big were the stakes and what were the average payments?
+
+ 
+
+6. Was the SVO slider measure incentivized? Given it was not and considering the additional weakness that it was assessed at the end of the experiment and could be affected by participants’ experiences in the previous parts, I do not see how this can be interpreted at all. As a last point, SVO was assessed with in-group recipients, which differs from the usual approach where recipients are unknown others (although there is some evidence that the results are equivalent, e.g., Böhm, Fleiß & Rybnicek, 2017). Although the authors are cautious regarding the interpretation of their results in relation to SVO, I think these results should be dropped completely from the results section. This does not mean that I suggest to drop the information from the methods section that this variable was assessed, but it should be clearly explained why this data could not be used in any meaningful analyses. This is really a pity because it would have been interesting, particularly with regard to parochial altruism, how SVO relates to the other results.
+
+ 
+
+Results
+
+ 
+
+7. How was the mixed-effects analysis specified? Did you consider random intercepts, random slopes, or both among subjects to consider the within-subjects homogeneity in error terms?
+
+ 
+
+8. The is a typo on p.11: It should be THE SECOND column of Table 2.
+
+ 
+
+9. I am puzzled about the difference regarding senders and responders in group-based reciprocity. Although the authors suggest one possible explanation in the Discussion, I think there could be an alternative explanation. That is, participants who play in the later position of the trust game, i.e., responders, may perceive their back-transfer already as reciprocity and see no need to reciprocate again in the later allocation game.
+
+ 
+
+10. Related to the point above, the behavior(s) in the trust game are insufficiently controlled in the analyses of the allocation game. The trust game is quite complex. Responders’ back-transfers may be influenced by the absolute amount sent in the first place. For instance, if a responder received only a small amount by the sender, he/she might be less willing to make a fair back-transfer compared to a sender who received a larger, “fair” amount. These “level differences” need to be considered, and therefore, the whole analyses presented could be biased.
+
+ 
+
+11. In the introduction, the authors mention differences between positive and negative reciprocity but rarely relate to this differentiation when presenting their results. This requires controlling (e.g., mean center) for the baseline allocations, both in the analyses and when displaying the results (i.e., in Figure 2).
+
+
+
+Discussion 
+
+ 
+
+12. More generally, it is not clear what are the consequences of the mechanism the author suggest and discuss at the end. Given that people display group-based reciprocity, should they seek group-based markers? Should groups enforce group-based signals, potentially more so when they are prosocial rather when they are aggressive/non-cooperative across group boundaries? I think the discussion could be improved a lot by suggesting some testable hypotheses for future research.
+
+ 
+
+Overall, I am not sure what I have learned. The ideas and hypotheses presented are refreshing and important. The way they were tested and then analyses, however, is faulty and I am not convinced by the authors’ interpretations.

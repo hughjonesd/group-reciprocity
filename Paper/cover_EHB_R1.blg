@@ -1,0 +1,15 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'cover_EHB_R1.blg'
+[73] biber-darwin:303> INFO - === Tue Apr  3, 2018, 20:44:36
+[103] Biber.pm:359> INFO - Reading 'cover_EHB_R1.bcf'
+[202] Biber.pm:835> INFO - Found 8 citekeys in bib section 0
+[217] Biber.pm:3670> INFO - Processing section 0
+[236] Biber.pm:3840> INFO - Looking for bibtex format file 'grouprec.bib' for section 0
+[243] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[263] bibtex.pm:1292> INFO - Found BibTeX data source 'grouprec.bib'
+[328] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[328] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[328] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[328] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[343] bbl.pm:608> INFO - Writing 'cover_EHB_R1.bbl' with encoding 'UTF-8'
+[345] bbl.pm:712> INFO - Output to cover_EHB_R1.bbl

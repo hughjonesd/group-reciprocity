@@ -1,0 +1,129 @@
+---
+title: "R Notebook"
+output: 
+  html_notebook: 
+    fig_height: 3
+    fig_width: 4.5
+---
+
+```{r setup, include=FALSE}
+load("sims.RData")
+library(ggplot2)
+```
+
+Here's a glimpse of the raw data:
+
+```{r}
+head(sims)
+```
+
+`repetition` is just the number of the simulation of a particular set of parameters, from 1-10. The next six columns
+are parameters: 
+* `b` is the benefit of being helped; the cost was always 1.
+* `periods` is the number of periods in a generation.
+* `memory` is the length of GR types' memory.
+  - This was implemented as follows: individuals just remembered the last `memory` periods (not the last `memory` times
+they met somebody). For technical reasons that made things much quicker. 
+* `G` is number of groups.
+* `N` is total population. 
+
+The simulation stopped when one strategy had 0.99 of the population (`fixation_threshold`).
+
+The next columns are results. 
+* `generation` says when the simulation stopped. 
+* `winner` is which strategy went to fixation, GR or S.
+* `cor_prop_fit` is the correlation between group fitness, and the proportion of GR types.
+* `cor_prop_reput` is the correlation between group reputation, and the proportion of GR types.
+* `cor_reput_fit` is the correlation between group reputation, and group fitness.
+
+The last three are averages over all generations (taken at the last period).
+
+The data is also in the CSV file "sims.csv".
+
+# Basic facts
+
+Here's the parameters that were used:
+
+```{r}
+apply(sims[2:6], 2, unique)
+```
+
+
+
+Selfish strategies mostly won:
+```{r}
+barplot(table(sims$winner), ylab = "Num wins")
+```
+
+# Comparative statics
+
+These graphs show the proportion of GR wins, for values of each individual parameter.
+
+```{r}
+show_wins <- function(param) {
+  tbl <- table(sims$winner, sims[[param]], dnn = c("Winner", param)) %>% prop.table(2)
+  print(round(tbl, 2))
+  barplot(tbl[1,], col = c("blue"), ylab = "Proportion of GR wins", xlab = param)
+}
+show_wins("b")
+show_wins("periods")
+show_wins("memory")
+show_wins("G")
+show_wins("N")
+```
+
+Results are much as expected. Higher b, smaller groups, smaller population all lead to more GR wins. Number of periods seems not to matter much; oddly, long memory seems to have made things worse for GR.
+
+Why does population matter? One reason could be more groups. This might mean GR guys spend more time meeting new 
+groups and perhaps getting suckered. If so the effect should be less when there are more periods. But there's not much evidence for that:
+
+```{r}
+table(sims$winner, interaction(sims$N, sims$periods)) %>% prop.table(2) %>% barplot(legend.text = c("GR", "S"))
+```
+
+The next plot shows average wins out of 10 for all of the 32 conditions.
+
+```{r}
+sims %>% 
+      group_by(b, periods, memory, G, N) %>% 
+      summarize(GR_wins = mean(winner == "GR")) %>% 
+      mutate(
+        label = sprintf("b %s, pds %s, mem %s, G %s, N %s", b, periods, memory, G, N)
+      ) -> summaries
+
+# par(mar = c(5, 10, 1, 1))
+# barplot(summaries$GR_wins, names.arg = summaries$label, horiz = TRUE, cex.names = .6, las = 2, border = NA, col = "blue")
+
+ggplot(summaries, aes(y = GR_wins, x = factor(b), colour = factor(periods), shape = factor(memory))) + geom_point(alpha = .5, position = position_jitter(width = 0.1, height = 0)) + facet_grid(G ~ N, labeller = "label_both") + xlab("b")
+```
+
+
+# Mechanisms
+
+We'll plot those last three correlations against which group won. 
+
+```{r}
+f <- function(ggobj, var) {
+  ggobj + 
+        geom_violin(aes_string(y = var)) + 
+        geom_point(aes_string(y = var), alpha = .2, color = 'brown', position = position_jitter(width = .05, 
+          height = 0))
+}
+
+p <- ggplot(sims, aes(x = winner))
+f(p, "cor_prop_fit")
+f(p, "cor_prop_reput")
+f(p, "cor_reput_fit")
+```
+
+So, overall, when GR types win,  these correlations are high. `cor_prop_reput` seems to have two groups, not sure why. 
+
+Lastly, you can see how long things took to reach fixation. It seems to be longer when S won, which makes
+me worried this might be just drift for GR. I could run this for time to complete fixation, but it will take
+about twice as long.
+
+```{r}
+f(p, "generation") + facet_wrap(periods ~ N, labeller = "label_both")
+```
+
+
