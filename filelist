@@ -1,0 +1,32 @@
+140610_0932.xls
+140610_1226.xls
+150615_1224.xls
+Analyses baseline.do
+Data
+Data after reshape corrected.csv
+Data after reshape.csv
+Data_baseline.csv
+Data_baseline.xlsx
+Exported Items.bib
+Paper
+Pilot.csv
+Pilot.xls
+R-block-design.R
+R-exploration.R
+R-explore-new-design.R
+R-explore.R
+README.md
+analysis.R
+filelist
+graphs-for-presentation.R
+group and indiv reciprocity.Rproj
+group-reciprocity-sim
+newmatching.csv
+sims-analysis-2.Rmd
+sims-analysis-2.nb.html
+sims-analysis.Rmd
+sims-analysis.nb.html
+sims.RData
+sims.csv
+simulations.R
+zTree.R

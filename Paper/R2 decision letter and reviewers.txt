@@ -1,0 +1,102 @@
+Ref: EVOLHUMBEHAV_2017_270_R1
+Title: Humans reciprocate by discriminating against group peers
+Journal: Evolution and Human Behavior
+
+Dear Dr. Hugh-Jones,
+
+Thank you for submitting your manuscript to Evolution and Human Behavior. I have completed the review of your manuscript and a summary is appended below. The reviewers include one of the original reviewers who feel you adequately addressed that reviewers' specific comments and another new reviewer who raises a number of important continuing issues with the paper that I agree need to be addressed.  These include tempering frequent strong and unsubstantiated claims and a number of concerns about analysis, presentation and interpretation.  
+
+Also, please remove the discussion of the simulations.  Upon further reflection, they add very little to the paper and should contribute to an independently reviewer paper. You might consider submitting that paper to the Journal of Theoretical Biology.
+
+The reviewers recommend reconsideration of your paper following major revision. I invite you to resubmit your manuscript after addressing all reviewer comments.
+
+When resubmitting your manuscript, please carefully consider all issues mentioned in the reviewers' comments, outline every change made point by point, and provide suitable rebuttals for any comments not addressed.
+
+To submit your revised manuscript:
+
+Log into EVISE® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=EVOLHUMBEHAV
+Locate your manuscript under the header 'My Submissions that need Revisions' on your 'My Author Tasks' view
+Click on 'Agree to Revise'
+Make the required edits
+Click on 'Complete Submission' to approve
+What happens next?
+After you approve your submission preview you will receive a notification that the submission is complete. To track the status of your paper throughout the editorial process, log in to Evise® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=EVOLHUMBEHAV.
+
+I look forward to receiving your revised manuscript as soon as possible.
+
+Kind regards,
+
+Dr Hruschka
+Editor
+Evolution and Human Behavior
+
+Comments from the editors and reviewers:
+-Reviewer 1
+
+  -
+
+ The authors have adequately addressed the points I raised in my initial review. As the authors point out in the discussion, this study is a first step and I think it will contribute to new theorizing on the basis of the questions they raise.
+
+In my opinion, this paper should be accepted pending light edits detailed below.
+
+ 
+
+Minor comments
+
+Generally, please include line numbers in submissions as it greatly facilitates reviewing.
+
+ 
+
+Page 12, above section 31. “indeed, column of Table …” there should be a column name after the world “column”
+
+ 
+
+Page 7, second line in 1st full paragraph: “in which the individual could help others”. Here you should specify which individual it is as it’s not immediately clear.
+
+ 
+
+Page 7-8: it’s not clear to me whether initially the participants are interacting in person or they’re all at terminals in a room and instructions are then read to the participants: “instructions read aloud”.  
+
+ 
+
+Page 8: ‘each player … had to allocate 100 tokens within the group. The allocator always received exactly 30 tokens and could freely allocate the remaining 70….” Doesn’t this mean that each player had to allocate only 70 tokens, not 100? Because 30 were designated for their personal retention? Please reword on revisions.
+
+ 
+
+Page 11 “”his team mates” were there only male players? You can use “their teammates”. ‘Their’ is acceptable in English as a gender neutral single pronoun.
+
+ 
+
+I believe “team mates” is usually spelled as one word as in ‘teammates’
+
+ 
+
+New work in Nature Human Behaviour recently came out that is relevant to discussion of whether aggression is aimed at retaliation (in this case—defense) shows that much of what may appear to be offensive aggression is actually motivated by defensive strategizing. It doesn’t undermine any of the claims in this paper but is relevant to the literature and the discussion of intentionality (Spoils division rules shape aggression between natural groups. Dogan et al.).
+
+ 
+
+
+-Reviewer 3
+
+  -
+This manuscript offers a glimpse into the positive and negative group reciprocity, in that individuals may reward or punish out-group members for the behavior of an out-group target. For addressing this question, the combination of the allocation and trust games seem a good choice. However, as written, the paper is too strident about its results, relying extensively on claims about universality that are not supported either by the results it describes or the papers it cites. Other major issues include lack of precision in the prose and the need for random intercepts by participant, nested within session. I’ll walk through these comments here, but note that I have left more detailed comments in the attached PDF.
+
+The authors begin the manuscript – from the title onwards – with big claims about humans and their behavior towards out-groups. Humans do not universally display stereotyping and prejudice towards out-groups (as implied by paragraph one), a universal propensity to group-reciprocate is claimed but not demonstrated, and the title makes too strong of a statement about the results of the paper. The discussion does a much better job of illustrating the plasticity that characterizes human intergroup relationships: individuals cognizing out-groups in different ways. If the rest of the paper was as moderate as this section, it would do a more accurate job of characterizing humans.
+
+I agree that humans do exhibit evidence of group reciprocity, per vengeance behavior and the generalization from one to many documented by work on stereotypes (both positive and negative) and intergroup contact. The paper and its results could still be strong with a more moderate framing: that humans can use group reciprocity, not that it’s universally the case. Further, as the results are ultimately about both positive and negative group reciprocity, given the experimental design, an introduction that acknowledges that behavior towards out-groups can be positive or negative would better foreground the study.
+
+On this topic, and elsewhere in the paper, big claims are made that need citations. I’ve made some suggestions in the PDF on which papers support the claims made, or where these claims should be tempered.
+
+Throughout the text, and most especially in the introduction, there’s a lot of imprecision in the prose. Some sections are hard to follow, and assumptions are made about the benefits of behaving aggressively toward out-group members (what are those benefits?), that the mind represents groups as entities (this comes up as an aside, with no cognitive psych support, even though it’s out there (see Tooby, Cosmides, & Price 2006)), that reputation is a confound with respect to the predictions at hand (how so?). These assumptions are shaky and need more theoretical support given the audience of E&HB. Further, it cannot be assumed that the E&HB audience knows the psych terms included in the manuscript, given how diverse the audience is. I’ve flagged a number of places where more clarity is needed in the attached PDF, with explanations for why it is needed.
+
+I have several analytic points:
+
+-          I think the model with random intercepts for each subject, nested within random intercepts for session, should be the model reported in the paper, not relegated to the response to reviewers. There are multiple decisions per participants being analyzed in a single model. Clustering by participant is needed.
+
+-          I agree with Reviewer 2 that you should drop the SVO: its measurement following the games is problematic; you provide no a priori reason about why it should affect group reciprocity (as you note explicitly) and not direct reciprocity or in-group favoritism, and it doesn’t add anything to the manuscript. After you mention that you collected the SVO and collectivism data, mention that they are not included in this paper as you had no a priori predictions for why they should affect behavior. (On that note, it seems to me that the collectivism thing does have the possibility to be predictive, although whether it should be more predictive of in-group favoritism or group reciprocity is unclear to me… please address why it was not included in the models in the manuscript.)
+
+-          Contingent giving is not analyzed as a potential shortcoming of the repeat appearance of certain players in the Allocation Game. Though participants were told only one decision would be randomly selected as the basis for payouts, it is very unlikely the mind is good at representing each allocation decision as independent of the others. (Which is another reason why you need random intercepts by participant in the paper.) So, taking the example from Table 1, Brown 2 appears in two allocation decisions for Blue 2. One could imagine that if Blue 2 gives Brown 2 more in the first allocation decision, Blue 2 might give Brown 2 less in the second, thinking “I already gave him/her some.” This is something that should be checked: that decisions in the allocation game are not contingent on previous decisions made for targets that are encountered twice.
+
+I have no strong feelings about whether the simulations described in the manuscript stay or go, and I see that Reviewers 1 and 2 didn’t agree on this either. As written, some of the take-home points were not clear (again, issues with the precision of the prose), and it’s not immediately apparent to me that the simulations add anything to the paper. If the simulations were excluded, I don’t think it would detract from the paper, as by the end of the manuscript, the simulations were ultimately forgettable (and not discussed in the Discussion at all).
+
+The Discussion gets a little redundant, goes off topic, and is a paragraph or two longer than it needs to be. I’ve made some suggestions for where it can be condensed.

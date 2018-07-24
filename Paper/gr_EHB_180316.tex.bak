@@ -1,9 +1,4 @@
-% !TeX program = XeLaTeX
-
-
 \documentclass[12pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
 \def\maxwidth{ %
   \ifdim\Gin@nat@width>\linewidth
@@ -54,9 +49,7 @@
 \usepackage{alltt}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{setspace}
-%\usepackage[semicolon,sort]{natbib}
-\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} % Numbered citations
-%\usepackage[backend=biber,citestyle=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,firstinits=false,uniquename=false]{biblatex}
+\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} 
 \addbibresource{grouprec.bib}
 \usepackage{geometry}
 \usepackage{verbatim}
@@ -74,11 +67,6 @@
 \usepackage[hidelinks,pdfstartview=]{hyperref}
 \usepackage{changepage} % needed for the appendix
 
-%\usepackage[nolists]{endfloat}
-%\usepackage[affil-it]{authblk}
-%\renewcommand\Authfont{\sffamily}
-%\renewcommand\Affilfont{\sffamily\small\it}
-%\setlength{\affilsep}{0.5em}
 \usepackage{xltxtra,fontspec,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
 \setsansfont{TeX Gyre Heros}
@@ -107,7 +95,6 @@
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \makeatletter
-%\def\@seccntformat#1{}
 %%% Change section and subsection style
 \renewcommand\section{\@startsection {section}{1}{\z@}%
 {-3.5ex \@plus -1ex \@minus -.2ex}%
@@ -119,44 +106,20 @@
 {\it\large}}
 \makeatother
 
-%%% Define subhyps
-
-\makeatletter
-\newcounter{subhyp}
-\let\savedc@hyp\c@hyp
-\newenvironment{subhyp}
- {%
-  \setcounter{subhyp}{0}%
-  \stepcounter{hyp}%
-  \edef\saved@hyp{\thehyp}% Save the current value of hyp
-  \let\c@hyp\c@subhyp     % Now hyp is subhyp
-  \renewcommand{\thehyp}{\saved@hyp\alph{hyp}}%
- }
- {}
-\newcommand{\normhyp}{%
-  \let\c@hyp\savedc@hyp % revert to the old one
-  \renewcommand\thehyp{\arabic{hyp}}%
-}
-\makeatother
-
 \renewcommand{\abstractname}{\bf\sffamily Abstract}
 
 \newtheorem{hyp}{Hypothesis}
 \newtheorem{res}{Result}
 
-\title{\bf\sffamily Humans reciprocate %intentional harm 
-by discriminating against group peers}
+\title{\bf\sffamily Humans reciprocate by discriminating against group peers}
 %\author{\textsc{Authors undisclosed}}
 \author{David Hugh-Jones\thanks{School of Economics, University of East Anglia. E-mail: D.Hugh-Jones@uea.ac.uk.} \and Itay Ron\thanks{E-mail: itayron@gmail.com} \and Ro'i Zultan\thanks{Department of Economics, Ben-Gurion University of the Negev. E-mail: zultan@bgu.ac.il.}}
 
-\date{}%\sffamily \small This version: \today.}
-
-%\textbf{Preliminary version, please do not distribute.}}
+\date{}
 
 \def\figwidth{\textwidth}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-%\SweaveOpts{concordance=TRUE}
 \maketitle
 
 \begin{abstract}
@@ -292,12 +255,6 @@ it is difficult to distinguish between retaliatory acts directed at groups that 
 directed at unrelated group members. We therefore designed a controlled laboratory experiment to test the psychological
 mechanism by which humans reciprocate towards groups in a clean way. That is, we test the hypothesis that people 
 reciprocate towards groups.
- 
-% Thus, we hypothesise that humans developed a propensity to reciprocate towards groups. Although field observations from
-% conflict are highly suggestive, they are loaded with individual and group context and history. Moreover, in the natural 
-% world it is difficult to distinguish between retaliatory acts directed at groups that include the perpetrator and acts
-% directed at unrelated group members. We therefore designed a laboratory experiment to test the proximate mechanism implied
-% by our evolutionary model in a clean way. That is, we test the hypothesis that people reciprocate towards groups.
 
 Cleanly identifying group reciprocity requires controlling for three confounds: individual level reciprocity, e.g. if
 subjects' actions affect an entire group including the original actor who helped or harmed them; generalized reciprocity,
@@ -306,8 +263,6 @@ strategic interactions, where apparent reciprocity is driven by reputation-build
 Our experiment fulfils all three: subjects can differentiate the original actor from his or her group members, they 
 interact both with these group members and with members of other groups, and we minimize strategic concerns by not giving
 feedback about subjects' actions.
-
-%While previous work has not satisfied all three conditions simultaneously \citep{gaertner2008whenrejection,stenstrom2008theroles,hugh-jones2013intergroup}, 
 
 While previous studies looked at retaliation towards groups, this retaliation does not necessarily reflect group reciprocity as defined here. \citet{gaertner2008whenrejection} found that rejection by one group member leads to more hostility towards the group when the group is perceived as a unified entity. Since hostility was directed towards the whole group, individual and group level reciprocity were confounded. Similarly, \citet{bohm2016makes} examine intergroup retaliation using the intergroup prisoner's
 dilemma paradigm, but cannot distinguish between individual and group reciprocity.
@@ -318,9 +273,6 @@ Our experimental set up was the following. After an initial group-formation stag
 Rs' actions clearly have a benefit/cost ratio of 1 (money returned to S is lost to R), Ss may send money in the expectation of having
 money returned. In addition, not returning money in the trust game violates a social norm \citep{kimbrough2015norms}. For
 this reason, we expected R's actions to elicit stronger reciprocity, although we test the effect of both S's and R's actions.
-
-
-% Whereas R is clearly kind when returning money (and nasty when exploiting a generous proposer by keeping the received amount), S's intentions are equivocal. Sending money can be driven by selfish expectations of reciprocity, while not sending can be driven by caution. Thus, while all subjects experience helpful or harmful actions, only senders experience actions that clearly reflect their counterpart's preferences and intentions \citep{gunnthorsdottir2002using,kimbrough2015norms}.
 
 The upstream action was followed by the reciprocal action, 
 in which the individual could help others. We implemented this as an Allocation
@@ -446,7 +398,6 @@ group reciprocity. All reported statistical tests are based on linear
 regressions with standard errors clustered by session. %See the supplementary material for the full specification and results.
 
 
-%latex.default(tbl[, -1], file = "", label = "tab:results", rgroup = c("Senders",     "Responders"), caption = "Allocations and Discrimination",     rowname = tbl$Condition, center = "centerline", rowlabel = "",     insert.bottom = "\\justify Mean allocation, mean discrimination, and reciprocity (marginal effect of TG partner's kindness on allocation) by condition. Robust standard errors clustered on sessions. Significance of comparison to Baseline is marked.$^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively.")%
 \begin{table}[!tbp]
 \caption{Allocations and Discrimination\label{tab:results}} 
 \centerline{\begin{tabular}{llll}
@@ -608,8 +559,6 @@ reciprocity. These ideas could be formalized in future work.
 
 \newpage
 \printbibliography
-%\bibliographystyle{dcu}
-%\bibliography{grouprec}
 
 \newpage
 

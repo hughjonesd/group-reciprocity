@@ -1,55 +1,95 @@
-\documentclass[12pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
+% !TeX program = XeLaTeX
+<<setup, warning=FALSE, message=FALSE, echo=FALSE>>=
+
+library(knitr)
+library(magrittr)
+library(dplyr)
+library(multiwayvcov)
+library(lmtest)
+library(ggplot2)
+library(broom)
+library(Hmisc)
+library(car)
+library(plm)
+
+filter <- dplyr::filter
+recode <- dplyr::recode
+summarize <- dplyr::summarize
+
+opts_chunk$set(echo = FALSE)
+
+myfmt <- function (x) format(x, digits = 2, nsmall = 2, scientific = F)
+
+mystar <- function (pval) symnum(pval, corr = FALSE, cutpoints = c(0,  .001,.01,.05, 1),
+      symbols = c("***","**","*", ""))
+
+cut_pval <- function (pval) {
+  ifelse(pval < 0.05, 
+        as.character(cut(pval, c(0, 0.001, 0.01, 0.05, 1), labels = c("< 0.001", "< 0.01", "< 0.05", "> 0.05"), 
+          right = FALSE)),
+        paste('=', myfmt(pval)))
 }
-\makeatother
 
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
+setwd("~/Dropbox/Dave_Ro'i/group and indiv reciprocity")
+dfr <- read.csv("data/clean_w_missing.csv", stringsAsFactors = FALSE)
 
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
+dfr %<>% filter(!is.na(give))
 
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+dfr$kind_split <- dfr$kindness >= median(dfr$kindness[dfr$roletrust == "Sender"], na.rm = T)
+dfr$kind_split_send <- dfr$sent >= median(dfr$sent[dfr$roletrust == "Responder"])
 
-\usepackage{alltt}
+dfr %<>% group_by(sid, indcondition) %>% mutate(n_choices = n())
+
+# There are obvious connection with existing work that could make what you are 
+# proposing relevant (e.g. the work of Bowles, Boehm, Doug Jones, Boyd.......), 
+# but it would require a serious
+# engagement with that literature and reframing of the paper to make that happen.  
+# This would involve more than simply
+# adding a few paragraphs as has been done in the current revision.
+
+# Stuff to cite:
+# Bowles par alt & war: choi2007coevolution
+# Darwin quote - from Bowles 2012: groups with “courageous, sympathetic and faithful members, 
+# who were always ready to...aid and defend each other...would spread and be victorious over 
+# other tribes” 
+# Boehm retaliatory violence: boehm2011retaliatory
+#  - common ancestor of humans bonobos and chimps had (a) tendency to respond to aggression
+#    (b) living in social groups often as "band of brothers" [literally]
+#  - chimps tend not to retaliate, because they have dominance hierarchy - a beta who 
+#    retaliates against the alpha is challenging for dominance which leads to a serious fight
+#  - but humans were more egalitarian, so their "alphas" couldn't provide conflict resolution
+#    from above. [The argument of Hierarchy In The Forest - DHJ]
+#  - captive chimps show retaliation by *groups* against individuals (de Waal)
+#  - but neither chimps nor bonobos (and hence, not the common ancestor) had "lethal retaliation
+#    by a second party"
+#    - "Raymond Kelly (2000) sees two basic patterns of hunter-gatherer retaliation. One involves simply singling out
+#    the killer personally and killing him. The other involves extending the target population to include his kinship
+#    group so that, say, a brother or cousin may be killed in his place." This is called 'social substitutability'.
+#    - argues that substitutability is more likely when there is a strong political clan organization. Foragers
+#    living in bands with less "corporate identity", are more likely to kill the actual killer.
+#    - [so it becomes indeed of interest whether there is an *innate* human tendency to retaliate against groups.
+#    But I don't think our experiment proves such an innate tendency. It just reflects the practices of one partic ethnic
+#    group, Westernized students.]
+# #  Kelly PNAS 2005
+#    - intergroup violence exists among chimpanzees
+#    - there's a tradeoff between territorial expansion, and the risk of conflict, which means that groups tend to
+#      avoid the border zone between them, and the food it has in it.
+#    - he argues groups would therefore favour peace. [But there's a missing game-theoretic point. Intergroup rels
+#      have a PD structure, and peace could only be maintained by something like tit-for-tat. Perhaps we could make
+#      this point.]
+#    - humans in particular have ranged weapons which favour the defensive. So there's a period where humans are more
+#      peaceful than chimps; only when segmented societies, with specific military institutions, develop, does war
+#      return with a vengeance
+# Boehm ancestral hierarchy and conflict: boehm2012ancestral
+# Boehm's "blood revenge" book
+@
+
+\documentclass[12pt,a4paper]{article}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{setspace}
-\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} 
+%\usepackage[semicolon,sort]{natbib}
+\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} % Numbered citations
+%\usepackage[backend=biber,citestyle=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,firstinits=false,uniquename=false]{biblatex}
 \addbibresource{grouprec.bib}
 \usepackage{geometry}
 \usepackage{verbatim}
@@ -67,6 +107,11 @@
 \usepackage[hidelinks,pdfstartview=]{hyperref}
 \usepackage{changepage} % needed for the appendix
 
+%\usepackage[nolists]{endfloat}
+%\usepackage[affil-it]{authblk}
+%\renewcommand\Authfont{\sffamily}
+%\renewcommand\Affilfont{\sffamily\small\it}
+%\setlength{\affilsep}{0.5em}
 \usepackage{xltxtra,fontspec,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
 \setsansfont{TeX Gyre Heros}
@@ -95,6 +140,7 @@
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \makeatletter
+%\def\@seccntformat#1{}
 %%% Change section and subsection style
 \renewcommand\section{\@startsection {section}{1}{\z@}%
 {-3.5ex \@plus -1ex \@minus -.2ex}%
@@ -106,20 +152,44 @@
 {\it\large}}
 \makeatother
 
+%%% Define subhyps
+
+\makeatletter
+\newcounter{subhyp}
+\let\savedc@hyp\c@hyp
+\newenvironment{subhyp}
+ {%
+  \setcounter{subhyp}{0}%
+  \stepcounter{hyp}%
+  \edef\saved@hyp{\thehyp}% Save the current value of hyp
+  \let\c@hyp\c@subhyp     % Now hyp is subhyp
+  \renewcommand{\thehyp}{\saved@hyp\alph{hyp}}%
+ }
+ {}
+\newcommand{\normhyp}{%
+  \let\c@hyp\savedc@hyp % revert to the old one
+  \renewcommand\thehyp{\arabic{hyp}}%
+}
+\makeatother
+
 \renewcommand{\abstractname}{\bf\sffamily Abstract}
 
 \newtheorem{hyp}{Hypothesis}
 \newtheorem{res}{Result}
 
-\title{\bf\sffamily Humans reciprocate by discriminating against group peers}
+\title{\bf\sffamily Humans reciprocate %intentional harm 
+by discriminating against group peers}
 %\author{\textsc{Authors undisclosed}}
 \author{David Hugh-Jones\thanks{School of Economics, University of East Anglia. E-mail: D.Hugh-Jones@uea.ac.uk.} \and Itay Ron\thanks{E-mail: itayron@gmail.com} \and Ro'i Zultan\thanks{Department of Economics, Ben-Gurion University of the Negev. E-mail: zultan@bgu.ac.il.}}
 
-\date{}
+\date{}%\sffamily \small This version: \today.}
+
+%\textbf{Preliminary version, please do not distribute.}}
 
 \def\figwidth{\textwidth}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
 \begin{document}
+%\SweaveOpts{concordance=TRUE}
 \maketitle
 
 \begin{abstract}
@@ -130,9 +200,8 @@ harms or helps them, they harm or help other members of that person's group.
 Subjects played a trust game, then allocated money between other people. Senders
 whose partners returned more in the trust game gave more to that partner's group
 members. The effect was about half as large as the effect of direct reciprocity.
-Receivers' allocations to group members were not affected by their partners’ 
-play in the trust game, suggesting that group reciprocity was only triggered when the
-partner's intentions were unequivocal. We show conditions under which group 
+Receivers' allocations to group members were not affected by their partners' 
+play in the trust game, suggesting that group reciprocity was only triggered by strong norm violations. We show conditions under which group 
 reciprocity can evolve, and discuss its place in conflict among early humans.
 \end{abstract}
 
@@ -147,9 +216,9 @@ Word count: 3129
 Human society is organized in groups, including families, clans, firms and nations. This
 structure is reflected in individual behaviour and cognition. Humans identify
 with their ingroup and are altruistic and prosocial towards ingroup members;
-towards outgroup members, they display stereotyping and prejudice
+towards outgroup members, they may display stereotyping and prejudice
 \citep{tajfel1979integrative,yamagishi2000thegroup,balliet2014ingroup,DeDreu2014,chen2009group,chen2011potential}.
-Group structure provides the backdrop for intergroup conflict---from economic
+ provides the backdrop for intergroup conflict---from economic
 and political competition to inter-ethnic violence and war---which is pervasive
 in the species \citep{esteban2012ethnicity} and has serious economic costs \citep{world_bank_world_2011}.
 
@@ -175,7 +244,7 @@ to harm (help) others from that group.  Whereas group-based downstream
 reciprocity \citep{bernhard2006group,bernhard2006parochial} follows the maxim
 `do unto others as they have done to members of \emph{my} tribe', group-based
 upstream reciprocity follows the maxim `do unto others as members of
-\emph{their} tribe have done to me' (Figure~\ref{fig:illustration}). Tit-for-tat conflict looks like negative group reciprocity.
+\emph{their} tribe have done to me' (Figure~\ref{fig:illustration}). Tit-for-tat conflict looks like negative group reciprocity, i.e., reciprocity where harm is reciprocated with harm.
 
 \begin{figure}
 	\begin{center}
@@ -198,7 +267,7 @@ upstream reciprocity follows the maxim `do unto others as members of
 The concept of group reciprocity may help to explain the evolution of intergroup conflict. The current literature 
 includes three differing approaches to understanding this. While cultural theories argue that there is no innate tendency to 
 intergroup aggression, theories of parochial altruism argue that intergroup violence was a driver of within-group 
-altruism via group selection processes; as a result, intergroup violence can involve self-sacrifice for one's group
+altruism via group selection; as a result, intergroup violence can involve self-sacrifice for one's group
 members \citep{choi2007coevolution,bowles2009did}. The ``chimpanzee model", by contrast, argues that early humans, like
 chimpanzees, only attack when odds are very favourable; thus a human tendency to kill outgroups evolved by individual
 selection alone \citep{wrangham2012intergroup}. This is supported by evidence that both 
@@ -209,21 +278,22 @@ of a perpetrator's group become legitimate targets for revenge. Social substitut
 societies, which typically feature strong corporate identities such as extended patrilineal families and clans. 
 Some of these societies also have ``war/peace systems'' featuring well-defined institutions for ending conflict as well as beginning it, such as the Andamanese Peace Dance or the Montenegrin Court of Good Men for ending feuds 
 \citep{boehm1984blood}. By 
-contrast, while chimpanzees do practice retaliation and reconciliation among alliances within the community, they  do not 
+contrast, while chimpanzees do practice reciprocity among alliances within the community, they  do not 
 reciprocate towards other groups. Instead, they attack stranger chimpanzees whenever it is safe to do so. The risk of 
 being attacked forces chimps to avoid territory bordering other communities, which limits their available space for foraging 
 \citep{wilson2003intergroup}. While this fact seems to favour the evolution of peaceful intergroup relations 
-\citep{kelly2005evolution}, that ignores the prisoner's dilemma structure of intergroup relations; while both groups would
-do better not attacking the other, each group does better by attacking when the odds are good enough. Indeed, peaceful
-unsegmented societies resolve intergroup conflict by avoiding the other group, which entails a loss of access to valuable
-resources, and hence lower population density. The evolution of group 
+\citep{kelly2005evolution}, that ignores the prisoner's dilemma structure of intergroup relations; although both groups would
+do better if neither attack---thus avoiding costly conflict---each group does better by attacking when the odds are good enough, thereby gaining territory, resources, etc. Indeed, peaceful unsegmented societies resolve intergroup conflict by avoiding the other group, which entails a loss of access to valuable
+resources, constricting population expansion. The evolution of group 
 reciprocity could deter opportunistic conflict. When there is group reciprocity, someone who harms an outgroup member 
 brings retaliation on his own group, and this gives his group members an incentive to maintain peace 
-\citep{boehm1984blood}. Group reciprocity could thus have benefited humans by allowing them to range over wider 
-areas and to have more extensive contacts with outgroups.  So, the evidence in \citet{kelly2000warless} that population 
+\citep{boehm1984blood,fearon1996explaining}. Group reciprocity could thus have benefited humans by allowing them to exploit more of the land area 
+around them, and to have more extensive contacts with outgroups, sustaining
+a higher population in a given space. So, the evidence in \citet{kelly2000warless} that population 
 density is associated with war can be read two ways: the development of war, particularly of war/peace systems, may 
 allow different groups to live at high densities in peace.
 
+\begin{comment}
 While group reciprocity can benefit the group, to evolve it must increase individual fitness. In the
 supplementary materials, we report on a series of simulations tracking the evolution of group reciprocators under different
 environmental parameters. The key result is that when the relative cost of helping (or failing to harm) a target is low
@@ -247,22 +317,29 @@ would lower the benefit/cost threshold needed for it to evolve.
 \citet{kelly2000warless} argues that group reciprocity emerges in a segmented society, where group affiliations are rigid and salient.
 However, our simulations show that group reciprocity can evolve even without in-group sanctioning or collective norms of
 group responsibility and liability. That, and real world examples of apparent intergroup revenge in large modern societies,
-suggest there may be a universal propensity to group-reciprocate. In this paper, we aim to study the existence and form of the proximate
-psychological mechanism for group reciprocity in modern humans. Although field observations from conflict are highly 
-suggestive, they are loaded with individual and group context and history. Moreover, in the field, group 
-reciprocity and direct reciprocity may be conflated, because 
-it is difficult to distinguish between retaliatory acts directed at groups that include the perpetrator, and acts 
-directed at unrelated group members. We therefore designed a controlled laboratory experiment to test the psychological
-mechanism by which humans reciprocate towards groups in a clean way. That is, we test the hypothesis that people 
-reciprocate towards groups.
+suggest there may be a universal propensity to group-reciprocate. 
+\end{comment}
 
-Cleanly identifying group reciprocity requires controlling for three confounds: individual level reciprocity, e.g. if
-subjects' actions affect an entire group including the original actor who helped or harmed them; generalized reciprocity,
+Real world examples of apparent intergroup revenge suggest there may be a human propensity to group-reciprocate \citep{horowitz1985ethnicgroups,horowitz2001thedeadly,bauerlein2001negrophobia,chagnon1988lifehistories}.
+In this paper, we aim to study the existence and form of the proximate
+psychological mechanism for group reciprocity in modern humans. Although field observations from conflict are highly 
+suggestive, it is hard to identify group-reciprocity motives in naturally occurring data. Actions that may look like group reciprocity may be rooted in other motivations---such as wishing to signal group strength---or reflect centralized group decisions rather than individual tendencies for group reciprocity \citep{gould2000revenge,mamdani2001victims}.
+Moreover, in the field, group 
+reciprocity may be conflated with individual level reciprocity, i.e., acts that aim to help or harm the perpetrator, but have side effects on the entire group. We therefore designed a controlled laboratory experiment to test the human tendency for group reciprocity in a clean way. 
+ 
+% Thus, we hypothesise that humans developed a propensity to reciprocate towards groups. Although field observations from
+% conflict are highly suggestive, they are loaded with individual and group context and history. Moreover, in the natural 
+% world it is difficult to distinguish between retaliatory acts directed at groups that include the perpetrator and acts
+% directed at unrelated group members. We therefore designed a laboratory experiment to test the proximate mechanism implied
+% by our evolutionary model in a clean way. That is, we test the hypothesis that people reciprocate towards groups.
+
+Cleanly identifying group reciprocity requires controlling for three confounds: individual level reciprocity; generalized reciprocity,
 where subjects reciprocate not specifically towards the original actor’s group, but towards other people in general; and
-strategic interactions, where apparent reciprocity is driven by reputation-building. 
+actions driven by strategic reputation-building rather than by a motivation to reciprocate past actions. 
 Our experiment fulfils all three: subjects can differentiate the original actor from his or her group members, they 
-interact both with these group members and with members of other groups, and we minimize strategic concerns by not giving
-feedback about subjects' actions.
+interact both with these group members and with members of other groups, and we minimize strategic concerns by not giving feedback about the reciprocator's action.
+
+%While previous work has not satisfied all three conditions simultaneously \citep{gaertner2008whenrejection,stenstrom2008theroles,hugh-jones2013intergroup}, 
 
 While previous studies looked at retaliation towards groups, this retaliation does not necessarily reflect group reciprocity as defined here. \citet{gaertner2008whenrejection} found that rejection by one group member leads to more hostility towards the group when the group is perceived as a unified entity. Since hostility was directed towards the whole group, individual and group level reciprocity were confounded. Similarly, \citet{bohm2016makes} examine intergroup retaliation using the intergroup prisoner's
 dilemma paradigm, but cannot distinguish between individual and group reciprocity.
@@ -274,8 +351,11 @@ Rs' actions clearly have a benefit/cost ratio of 1 (money returned to S is lost 
 money returned. In addition, not returning money in the trust game violates a social norm \citep{kimbrough2015norms}. For
 this reason, we expected R's actions to elicit stronger reciprocity, although we test the effect of both S's and R's actions.
 
+
+% Whereas R is clearly kind when returning money (and nasty when exploiting a generous proposer by keeping the received amount), S's intentions are equivocal. Sending money can be driven by selfish expectations of reciprocity, while not sending can be driven by caution. Thus, while all subjects experience helpful or harmful actions, only senders experience actions that clearly reflect their counterpart's preferences and intentions \citep{gunnthorsdottir2002using,kimbrough2015norms}.
+
 The upstream action was followed by the reciprocal action, 
-in which the individual could help others. We implemented this as an Allocation
+in which each individual who participated in the TG could help others. We implemented this as an Allocation
 Game in which subjects divided a fixed amount between two recipients.
 In Direct Reciprocity rounds, the recipients included the TG partner;
 in Group Reciprocity rounds, a member of the TG partner's group; and
@@ -297,7 +377,8 @@ negative reciprocity in general may be linked to spite \citep{johnstone2004evolu
 \section{Material and methods}
 \label{sec:design}
 
-Each session consisted of~24 participants, randomly allocated into six
+Each session consisted of~24 participants, sitting at isolated computer terminals. 
+At the beginning of the experiment, the participants were randomly allocated into six
 \emph{teams} of four. Each participant was identified throughout the experiment
 by team colour and individual number (1--4) within the team. At the beginning of
 the experiment, participants were informed that the experiment had five distinct
@@ -314,7 +395,7 @@ first stage by allowing participants to consult each other by anonymous
 chat while solving a simple task. Participants solved five Raven matrices
 (see supplementary material). Each matrix was presented on screen
 for 120~seconds, during which each participant could both send written
-messages to the team and update her own answer. The final answer submitted
+messages to the team and update their own answer. The final answer submitted
 at the end of the 120~seconds determined payoffs, with 10~tokens
 paid for each correct answer. To further boost group identity through
 a common goal, team members each earned an additional bonus of 5~tokens
@@ -327,10 +408,7 @@ actual interaction, participants could see their TG partner's team
 colour and individual number. 
 
 The third stage Allocation Game consisted of six rounds. In each round, participants interacted in groups of three. Individuals in each group were identified to each other by
-team colour and number. Each round consisted of a random dictator game, as
-follows. Each player in the group of three had to allocate 100~tokens within the
-group. The allocator always received exactly 30~tokens, and could freely allocate the
-remaining 70~tokens between the other two players. Previous research has found that
+team colour and number. Each round consisted of a random dictator game, in which each player chose how to divide 100~tokens between the three group members if he or she is chosen to be the allocator. The allocator always received exactly 30~tokens, and could freely allocate the remaining 70~tokens between the other two players. Previous research has found that
 people do not harm, but refrain from helping negatively perceived outgroups
 \citep{weisel2015ingroup}. Accordingly, we set the parameters of the game so
 that an equal division between the other two players provides them with 35~tokens each, more than the allocator's own share.\footnote{
@@ -340,7 +418,7 @@ that an equal division between the other two players provides them with 35~token
 One round of the six rounds was randomly chosen for payment. In that round, the payoffs of the members of each group were determined by the allocation decision of one randomly chosen player in the group. No feedback was provided between rounds. At the end of the stage, players learned the payoff round, whether their allocation was chosen to determine payoffs, and their payoff for the round. Thus, all allocation decisions were completely independent of each other, both within and between participants.
 
 
-Table~\ref{tab:example} shows the matching scheme over the six rounds. Each participant was matched to be in the same group of three with a member of her own team in one of the six rounds (\emph{ingroup} condition), with her TG partner in another round (\emph{direct reciprocity} condition), and in two other rounds with other members of the TG partner's team (\emph{group reciprocity} condition). The remaining two rounds served as the baseline condition. Note that the matching is not independent. For example, if one player is in the direct reciprocity condition, then one other player is in the direct reciprocity condition and the third player is in either the baseline or group reciprocity condition. 
+Table~\ref{tab:example} shows the matching scheme over the six rounds. Each participant was matched to be in the same group of three with a member of their own team in one of the six rounds (\emph{ingroup} condition), with their TG partner in another round (\emph{direct reciprocity} condition), and in two other rounds with other members of the TG partner's team (\emph{group reciprocity} condition). The remaining two rounds served as the baseline condition. Note that the matching is not independent. For example, if one player is in the direct reciprocity condition, then one other player is in the direct reciprocity condition and the third player is in either the baseline or group reciprocity condition. 
 
 
 \begin{table}
@@ -385,9 +463,9 @@ The experiment was programmed in z-Tree \citep*{Fischbacher2007}.
 %The average payment was 72~NIS (approximately \$18) for a duration of 70~minutes. The lowest and highest payments were~25 and~130 NIS, respectively.
 The average payment was approximately \$18) for a duration of 70~minutes. The lowest and highest payments were approximately~\$6 and~\$32, respectively.
 
-The key outcomes in this design are based on the allocation decisions made in the third stage. Direct and group reciprocity can be both positive and negative, and therefore are not hypothesized to have a systematic effect on the the amount allocated to either the TG partner or to his team mates. Nonetheless---while there is arguably no reason to discriminate between two neutral players---we hypothesize that direct and group reciprocity will lead the allocator to discriminate either for or against the TG partner or his team mates. Consequently, we predict that the absolute difference between the two allocations will be larger in all treatments compared to the baseline. This difference is measured in our `Discrimination' outcome.
+The key outcomes in this design are based on the allocation decisions made in the third stage. Direct and group reciprocity can be both positive and negative, and therefore are not hypothesized to have a systematic effect on the the amount allocated to either the TG partner or to their teammates. Nonetheless---while there is arguably no reason to discriminate between two neutral players---we hypothesize that direct and group reciprocity will lead the allocator to discriminate either for or against the TG partner or their teammates. Consequently, we predict that the absolute difference between the two allocations will be larger in all treatments compared to the baseline. This difference is measured in our `Discrimination' outcome.
 
-We measure reciprocity directly by looking at the effect of the TG experience in the second stage on allocations made in the third stage. We define the experience with the TG partner in two ways. For responders, this is the amount sent to them by their partner. For senders, we calculate the amount returned to them by their partner as a fraction of the money available to the responder. Thus, an equal split of the pie implies a value of 1/2, and compensating the sender for his investment implies a value of 1/3. We subsequently define (direct or group) reciprocity as the slope of the allocation made to the TG partner or his team mates on the TG experience.
+We measure reciprocity directly by looking at the effect of the TG experience in the second stage on allocations made in the third stage. We define the experience with the TG partner in two ways. For responders, this is the amount sent to them by their partner. For senders, we calculate the amount returned to them by their partner as a fraction of the money available to the responder. Thus, an equal split of the pie implies a value of 1/2, and compensating the sender for his investment implies a value of 1/3. We subsequently define (direct or group) reciprocity as the slope of the allocation made to the TG partner or their teammates on the TG experience.
 
 \section{Results}
 \label{sec:results}
@@ -395,48 +473,92 @@ We measure reciprocity directly by looking at the effect of the TG experience in
 We report results on allocations, discrimination between recipients (measured as the
 absolute difference between the two recipients' allocations), and direct and
 group reciprocity. All reported statistical tests are based on linear
-regressions with standard errors clustered by session. %See the supplementary material for the full specification and results.
+regressions with individual-level random effects, per-session fixed effects, and standard errors 
+clustered by session. %See the supplementary material for the full specification and results.
 
 
-\begin{table}[!tbp]
-\caption{Allocations and Discrimination\label{tab:results}} 
-\centerline{\begin{tabular}{llll}
-\hline\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{Allocation}&\multicolumn{1}{c}{Discrimination}&\multicolumn{1}{c}{Reciprocity}\tabularnewline
-\hline
-{\bfseries Senders}&&&\tabularnewline
-~~Baseline&35.00 (---)& 4.15 (1.13) &---\tabularnewline
-~~Direct Reciprocity&33.98 (2.30) &22.00 (1.51) ***&15.64 (5.12)**\tabularnewline
-~~Group Reciprocity&34.39 (0.77) & 8.08 (1.61) ***& 7.78 (2.37)**\tabularnewline
-~~In-Group&38.98 (1.11) ***&15.46 (2.99) ***& 0.20 (5.50)\tabularnewline
-\hline
-{\bfseries Responders}&&&\tabularnewline
-~~Baseline&35.00 (---)& 2.25 (0.51) &---\tabularnewline
-~~Direct Reciprocity&35.38 (1.08) &22.17 (2.30) ***&20.87 (6.04)***\tabularnewline
-~~Group Reciprocity&34.79 (0.62) & 6.12 (1.51) **& 1.20 (2.08)\tabularnewline
-~~In-Group&42.13 (1.99) ***&17.20 (3.40) ***& 4.72 (7.62)\tabularnewline
-\hline
-\end{tabular}}
-\justify Mean allocation, mean discrimination, and reciprocity (marginal effect of TG partner's kindness on allocation) by condition. Robust standard errors clustered on sessions. Significance of comparison to Baseline is marked.$^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively.\end{table}
+<<table, results='asis', warning=FALSE>>=
+# senders:
+# col 1: Allocation; col 2: Discrimination; col 3: Reciprocity
+# B/GR/D/IG treatments in rows
+# mean and stderr of cols, 
+# sig stars for differences with baselin
+# receivers same
 
+dfr_targets <- dfr %>% 
+      ungroup %>% 
+      filter(indcondition == condition, condition != "Baseline" | recipient == 1) %>% 
+      mutate(
+        indcondition = recode(indcondition, Group  = 'Group Reciprocity', Direct = 'Direct Reciprocity'), 
+        roletrust = relevel(factor(roletrust), 2)
+      )
+myplm <- purrr::partial(plm, model = "random", effect = "individual", index = c("sid", "period"), 
+      random.method = "walhus")
+
+regs <- dfr_targets %>% group_by(roletrust) %>% do(
+  give_mod  = myplm(give ~ 0 + indcondition + factor(sessionid), .),
+  disc_mod  = myplm(discrimination ~ 0 + indcondition + factor(sessionid), .),
+  recip_mod = myplm(give ~ indcondition + indcondition:kindness + factor(sessionid), .),
+  give_mod2 = myplm(give ~ indcondition + factor(sessionid), .),
+  disc_mod2 = myplm(discrimination ~ indcondition + factor(sessionid), .)
+) 
+
+mycoeftest <- function (x) filter(tidy(coeftest(x, plm::vcovDC)), ! grepl("factor", term))
+mean_coefs <- regs %>% do(mycoeftest(.$give_mod))
+disc_coefs <- regs %>% do(mycoeftest(.$disc_mod))
+suppressWarnings({
+  recip_coefs_orig <- regs %>% do(mycoeftest(.$recip_mod))
+  recip_coefs <- recip_coefs_orig %>% filter(grepl('kindness', term))
+  mean_sigs   <- regs %>% do(mycoeftest(.$give_mod2))
+})
+recip_coefs$estimate[c(1,5)] <- 0 # to avoid formatting probs later
+disc_sigs <- regs %>% do(mycoeftest(.$disc_mod2))
+
+mean_stars  <- mystar(mean_sigs$p.value)
+disc_stars  <- mystar(disc_sigs$p.value)
+recip_stars <- mystar(recip_coefs$p.value)
+mean_stars[c(1,5)]  <- ''
+disc_stars[c(1,5)]  <- ''
+recip_stars[c(1,5)] <- ''
+
+tbl <- data_frame(
+  Condition = sub('indcondition', '', mean_coefs$term),
+  Allocation = paste0(myfmt(mean_coefs$estimate), ' (', myfmt(round(mean_coefs$std.error, 2)), ') ', mean_stars),
+  Discrimination = paste0(myfmt(disc_coefs$estimate), ' (', myfmt(round(disc_coefs$std.error, 2)), ') ', disc_stars),
+  Reciprocity = paste0(myfmt(recip_coefs$estimate), ' (', myfmt(round(recip_coefs$std.error, 2)), ')', recip_stars)
+)
+tbl$Reciprocity[c(1,5)] <- '---'
+tbl$Allocation[c(1,5)]  <- '35.00 (---)'
+
+# latex(tbl[5:8,], file = '', cgroup = 'Senders', n.cgroup = 4, rowname = NULL, where='!htbp')
+latex(tbl[, -1], file = '', label = 'tab:results', rgroup = c('Senders', 'Responders'),
+      caption = 'Allocations and Discrimination', rowname = tbl$Condition, center = 'centerline', rowlabel = '',
+      insert.bottom = '\\justify Mean allocation, mean discrimination, and reciprocity (marginal effect of TG partner\'s kindness on allocation) by condition. Robust standard errors clustered on sessions. Significance of comparison to Baseline is marked.$^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively.')
+
+disc_mod_all <- myplm(discrimination ~ roletrust*indcondition + factor(session), dfr_targets)
+disc_res <- mycoeftest(disc_mod_all)
+disc_anova <- tidy(Anova(disc_mod_all, vcov. = vcovDC(disc_mod_all)))
+dr_direct <- disc_res %>% filter(term == 'indconditionDirect Reciprocity')
+dr_gr     <- disc_res %>% filter(term == 'indconditionGroup Reciprocity')
+
+ratio_coefs <- recip_coefs$estimate[3]/recip_coefs$estimate[2] * 100
+@
 
 
 The first data column in Table~\ref{tab:results} presents the mean allocations.
 Participants gave significantly more to members of their own team at the expense
-of the neutral recipient ($z=3.58,p< 0.001$ for senders, 
-$z=3.59,p< 0.001$ for
+of the neutral recipient ($z=\Sexpr{myfmt(mean_sigs$statistic[4])},p\Sexpr{cut_pval(mean_sigs$p.value[4])}$ for senders, 
+$z=\Sexpr{myfmt(mean_sigs$statistic[8])},p\Sexpr{cut_pval(mean_sigs$p.value[4])}$ for
 responders), establishing that our group formation manipulation was successful
-in inducing group identity and triggering ingroup favouritism. Allocations to
-the TG~partner and his team mates were not significantly different to the
-baseline~35 ($p>0.43$ for all comparisons). This result suggests that the experience with the TG partner is, on average, neutral, such that positive and negative experiences balance each other overall.
+in inducing group identity and triggering ingroup favouritism. 
 
-Nonetheless, both positive and negative treatment of the TG partner or his team mates increase the absolute difference between the two allocations. Indeed,
+Nonetheless, both positive and negative treatment of the TG partner or their teammates increase the absolute difference between the two allocations. Indeed, the second data
 column of Table~\ref{tab:results} shows that allocators discriminated significantly more
 than in the baseline both when interacting with their TG partner
-($z=9.08,p< 0.001$) and with his team mates 
-($z=3.93,p< 0.001$). This effect was not
-significantly different between TG senders and receivers (F test $0.50,
-p= 0.68$).
+($z=\Sexpr{myfmt(dr_direct$statistic)},p\Sexpr{cut_pval(dr_direct$p.value)}$) and with their teammates 
+($z=\Sexpr{myfmt(dr_gr$statistic)},p\Sexpr{cut_pval(dr_gr$p.value)}$). This effect was not
+significantly different between TG senders and receivers (F test $\Sexpr{myfmt(disc_anova$statistic[4])},
+p\Sexpr{cut_pval(disc_anova$p.value[4])}$).
 
 \subsection{Direct and group reciprocity}
 \label{sec:reciprocity}
@@ -451,44 +573,83 @@ for the six (out of 96) senders who did not send any money.
 %
 There is strong direct reciprocity: allocations
 to the TG partners increase with the TG experience both for
-senders ($z=3.06,p< 0.01$) and for responders 
-($z=3.46,p< 0.001$).
+senders ($z=\Sexpr{myfmt(recip_coefs$statistic[2])},p\Sexpr{cut_pval(recip_coefs$p.value[2])}$) and for responders 
+($z=\Sexpr{myfmt(recip_coefs$statistic[6])},p\Sexpr{cut_pval(recip_coefs$p.value[6])}$).
 
 Group reciprocity, however, is only observed for senders, who allocate
-less to team mates of a responder who returned less.
+less to teammates of a responder who returned less.
 Responders,  although directly reciprocating the
-TG partner's action, do not systematically discriminate against team mates
+TG partner's action, do not systematically discriminate against teammates
 of a sender who sent little. The regression analysis shows no significant
-effect of the responder's TG experience on her allocation to the sender's
-team mates ($z=0.58,p= 0.56$). 
+effect of the responder's TG experience on their allocation to the sender's
+teammates ($z=\Sexpr{myfmt(recip_coefs$statistic[7])},p\Sexpr{cut_pval(recip_coefs$p.value[7])}$). 
 The sender's TG experience, on the other
-hand, significantly increases the allocations made to the responder's team mates 
-($z=3.29,p< 0.01$).\footnote{
+hand, significantly increases the allocations made to the responder's teammates 
+($z=\Sexpr{myfmt(recip_coefs$statistic[3])},p\Sexpr{cut_pval(recip_coefs$p.value[3])}$).\footnote{
   Responders who receive higher amounts also return a higher share. As a result, senders with a more positive TG experience are, on average, those who sent more in the TG, creating a potential confound. There is no reason, however, why different senders should systematically discriminate between groups in a non-costly way. Indeed, the results hold when we control in the regression for the amount sent and its interaction with the share returned.
 }
 The estimated ratio of the group and direct reciprocity coefficients
-is 50\%, so that for every allocation dollar a responder
-loses due to an unkind action in the TG, his team mates lose~50 cents. 
+is \Sexpr{round(ratio_coefs, 0)}\%, so that for every allocation dollar a responder
+loses due to an unkind action in the TG, their teammates lose~\Sexpr{round(ratio_coefs, 0)} cents. 
 This relationship is shown graphically in Figure~\ref{fig:plots} (the corresponding figure for direct reciprocity is 
 included in the supplementary material).
 
+<<more_stats>>=
 
+# just not enough data.
+# dfr %<>% mutate(kind_split_3 = cut(kindness, c(0, 1/3, 1/3 + 0.00001, 1)))
+# dfr_gr <- dfr %>% filter(indcondition=='Group', roletrust=='Sender') %>% group_by(sid) %>% 
+#       summarize(give = mean(give), kind_split_3 = kind_split_3[1], kindness = kindness[1])
+# give_ks3 <- myfmt(with(dfr_gr, tapply(give, kind_split_3, mean)))
+# ttlo <- t.test(give ~ I(kindness < 1/3), dfr_gr) 
+dfr$SVO <- factor(dfr$svo_angle >= median(dfr$svo_angle, na.rm = TRUE), labels = c("Low SVO", "High SVO"))
+# NB: *low* scores on the collectivism measure indicated high collectivism
+# dfr$col_split <- factor(dfr$collectivism >= median(dfr$collectivism, na.rm = TRUE), labels = c("High coll.", "Low coll."))
+# dfr$col_split <- factor(dfr$col_split, levels = c("Low coll.", "High coll."))
+
+dfr_gr <- dfr %>% filter(indcondition=='Group', roletrust=='Sender') 
+mod_SVO <- tidy(coeftest(x <- lm(give ~ kindness*SVO, dfr_gr), cluster.vcov(x, ~ session)))
+# mod_coll <- lm(give ~ kindness*col_split, dfr_gr)
+svo_p <- mod_SVO$p.value[4]
+
+@
 
 
 Senders' group reciprocity was related to their social value orientation. The slope of the effect of the TG experience 
 on allocations was 
-15.97 for those with less than median SVO, and 
--1.06 for those with median or greater SVO 
-(interaction, $p= 0.061$).These results should be interpreted cautiously, since both scores were 
+\Sexpr{myfmt(mod_SVO$estimate[2])} for those with less than median SVO, and 
+\Sexpr{myfmt(mod_SVO$estimate[2] + mod_SVO$estimate[4])} for those with median or greater SVO 
+(interaction, $p\Sexpr{cut_pval(svo_p)}$).These results should be interpreted cautiously, since both scores were 
 affected by the TG experience. 
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/plots-1} \caption[Allocations in the Group Reciprocity condition versus the TG experience]{Allocations in the Group Reciprocity condition versus the TG experience. Circles show individual data points (circle size proportional to number of observations). Lines show linear regressions.}\label{fig:plots}
-\end{figure}
+<<plots, fig.cap='Allocations in the Group Reciprocity condition versus the TG experience. Circles show individual data points (circle size proportional to number of observations). Lines show linear regressions.', warning = FALSE>>=
+
+suppressMessages({
+  library(scales)
+  library(plotrix)
+})
+par(mfrow=c(1,2))
+
+with(dfr %>% filter(greciprocity == 1, roletrust=="Sender"), 
+      sizeplot(kindness, give, pch = 19, col = alpha("darkgreen", .85), xlab = "TG experience", ylab = "Allocation", 
+      main = "Senders")) 
+intcpt <- recip_coefs_orig[1:8,] %>% filter(term %in% c('(Intercept)', 'indconditionGroup Reciprocity')) %>% 
+      select(estimate) %>% sum
+slope <- recip_coefs_orig[1:8,] %>% filter(term %in% c('indconditionGroup Reciprocity:kindness')) %>% 
+      select(estimate) %>% sum
+abline(intcpt, slope, col = "green", lwd = 3)
+
+with(dfr %>% filter(greciprocity == 1, roletrust=="Responder"), 
+      sizeplot(kindness, give, pch = 19, col = alpha("navy", .65), xlab = "TG experience", ylab = "Allocation", 
+      main = "Responders"))
+intcpt <- recip_coefs_orig[9:16,] %>% filter(term %in% c('(Intercept)', 'indconditionGroup Reciprocity')) %>% 
+      select(estimate) %>% sum
+slope <- recip_coefs_orig[9:16,] %>% filter(term %in% c('indconditionGroup Reciprocity:kindness')) %>% 
+      select(estimate) %>% sum
+abline(intcpt, slope, col = "skyblue", lwd = 3)
 
 
-\end{knitrout}
+@
 
 \section{Discussion}
 \label{sec:conclusion}
@@ -559,6 +720,8 @@ reciprocity. These ideas could be formalized in future work.
 
 \newpage
 \printbibliography
+%\bibliographystyle{dcu}
+%\bibliography{grouprec}
 
 \newpage
 
@@ -582,13 +745,30 @@ reciprocity. These ideas could be formalized in future work.
 \newpage
 \section{Allocations in the DR condition}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
-\includegraphics[width=\maxwidth]{figure/plots_dr-1} \caption[Allocations in the Direct Reciprocity condition versus the TG experience]{Allocations in the Direct Reciprocity condition versus the TG experience. Circles show individual data points (circle size proportional to number of observations). Lines show linear regressions.}\label{fig:plots_dr}
-\end{figure}
+<<plots_dr, fig.cap='Allocations in the Direct Reciprocity condition versus the TG experience. Circles show individual data points (circle size proportional to number of observations). Lines show linear regressions.',fig.pos='!h',warning = FALSE>>=
+
+par(mfrow=c(1,2))
+
+with(dfr %>% filter(direct == 1, roletrust=="Sender"), 
+      sizeplot(kindness, give, pch = 19, col = alpha("darkred", .85), xlab = "TG experience", ylab = "Allocation", 
+      main = "Senders")) 
+intcpt <- recip_coefs_orig[1:8,] %>% filter(term %in% c('(Intercept)', 'indconditionDirect Reciprocity')) %>% 
+      select(estimate) %>% sum
+slope <- recip_coefs_orig[1:8,] %>% filter(term %in% c('indconditionDirect Reciprocity:kindness')) %>% 
+      select(estimate) %>% sum
+abline(intcpt, slope, col = "orange", lwd = 3)
+
+with(dfr %>% filter(direct == 1, roletrust=="Responder"), 
+      sizeplot(kindness, give, pch = 19, col = alpha("purple", .65), xlab = "TG experience", ylab = "Allocation", 
+      main = "Responders"))
+intcpt <- recip_coefs_orig[9:16,] %>% filter(term %in% c('(Intercept)', 'indconditionDirect Reciprocity')) %>% 
+      select(estimate) %>% sum
+slope <- recip_coefs_orig[9:16,] %>% filter(term %in% c('indconditionDirect Reciprocity:kindness')) %>% 
+      select(estimate) %>% sum
+abline(intcpt, slope, col = "pink", lwd = 3)
 
 
-\end{knitrout}
+@
 
 \newpage
 \section{Experimental instructions}

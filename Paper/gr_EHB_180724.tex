@@ -1,4 +1,9 @@
+% !TeX program = XeLaTeX
+
+
 \documentclass[12pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
 \def\maxwidth{ %
   \ifdim\Gin@nat@width>\linewidth
@@ -49,7 +54,9 @@
 \usepackage{alltt}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{setspace}
-\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} 
+%\usepackage[semicolon,sort]{natbib}
+\usepackage[backend=biber,style=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,giveninits=false,uniquename=false,doi=false,url=false,isbn=false]{biblatex} % Numbered citations
+%\usepackage[backend=biber,citestyle=authoryear-comp,natbib=true,sorting=nyt,sortcites=true,maxnames=10,firstinits=false,uniquename=false]{biblatex}
 \addbibresource{grouprec.bib}
 \usepackage{geometry}
 \usepackage{verbatim}
@@ -67,6 +74,11 @@
 \usepackage[hidelinks,pdfstartview=]{hyperref}
 \usepackage{changepage} % needed for the appendix
 
+%\usepackage[nolists]{endfloat}
+%\usepackage[affil-it]{authblk}
+%\renewcommand\Authfont{\sffamily}
+%\renewcommand\Affilfont{\sffamily\small\it}
+%\setlength{\affilsep}{0.5em}
 \usepackage{xltxtra,fontspec,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
 \setsansfont{TeX Gyre Heros}
@@ -95,6 +107,7 @@
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \makeatletter
+%\def\@seccntformat#1{}
 %%% Change section and subsection style
 \renewcommand\section{\@startsection {section}{1}{\z@}%
 {-3.5ex \@plus -1ex \@minus -.2ex}%
@@ -106,20 +119,44 @@
 {\it\large}}
 \makeatother
 
+%%% Define subhyps
+
+\makeatletter
+\newcounter{subhyp}
+\let\savedc@hyp\c@hyp
+\newenvironment{subhyp}
+ {%
+  \setcounter{subhyp}{0}%
+  \stepcounter{hyp}%
+  \edef\saved@hyp{\thehyp}% Save the current value of hyp
+  \let\c@hyp\c@subhyp     % Now hyp is subhyp
+  \renewcommand{\thehyp}{\saved@hyp\alph{hyp}}%
+ }
+ {}
+\newcommand{\normhyp}{%
+  \let\c@hyp\savedc@hyp % revert to the old one
+  \renewcommand\thehyp{\arabic{hyp}}%
+}
+\makeatother
+
 \renewcommand{\abstractname}{\bf\sffamily Abstract}
 
 \newtheorem{hyp}{Hypothesis}
 \newtheorem{res}{Result}
 
-\title{\bf\sffamily Humans reciprocate by discriminating against group peers}
+\title{\bf\sffamily Humans reciprocate %intentional harm 
+by discriminating against group peers}
 %\author{\textsc{Authors undisclosed}}
 \author{David Hugh-Jones\thanks{School of Economics, University of East Anglia. E-mail: D.Hugh-Jones@uea.ac.uk.} \and Itay Ron\thanks{E-mail: itayron@gmail.com} \and Ro'i Zultan\thanks{Department of Economics, Ben-Gurion University of the Negev. E-mail: zultan@bgu.ac.il.}}
 
-\date{}
+\date{}%\sffamily \small This version: \today.}
+
+%\textbf{Preliminary version, please do not distribute.}}
 
 \def\figwidth{\textwidth}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
+%\SweaveOpts{concordance=TRUE}
 \maketitle
 
 \begin{abstract}
@@ -131,9 +168,8 @@ Subjects played a trust game, then allocated money between other people. Senders
 whose partners returned more in the trust game gave more to that partner's group
 members. The effect was about half as large as the effect of direct reciprocity.
 Receivers' allocations to group members were not affected by their partners’ 
-play in the trust game, suggesting that group reciprocity was only triggered when the
-partner's intentions were unequivocal. We show conditions under which group 
-reciprocity can evolve, and discuss its place in conflict among early humans.
+play in the trust game, suggesting that group reciprocity was only triggered by
+strong norm violations. We discuss the role of group reciprocity in conflict among early humans.
 \end{abstract}
 
 \emph{Keywords:} Upstream reciprocity, group identity, intergroup conflict.
@@ -147,7 +183,7 @@ Word count: 3129
 Human society is organized in groups, including families, clans, firms and nations. This
 structure is reflected in individual behaviour and cognition. Humans identify
 with their ingroup and are altruistic and prosocial towards ingroup members;
-towards outgroup members, they display stereotyping and prejudice
+towards outgroup members, they may display stereotyping and prejudice
 \citep{tajfel1979integrative,yamagishi2000thegroup,balliet2014ingroup,DeDreu2014,chen2009group,chen2011potential}.
 Group structure provides the backdrop for intergroup conflict---from economic
 and political competition to inter-ethnic violence and war---which is pervasive
@@ -175,7 +211,8 @@ to harm (help) others from that group.  Whereas group-based downstream
 reciprocity \citep{bernhard2006group,bernhard2006parochial} follows the maxim
 `do unto others as they have done to members of \emph{my} tribe', group-based
 upstream reciprocity follows the maxim `do unto others as members of
-\emph{their} tribe have done to me' (Figure~\ref{fig:illustration}). Tit-for-tat conflict looks like negative group reciprocity.
+\emph{their} tribe have done to me' (Figure~\ref{fig:illustration}). Tit-for-tat conflict looks like 
+negative group reciprocity, i.e., reciprocity where harm is reciprocated with harm.
 
 \begin{figure}
 	\begin{center}
@@ -199,83 +236,69 @@ The concept of group reciprocity may help to explain the evolution of intergroup
 includes three differing approaches to understanding this. While cultural theories argue that there is no innate tendency to 
 intergroup aggression, theories of parochial altruism argue that intergroup violence was a driver of within-group 
 altruism via group selection processes; as a result, intergroup violence can involve self-sacrifice for one's group
-members \citep{choi2007coevolution,bowles2009did}. The ``chimpanzee model", by contrast, argues that early humans, like
+members \citep{choi2007coevolution,bowles2009did,hugh2013reputation}.\footnote{
+Empirical studies confirm that outside threat increases within-group cooperation \citep{weisel2016social,gneezy2012conflict,bornstein1994}.
+} 
+The ``chimpanzee model", by contrast, argues that early humans, like
 chimpanzees, only attack when odds are very favourable; thus a human tendency to kill outgroups evolved by individual
 selection alone \citep{wrangham2012intergroup}. This is supported by evidence that both 
 hunter-gatherers and chimpanzees are rarely wounded when they attack. 
 
-\citet{kelly2000warless} argues that a defining characteristic of war is ``social substitutability'', whereby members
+\citet{kelly2000warless} argues that a defining characteristic of war is ``social substitutability'', whereby members 
 of a perpetrator's group become legitimate targets for revenge. Social substitutability is especially found in segmented
 societies, which typically feature strong corporate identities such as extended patrilineal families and clans. 
 Some of these societies also have ``war/peace systems'' featuring well-defined institutions for ending conflict as well as beginning it, such as the Andamanese Peace Dance or the Montenegrin Court of Good Men for ending feuds 
 \citep{boehm1984blood}. By 
-contrast, while chimpanzees do practice retaliation and reconciliation among alliances within the community, they  do not 
+contrast, while chimpanzees do practice reciprocity among alliances within the community, they  do not 
 reciprocate towards other groups. Instead, they attack stranger chimpanzees whenever it is safe to do so. The risk of 
 being attacked forces chimps to avoid territory bordering other communities, which limits their available space for foraging 
-\citep{wilson2003intergroup}. While this fact seems to favour the evolution of peaceful intergroup relations 
-\citep{kelly2005evolution}, that ignores the prisoner's dilemma structure of intergroup relations; while both groups would
-do better not attacking the other, each group does better by attacking when the odds are good enough. Indeed, peaceful
-unsegmented societies resolve intergroup conflict by avoiding the other group, which entails a loss of access to valuable
-resources, and hence lower population density. The evolution of group 
+\citep{wilson2003intergroup}. 
+While this fact seems to favour the evolution of peaceful intergroup relations 
+\citep{kelly2005evolution}, that ignores the prisoner's dilemma structure of intergroup relations; although both groups would
+do better if neither attack---thus avoiding costly conflict---each group does better by attacking when the odds are good enough, thereby gaining territory, resources, etc. Indeed, peaceful unsegmented societies resolve intergroup conflict by avoiding the other group, which entails a loss of access to valuable
+resources, constricting population expansion. 
+
+The evolution of group 
 reciprocity could deter opportunistic conflict. When there is group reciprocity, someone who harms an outgroup member 
 brings retaliation on his own group, and this gives his group members an incentive to maintain peace 
-\citep{boehm1984blood}. Group reciprocity could thus have benefited humans by allowing them to range over wider 
-areas and to have more extensive contacts with outgroups.  So, the evidence in \citet{kelly2000warless} that population 
-density is associated with war can be read two ways: the development of war, particularly of war/peace systems, may 
-allow different groups to live at high densities in peace.
+\citep{boehm1984blood,fearon1996explaining}. Indeed, hunter-gatherers and farmers have similar levels of
+lethal violence to chimpanzees, but much less non-lethal violence \citep{wrangham2006comparative}; this could be
+because the threat of high-level violence can contain low-level violence. Group reciprocity could thus 
+have benefited humans by allowing them to exploit more of the land area 
+around them, and to have more extensive contacts with outgroups, sustaining
+a higher population in a given space. So, the evidence in \citet{kelly2000warless} that population 
+density is associated with war can be read in two ways: the development of war, particularly of war/peace systems, may 
+allow different groups to live at high densities in peace.  
 
-While group reciprocity can benefit the group, to evolve it must increase individual fitness. In the
-supplementary materials, we report on a series of simulations tracking the evolution of group reciprocators under different
-environmental parameters. The key result is that when the relative cost of helping (or failing to harm) a target is low
-enough, relative to the benefit supplied to the target and to the group size, group reciprocity can evolve to fixation in a group. The mechanism is that groups 
-with a high share of group
-reciprocators learn to cooperate with each other, while not helping groups that have a high share of selfish types. 
-Selfish types in cooperative groups free ride on the group reputation,
-exploiting members of other cooperating groups, thereby gaining higher fitness then the group reciprocators in their group.
-Nonetheless, if the share of group reciprocators within the group varies sufficiently between groups, group reciprocators 
-are overrepresented in the cooperative groups, and therefore have higher fitness overall. The high benefit/cost ratio required for
-group reciprocity to evolve fits the ``chimpanzee model" of conflict where an attack is 
-only launched if it is low risk. It may also explain why most salient examples of group reciprocity are seen in the
-negative domain of harm and conflict: when the benefit/cost ratio is high, hurting or refraining from helping is a ``nasty" action, 
-since it imposes a large loss on the target for a small gain to oneself.
-
-Another factor that could support the evolution of group reciprocity is intra-group dependencies. If group members help 
-each other, e.g. by providing public goods, then punishing a perpetrator's group member indirectly harms the perpetrator.
-Our simulations show that group reciprocity may emerge even absent such intra-group dependencies, but their presence
-would lower the benefit/cost threshold needed for it to evolve.
-
-\citet{kelly2000warless} argues that group reciprocity emerges in a segmented society, where group affiliations are rigid and salient.
-However, our simulations show that group reciprocity can evolve even without in-group sanctioning or collective norms of
-group responsibility and liability. That, and real world examples of apparent intergroup revenge in large modern societies,
-suggest there may be a universal propensity to group-reciprocate. In this paper, we aim to study the existence and form of the proximate
+Real world examples of apparent intergroup revenge suggest there may be a human propensity to group-reciprocate \citep{horowitz1985ethnicgroups,horowitz2001thedeadly,bauerlein2001negrophobia,chagnon1988lifehistories}.
+That is, individuals sometimes, but not always, discriminate against outgroups. Behavior toward outgroup members varies on the basis of the individuals' experiences with the outgroup.
+In this paper, we aim to study the existence and form of the proximate
 psychological mechanism for group reciprocity in modern humans. Although field observations from conflict are highly 
-suggestive, they are loaded with individual and group context and history. Moreover, in the field, group 
-reciprocity and direct reciprocity may be conflated, because 
-it is difficult to distinguish between retaliatory acts directed at groups that include the perpetrator, and acts 
-directed at unrelated group members. We therefore designed a controlled laboratory experiment to test the psychological
-mechanism by which humans reciprocate towards groups in a clean way. That is, we test the hypothesis that people 
-reciprocate towards groups.
+suggestive, it is hard to identify group-reciprocity motives in naturally occurring data. Actions that may look like group reciprocity may be rooted in other motivations---such as wishing to signal group strength---or reflect centralized group decisions rather than individual tendencies for group reciprocity \citep{gould2000revenge,mamdani2001victims}.
+Moreover, in the field, group 
+reciprocity may be conflated with individual level reciprocity, i.e., acts that aim to help or harm the perpetrator, but have side effects on the entire group. We therefore designed a controlled laboratory experiment to test the human tendency for group reciprocity in a clean way. 
 
-Cleanly identifying group reciprocity requires controlling for three confounds: individual level reciprocity, e.g. if
-subjects' actions affect an entire group including the original actor who helped or harmed them; generalized reciprocity,
+Cleanly identifying group reciprocity requires controlling for three confounds: individual level reciprocity; generalized reciprocity,
 where subjects reciprocate not specifically towards the original actor’s group, but towards other people in general; and
-strategic interactions, where apparent reciprocity is driven by reputation-building. 
+actions driven by strategic reputation-building rather than by a motivation to reciprocate past actions. 
 Our experiment fulfils all three: subjects can differentiate the original actor from his or her group members, they 
-interact both with these group members and with members of other groups, and we minimize strategic concerns by not giving
-feedback about subjects' actions.
+interact both with these group members and with members of other groups, and we minimize strategic concerns by not giving feedback about the reciprocator's action.
 
-While previous studies looked at retaliation towards groups, this retaliation does not necessarily reflect group reciprocity as defined here. \citet{gaertner2008whenrejection} found that rejection by one group member leads to more hostility towards the group when the group is perceived as a unified entity. Since hostility was directed towards the whole group, individual and group level reciprocity were confounded. Similarly, \citet{bohm2016makes} examine intergroup retaliation using the intergroup prisoner's
-dilemma paradigm, but cannot distinguish between individual and group reciprocity.
-\citet{stenstrom2008theroles} manipulated entitativity by making the original perpetrator (a political analyst) an official affiliate of the group (a presidential campaign). Thus, holding the group accountable for its member's action is justified without resorting to group reciprocity. In contrast, we look at how people reciprocate a clear individual act by one group member to an unrelated other group member, where group structure is minimal and free of existing social context. 
+While previous studies looked at retaliation towards groups, this retaliation does not necessarily reflect group reciprocity as defined here. \citet{gaertner2008whenrejection} found that rejection by one group member leads to more hostility towards the group when ``entitativity'' is high, i.e. the group is perceived as a unified entity. Since subjects could only display hostility to the whole group (by exposing them to unpleasant noise), individual and group level reciprocity were confounded. Similarly, \citet{bohm2016makes} examine intergroup retaliation using the intergroup prisoner's
+dilemma para\-digm, but cannot distinguish between individual and group reciprocity.
+\citet{stenstrom2008theroles} manipulated entitativity by making the original perpetrator (a political analyst) ``tightly affiliated'' with the group (a presidential campaign). Under this manipulation, holding the group accountable for the perpetrator's act can be practically and/or legally justified, without resorting to group reciprocity. In contrast, we look at how people reciprocate a clear individual act by one group member to an uninvolved other group member, where groups are created in the lab and are free of existing social context. 
 
 
-Our experimental set up was the following. After an initial group-formation stage, participants interacted in two strategic stages. The upstream action, in which the individual could be helped or harmed by another person, was represented by a Trust Game (TG) \citep{berg1995trust}.  In this game, the Sender~(S) receives~150 money-equivalent tokens, and chooses how many of them to send to the Responder~(R). The amount sent is multiplied by a factor of~3, so that R receives between 0~and~450 tokens, of which he can send any number back to S.  While
+Our experimental set up was the following. Participants were randomly assigned to groups and collaborated on a task to build group identity. Next, participants interacted in two strategic stages. The upstream action, in which the individual could be helped or harmed by another person, was represented by a Trust Game (TG) \citep{berg1995trust}.  In this game, the Sender~(S) receives~150 money-equivalent tokens, and chooses how many of them to send to the Responder~(R). The amount sent is multiplied by a factor of~3, so that R receives between 0~and~450 tokens, of which he can send any number back to S.  While
 Rs' actions clearly have a benefit/cost ratio of 1 (money returned to S is lost to R), Ss may send money in the expectation of having
 money returned. In addition, not returning money in the trust game violates a social norm \citep{kimbrough2015norms}. For
-this reason, we expected R's actions to elicit stronger reciprocity, although we test the effect of both S's and R's actions.
+these reasons, we expected R's actions to elicit more reciprocity, although we test the effect of both S's and R's actions.
+
+
+% Whereas R is clearly kind when returning money (and nasty when exploiting a generous proposer by keeping the received amount), S's intentions are equivocal. Sending money can be driven by selfish expectations of reciprocity, while not sending can be driven by caution. Thus, while all subjects experience helpful or harmful actions, only senders experience actions that clearly reflect their counterpart's preferences and intentions \citep{gunnthorsdottir2002using,kimbrough2015norms}.
 
 The upstream action was followed by the reciprocal action, 
-in which the individual could help others. We implemented this as an Allocation
+in which each individual who participated in the TG could help others. We implemented this as an Allocation
 Game in which subjects divided a fixed amount between two recipients.
 In Direct Reciprocity rounds, the recipients included the TG partner;
 in Group Reciprocity rounds, a member of the TG partner's group; and
@@ -285,19 +308,21 @@ Baseline rounds included two neutral recipients, to test whether the
 TG experience leads to arbitrary discrimination in the absence of any reciprocal
 or group motivations.
 
-Our expectations were as follows. First, in Direct Reciprocity rounds, individuals' allocations to their TG partner
-should positively covary with the amount the partner sent (or returned) in the Trust Game. This simply comes from
-from the well-known theory of direct reciprocity. Second, if group reciprocity is present, then allocations to the TG partner's group member, in Group Reciprocity rounds, should also covary with the amount sent or returned by the TG partner.
-We also measured participants' social value orientation \citep{van1999pursuit}. It is plausible that willingness to group-reciprocate should
-be linked to other social preferences. We were not certain \emph{a priori} whether group reciprocity would be stronger
-among selfish or among prosocial types. On the one hand, both prosociality and group reciprocity can be seen as actions
-that benefit the group, by providing support to ingroup members or protecting it from outgroups. On the other hand,
-negative reciprocity in general may be linked to spite \citep{johnstone2004evolution}. So we test a non-directional hypothesis here.
+Our expectations were as follows. First, in Direct Reciprocity rounds, individuals' allocations to their TG partner should positively covary with the amount the partner sent (or returned) in the Trust Game. This provides a benchmark to compare group reciprocity against.
+Second, if group reciprocity is present, then allocations to the TG partner's group member, in Group Reciprocity rounds, should also covary with the amount sent or returned by the TG partner.
+Lastly, Ingroup favoritism rounds checked that we had successfully created group identity among participants.
+
+% We also measured participants' social value orientation \citep{van1999pursuit}. It is plausible that willingness to group-reciprocate should
+% be linked to other social preferences. We were not certain \emph{a priori} whether group reciprocity would be stronger
+% among selfish or among prosocial types. On the one hand, both prosociality and group reciprocity can be seen as actions
+% that benefit the group, by providing support to ingroup members or protecting it from outgroups. On the other hand,
+% negative reciprocity in general may be linked to spite \citep{johnstone2004evolution}. So we test a non-directional hypothesis here.
 
 \section{Material and methods}
 \label{sec:design}
 
-Each session consisted of~24 participants, randomly allocated into six
+Each session consisted of~24 participants, sitting at isolated computer terminals. 
+At the beginning of the experiment, the participants were randomly allocated into six
 \emph{teams} of four. Each participant was identified throughout the experiment
 by team colour and individual number (1--4) within the team. At the beginning of
 the experiment, participants were informed that the experiment had five distinct
@@ -307,14 +332,16 @@ beginning of the stage. The five stages were a group formation stage, the TG
 stage, the Allocation Game stage, a social value orientation elicitation stage
 \citep*{murphy2011measuring} and a collectivism scale measurement stage
 \citep*[adapted from the horizontal collectivism scale
-in][]{Singelis1995horizontal}. Other than the collectivism measurement, all decisions were incentivized.
+in][]{Singelis1995horizontal}. 
+Other than the collectivism measurement, all decisions were incentivized.
+The results from the social value orientation and collectivism measures did not reveal any systematic and interpretable pattern, and are therefore not included in this paper. 
 
 Following \citep{chen2009group}, we created group identity in the
 first stage by allowing participants to consult each other by anonymous
 chat while solving a simple task. Participants solved five Raven matrices
 (see supplementary material). Each matrix was presented on screen
 for 120~seconds, during which each participant could both send written
-messages to the team and update her own answer. The final answer submitted
+messages to the team and update their own answer. The final answer submitted
 at the end of the 120~seconds determined payoffs, with 10~tokens
 paid for each correct answer. To further boost group identity through
 a common goal, team members each earned an additional bonus of 5~tokens
@@ -327,10 +354,7 @@ actual interaction, participants could see their TG partner's team
 colour and individual number. 
 
 The third stage Allocation Game consisted of six rounds. In each round, participants interacted in groups of three. Individuals in each group were identified to each other by
-team colour and number. Each round consisted of a random dictator game, as
-follows. Each player in the group of three had to allocate 100~tokens within the
-group. The allocator always received exactly 30~tokens, and could freely allocate the
-remaining 70~tokens between the other two players. Previous research has found that
+team colour and number. Each round consisted of a random dictator game, in which each player chose how to divide 100~tokens between the three group members if he or she is chosen to be the allocator. The allocator always received exactly 30~tokens, and could freely allocate the remaining 70~tokens between the other two players. Previous research has found that
 people do not harm, but refrain from helping negatively perceived outgroups
 \citep{weisel2015ingroup}. Accordingly, we set the parameters of the game so
 that an equal division between the other two players provides them with 35~tokens each, more than the allocator's own share.\footnote{
@@ -340,7 +364,9 @@ that an equal division between the other two players provides them with 35~token
 One round of the six rounds was randomly chosen for payment. In that round, the payoffs of the members of each group were determined by the allocation decision of one randomly chosen player in the group. No feedback was provided between rounds. At the end of the stage, players learned the payoff round, whether their allocation was chosen to determine payoffs, and their payoff for the round. Thus, all allocation decisions were completely independent of each other, both within and between participants.
 
 
-Table~\ref{tab:example} shows the matching scheme over the six rounds. Each participant was matched to be in the same group of three with a member of her own team in one of the six rounds (\emph{ingroup} condition), with her TG partner in another round (\emph{direct reciprocity} condition), and in two other rounds with other members of the TG partner's team (\emph{group reciprocity} condition). The remaining two rounds served as the baseline condition. Note that the matching is not independent. For example, if one player is in the direct reciprocity condition, then one other player is in the direct reciprocity condition and the third player is in either the baseline or group reciprocity condition. 
+Table~\ref{tab:example} shows the matching scheme over the six rounds. Each participant was matched to be in the same group of three with a member of their own team in one of the six rounds (\emph{ingroup} condition), with their TG partner in another round (\emph{direct reciprocity} condition), and in two other rounds with other members of the TG partner's team (\emph{group reciprocity} condition). The remaining two rounds served as the baseline condition. Note that the matching is not independent. For example, if one player is in the direct reciprocity condition, then one other player is in the direct reciprocity condition and the third player is in either the baseline or group reciprocity condition.\footnote{
+Some participants are matched with each other in two different rounds, as Blue~1 and Brown~2 in the example provided in Table~\ref{tab:example}. This should not matter, as only one round is actually paid. The results are robust both to controlling for and to removing repeated encounters from the regressions.
+}
 
 
 \begin{table}
@@ -366,16 +392,7 @@ Table~\ref{tab:example} shows the matching scheme over the six rounds. Each part
 
 The fourth stage implemented the slider measure of social value orientation
 \citep*{murphy2011measuring,crosetto2012flexible}, in which participants
-choose nine allocations between themselves and another person. For
-consistency with the previous stages, the team identity of the partner
-was known. To keep the decision independent of previous experience
-with the different teams, we matched participants within teams. Therefore, this measure captures within-group social value orientation. Payoffs
-were determined by one randomly chosen decision of the nine decisions
-made by one randomly chosen player in each dyad. The decisions yielded
-a social orientation angle for each participant, with~$0^{\circ}$
-corresponding to selfishness, $45^{\circ}$ to pure altruism, and
-negative angles to spitefulness.
-
+choose nine allocations between themselves and another member of their team.
 After the fifth and final stage (a non-strategic and non-incentivised
 collectivism measurement), participants learned their cumulative payoff in tokens and were paid in private.
 %and final payment in New Israeli Shekels. 
@@ -385,9 +402,9 @@ The experiment was programmed in z-Tree \citep*{Fischbacher2007}.
 %The average payment was 72~NIS (approximately \$18) for a duration of 70~minutes. The lowest and highest payments were~25 and~130 NIS, respectively.
 The average payment was approximately \$18) for a duration of 70~minutes. The lowest and highest payments were approximately~\$6 and~\$32, respectively.
 
-The key outcomes in this design are based on the allocation decisions made in the third stage. Direct and group reciprocity can be both positive and negative, and therefore are not hypothesized to have a systematic effect on the the amount allocated to either the TG partner or to his team mates. Nonetheless---while there is arguably no reason to discriminate between two neutral players---we hypothesize that direct and group reciprocity will lead the allocator to discriminate either for or against the TG partner or his team mates. Consequently, we predict that the absolute difference between the two allocations will be larger in all treatments compared to the baseline. This difference is measured in our `Discrimination' outcome.
+The key outcomes in this design are based on the allocation decisions made in the third stage. Direct and group reciprocity can be both positive and negative, and therefore are not hypothesized to have a systematic effect on the the amount allocated to either the TG partner or to their teammates. Nonetheless---while there is arguably no reason to discriminate between two neutral players---we hypothesize that direct and group reciprocity will lead the allocator to discriminate either for or against the TG partner or their teammates. Consequently, we predict that the absolute difference between the amounts allocated to the two recipients will be larger in all treatments compared to the baseline. This difference is measured in our `Discrimination' outcome.
 
-We measure reciprocity directly by looking at the effect of the TG experience in the second stage on allocations made in the third stage. We define the experience with the TG partner in two ways. For responders, this is the amount sent to them by their partner. For senders, we calculate the amount returned to them by their partner as a fraction of the money available to the responder. Thus, an equal split of the pie implies a value of 1/2, and compensating the sender for his investment implies a value of 1/3. We subsequently define (direct or group) reciprocity as the slope of the allocation made to the TG partner or his team mates on the TG experience.
+We measure reciprocity directly by looking at the effect of the TG experience in the second stage on allocations made in the third stage. We define the experience with the TG partner in two ways. For responders, this is the amount sent to them by their partner. For senders, we calculate the amount returned to them by their partner as a fraction of the money available to the responder. Thus, an equal split of the pie implies a value of 1/2, and compensating the sender for his investment implies a value of 1/3. We subsequently define (direct or group) reciprocity as the slope of the allocation made to the TG partner or their teammates on the TG experience. In other words, the Group Reciprocity parameter estimates the difference between the amount given to teammates of a TG partner who sent or returned nothing, and the amount given to teammates of a partner who sent or returned the maximum amount possible.
 
 \section{Results}
 \label{sec:results}
@@ -395,9 +412,11 @@ We measure reciprocity directly by looking at the effect of the TG experience in
 We report results on allocations, discrimination between recipients (measured as the
 absolute difference between the two recipients' allocations), and direct and
 group reciprocity. All reported statistical tests are based on linear
-regressions with standard errors clustered by session. %See the supplementary material for the full specification and results.
+regressions with individual-level random effects, per-session fixed effects, and standard errors 
+clustered by session. %See the supplementary material for the full specification and results.
 
 
+%latex.default(tbl[, -1], file = "", label = "tab:results", rgroup = c("Senders",     "Responders"), caption = "Allocations and Discrimination",     rowname = tbl$Condition, center = "centerline", rowlabel = "",     insert.bottom = "\\justify Mean allocation, mean discrimination, and reciprocity (marginal effect on allocation of experience with TG partner) by condition. Robust standard errors clustered on sessions. $^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively. Stars show significance of comparison to Baseline.")%
 \begin{table}[!tbp]
 \caption{Allocations and Discrimination\label{tab:results}} 
 \centerline{\begin{tabular}{llll}
@@ -405,38 +424,36 @@ regressions with standard errors clustered by session. %See the supplementary ma
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{Allocation}&\multicolumn{1}{c}{Discrimination}&\multicolumn{1}{c}{Reciprocity}\tabularnewline
 \hline
 {\bfseries Senders}&&&\tabularnewline
-~~Baseline&35.00 (---)& 4.15 (1.13) &---\tabularnewline
-~~Direct Reciprocity&33.98 (2.30) &22.00 (1.51) ***&15.64 (5.12)**\tabularnewline
-~~Group Reciprocity&34.39 (0.77) & 8.08 (1.61) ***& 7.78 (2.37)**\tabularnewline
-~~In-Group&38.98 (1.11) ***&15.46 (2.99) ***& 0.20 (5.50)\tabularnewline
+~~Baseline&35.00 (---)& 7.25 (5.08) &---\tabularnewline
+~~Direct Reciprocity&33.98 (1.61) &25.03 (5.54) ***&17.03 (3.72) ***\tabularnewline
+~~Group Reciprocity&34.41 (0.86) *&11.21 (5.49) **& 9.12 (4.52) *\tabularnewline
+~~In-Group&38.98 (2.16) *&18.56 (5.64) ***& 1.62 (8.42) \tabularnewline
 \hline
 {\bfseries Responders}&&&\tabularnewline
-~~Baseline&35.00 (---)& 2.25 (0.51) &---\tabularnewline
-~~Direct Reciprocity&35.38 (1.08) &22.17 (2.30) ***&20.87 (6.04)***\tabularnewline
-~~Group Reciprocity&34.79 (0.62) & 6.12 (1.51) **& 1.20 (2.08)\tabularnewline
-~~In-Group&42.13 (1.99) ***&17.20 (3.40) ***& 4.72 (7.62)\tabularnewline
+~~Baseline&35.00 (---)& 3.97 (1.76) &---\tabularnewline
+~~Direct Reciprocity&35.38 (1.52) &23.88 (3.06) ***&20.80 (7.76) **\tabularnewline
+~~Group Reciprocity&34.79 (0.68) & 7.82 (2.37) ***& 1.13 (2.37) \tabularnewline
+~~In-Group&42.13 (0.79) ***&18.88 (1.67) ***& 4.65 (4.87) \tabularnewline
 \hline
 \end{tabular}}
-\justify Mean allocation, mean discrimination, and reciprocity (marginal effect of TG partner's kindness on allocation) by condition. Robust standard errors clustered on sessions. Significance of comparison to Baseline is marked.$^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively.\end{table}
+\justify Mean allocation, mean discrimination, and reciprocity (marginal effect on allocation of experience with TG partner) by condition. Robust standard errors clustered on sessions. $^{*}$, $^{**}$, and $^{***}$ indicate p $<$ 0.05, p $<$ 0.01, and p $<$ 0.001, respectively. Stars show significance of comparison to Baseline.\end{table}
 
 
 
 The first data column in Table~\ref{tab:results} presents the mean allocations.
 Participants gave significantly more to members of their own team at the expense
-of the neutral recipient ($z=3.58,p< 0.001$ for senders, 
-$z=3.59,p< 0.001$ for
+of the neutral recipient ($z=2.31,p< 0.05$ for senders, 
+$z=8.33,p< 0.05$ for
 responders), establishing that our group formation manipulation was successful
-in inducing group identity and triggering ingroup favouritism. Allocations to
-the TG~partner and his team mates were not significantly different to the
-baseline~35 ($p>0.43$ for all comparisons). This result suggests that the experience with the TG partner is, on average, neutral, such that positive and negative experiences balance each other overall.
+in inducing group identity and triggering ingroup favouritism. 
 
-Nonetheless, both positive and negative treatment of the TG partner or his team mates increase the absolute difference between the two allocations. Indeed,
+Nonetheless, both positive and negative treatment of the TG partner or their teammates increase the absolute difference between the two allocations. Indeed, the second data
 column of Table~\ref{tab:results} shows that allocators discriminated significantly more
 than in the baseline both when interacting with their TG partner
-($z=9.08,p< 0.001$) and with his team mates 
-($z=3.93,p< 0.001$). This effect was not
-significantly different between TG senders and receivers (F test $0.50,
-p= 0.68$).
+($z=8.28,p< 0.001$) and with their teammates 
+($z=3.14,p< 0.01$). This effect was not
+significantly different between TG senders and receivers (F test $3.21,
+p= 0.36$).
 
 \subsection{Direct and group reciprocity}
 \label{sec:reciprocity}
@@ -447,40 +464,35 @@ The responder's experience with the sender is measured
 as the share of the endowment that the sender chose to send. The sender's experience with the responder is measured as the share
 of the received amount that the responder chose to send back. 
 The sender's experience was not defined
-for the six (out of 96) senders who did not send any money.
+for the six (out of 96) senders who did not send any money. 
 %
 There is strong direct reciprocity: allocations
 to the TG partners increase with the TG experience both for
-senders ($z=3.06,p< 0.01$) and for responders 
-($z=3.46,p< 0.001$).
+senders ($z=4.58,p< 0.001$) and for responders 
+($z=2.68,p< 0.01$).
 
 Group reciprocity, however, is only observed for senders, who allocate
-less to team mates of a responder who returned less.
+less to teammates of a responder who returned less.
 Responders,  although directly reciprocating the
-TG partner's action, do not systematically discriminate against team mates
+TG partner's action, do not systematically discriminate against teammates
 of a sender who sent little. The regression analysis shows no significant
-effect of the responder's TG experience on her allocation to the sender's
-team mates ($z=0.58,p= 0.56$). 
+effect of the responder's TG experience on their allocation to the sender's
+teammates ($z=0.48,p= 0.63$). 
 The sender's TG experience, on the other
-hand, significantly increases the allocations made to the responder's team mates 
-($z=3.29,p< 0.01$).\footnote{
+hand, significantly increases the allocations made to the responder's teammates 
+($z=2.02,p< 0.05$).\footnote{
   Responders who receive higher amounts also return a higher share. As a result, senders with a more positive TG experience are, on average, those who sent more in the TG, creating a potential confound. There is no reason, however, why different senders should systematically discriminate between groups in a non-costly way. Indeed, the results hold when we control in the regression for the amount sent and its interaction with the share returned.
 }
 The estimated ratio of the group and direct reciprocity coefficients
-is 50\%, so that for every allocation dollar a responder
-loses due to an unkind action in the TG, his team mates lose~50 cents. 
+is 54\%, so that for every allocation dollar a responder
+loses due to an unkind action in the TG, their teammates lose~54 cents. 
 This relationship is shown graphically in Figure~\ref{fig:plots} (the corresponding figure for direct reciprocity is 
 included in the supplementary material).
 
 
 
 
-Senders' group reciprocity was related to their social value orientation. The slope of the effect of the TG experience 
-on allocations was 
-15.97 for those with less than median SVO, and 
--1.06 for those with median or greater SVO 
-(interaction, $p= 0.061$).These results should be interpreted cautiously, since both scores were 
-affected by the TG experience. 
+%Senders' group reciprocity was related to their social value orientation. The slope of the effect of the TG experience on allocations was myfmt(mod_SVO$estimate[2]) for those with less than median SVO, and myfmt(mod_SVO$estimate[2] + mod_SVO$estimate[4]) for those with median or greater SVO (interaction, $pcut_pval(svo_p)$). These results should be interpreted cautiously, since both scores were affected by the TG experience. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
@@ -494,14 +506,13 @@ affected by the TG experience.
 \label{sec:conclusion}
 
 Our results show that upstream reciprocity is moderated by social boundaries. 
-Humans respond to harms from outgroup members by discriminating against others 
-in that specific outgroup. 
+Humans respond to harms from outgroup members under certain circstances by discriminating against others in that specific outgroup. 
 
 Group reciprocity as a proximate mechanism bears implications for human social cognition. While ingroup 
 altruism and group-based downstream reciprocity require people to differentiate their own group from 
 outsiders---``us'' from ``them''---upstream group reciprocity requires them to differentiate between 
 different outgroups---between ``them and them''---and to keep a mental account of outgroups' 
-reputation. Thus, group reciprocity could provide a cognitive foundation for the phenomena of 
+reputation \citep[cf.][]{tooby2006cognitive}. Thus, group reciprocity could provide a cognitive foundation for the phenomena of 
 intergroup prejudice and stereotyping \citep{allport1954nature}.\footnote{This argument is a 
 between-group parallel to \citet{yamagishi2000thegroup}, which argues that expectations of 
 generalized reciprocity lie behind altruism within a group.} Furthermore, by making group reputation
@@ -513,10 +524,12 @@ On the one hand, we find group reciprocity towards receivers, confirming that th
 
 One possible interpretation for this difference between senders and responders stems from the distinction between intention-based and outcome-based motives in reciprocal behaviour \citep{falk2006theory,stanca2009testing}. In this sense, senders' intentions are more ambiguous, as they do not know what the responder will do. Responders who do not return money, in contrast, are clearly intentionally harming the senders.
 It is possible that humans generalize \emph{intentions} across group members. That is, if group member 1 takes an action that deliberately harms them, they predict that group member 2 wishes to harm them also. If not returning money is seen as deliberately harmful, while
-not sending money can be explained by caution or mistrust, then this would generate the difference in group reciprocity that we observe. 
+not sending money can be explained by caution or mistrust, then this would generate the difference in group reciprocity that we observe.\footnote{
+Relately, intergroup contact theory stipulates that contact between groups reduces prejudice by correcting misperceptions of the motives driving outgroup behaviors \citep{pettigrew1998intergroup}. 
+}
 
-Another distinction made in the literature between trust (sender behavior) and trustworthiness (responder behavior) is based on norms and rules of conduct. In their analylsis of Adam Smith's \emph{A Theory of Moral Sentiments}, \citet{wilson2017sentiments} argue that trust is benificient act, while breaking trust is misconduct. Accordingly, \citet{wilson2017sentiments} found that people punish responders but not senders. Similarly, \citet{kimbrough2015norms} found that `rule followers' are more trustworthy, but not more trusting, than other individuals.  
-We view these interpretations of our results as tentative. Further research will be necessary to map and understand the boundaries of the group reciprocity phenomenon.
+Another distinction made in the literature between trust (sender behavior) and trustworthiness (responder behavior) is based on norms and rules of conduct. In their analylsis of Adam Smith's \emph{A Theory of Moral Sentiments}, \citet{wilson2017sentiments} argue that trust is a beneficent act, while breaking trust is misconduct. Accordingly, \citet{wilson2017sentiments} found that people punish responders but not senders. Similarly, \citet{kimbrough2015norms} found that `rule followers' are more trustworthy than other individuals in the trust game, but not more trusting. 
+Thus, our results tentatively suggest that group reciprocity depends on intentionality or on social norms underlying human exchange. Further research will be necessary to map and understand the boundaries of the group reciprocity phenomenon.
 
 We mention some caveats and limitations.
 First, since our study was conducted with students from a rich industrialized democracy, results may not generalize to all cultures \citep{henrich2010most}. In particular, the link between intentions and moral judgment may vary across cultures \citep{barrett2016small}, and this could affect how group reciprocity plays out in different societies. Second, our experiment did not differentiate between positive and
@@ -524,25 +537,20 @@ negative group reciprocity: we leave this for future work.
 
 
 % new para, not sure quite where to put it
-We have argued that group reciprocity could help explain why some groups have relatively peaceful intergroup relations. It may
-also provide a step from the ``chimpanzee model" of conflict towards the large-scale, organized intergroup conflicts
-observed in tribal and state-level societies. For example, \citet{wrangham2006comparative} provide evidence that hunter-gatherers 
-and farmers have similar
-levels of lethal violence to chimpanzees but much less non-lethal violence. This could be because the threat of 
-high-level violence
-can contain low-level violence. A further step could be provided by ``third party" group reciprocity. That 
+We have argued that group reciprocity could help explain why some groups have relatively peaceful 
+intergroup relations.  A further step could be provided by ``third party" group reciprocity. That 
 is, in many ethnic conflicts, a harm from one group to another is revenged by the entire second group, leading to 
-cycles of intergroup violence. Third party group reciprocity could result from organized groups taking collective
-action to maintain their reputation as reciprocal (and hence, dangerous to attack).
+cycles of intergroup violence \citep{fearon1996explaining}. Third party group reciprocity could result from 
+organized groups taking collective action to maintain their reputation as reciprocal, and therefore dangerous to attack.
 
 Upstream reciprocity is notoriously difficult to understand in evolutionary
 terms \citep{boyd1989evolution,nowak2007upstream}. Group reciprocity may provide another piece of 
-the puzzle. Group reicprocity allows individuals to use reciprocal strategies based on group 
+the puzzle. Group reciprocity allows individuals to use reciprocal strategies based on group 
 reputation. Consequently, upstream reciprocity can direct group-level selection in ways parallel 
 to those by which direct reciprocity direct individual-level selection.
 %provides two new channels by which upstream reciprocity may evolve. 
-We acknowledge, though do not develop here, two other ways by which group reciprocity may evolve.
-First, group members are interdependent, especially in the small groups that were the norm during most of human evolutionary 
+There are two other ways by which group reciprocity may evolve.
+First, group members are interdependent, especially in the small groups that were common during most of human evolutionary 
 history. Punishing a perpetrator's group member therefore indirectly harms the perpetrator, who is dependent on his peers for
 , e.g., public goods provision. Thus, group reciprocity may bridge upstream indirect reciprocity and direct reciprocity 
 through intra-group dependencies. Second, the evolution of indirect reciprocity acts by way of chains
@@ -559,6 +567,8 @@ reciprocity. These ideas could be formalized in future work.
 
 \newpage
 \printbibliography
+%\bibliographystyle{dcu}
+%\bibliography{grouprec}
 
 \newpage
 

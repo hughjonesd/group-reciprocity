@@ -54,3 +54,7 @@ m2 <- lm(give ~ kindness * sent_demeaned, dfr_targets, subset = roletrust == "Se
     "Group Reciprocity")
 coeftest(m1, cluster.vcov(m1, ~ session))
 coeftest(m2, cluster.vcov(m2, ~ session))
+
+
+
+
